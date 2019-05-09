@@ -1,0 +1,81 @@
+\hypertarget{struct_code_attribute}{}\section{Referência da Estrutura Code\+Attribute}
+\label{struct_code_attribute}\index{Code\+Attribute@{Code\+Attribute}}
+
+
+Estrutura do Atributo code.  
+
+
+
+
+{\ttfamily \#include $<$estruturas.\+h$>$}
+
+
+
+Diagrama de colaboração para Code\+Attribute\+:
+% FIG 0
+\subsection*{Campos de Dados}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{estruturas_8h_a5f223212eef04d10a4550ded680cb1cf}{u2} \hyperlink{struct_code_attribute_a87132111c747d163d9b94ec155c1e1db}{attribute\+\_\+name\+\_\+index}
+\item 
+\hyperlink{estruturas_8h_aedf6ddc03df8caaaccbb4c60b9a9b850}{u4} \hyperlink{struct_code_attribute_a612405902fb38f8f04e8cd55e875a3a5}{attribute\+\_\+length}
+\item 
+\hyperlink{estruturas_8h_a5f223212eef04d10a4550ded680cb1cf}{u2} \hyperlink{struct_code_attribute_a61e8f2685ef2bb170d72e402a0e72ca2}{max\+\_\+stack}
+\item 
+\hyperlink{estruturas_8h_a5f223212eef04d10a4550ded680cb1cf}{u2} \hyperlink{struct_code_attribute_a1407b9bddee5eca9e0b0b20fbf1a8f1f}{max\+\_\+locals}
+\item 
+\hyperlink{estruturas_8h_aedf6ddc03df8caaaccbb4c60b9a9b850}{u4} \hyperlink{struct_code_attribute_a6758c92d94ab2ba7db0ddc3e5f4520bc}{code\+\_\+length}
+\item 
+\hyperlink{estruturas_8h_a216a9f8b04b4f0af84a4ca9d1d85a6ca}{u1} $\ast$ \hyperlink{struct_code_attribute_ace67f68bc8bc1d0ee3f86f173a83d7aa}{code}
+\item 
+\hyperlink{estruturas_8h_a5f223212eef04d10a4550ded680cb1cf}{u2} \hyperlink{struct_code_attribute_a7c7ee411e88e741a868818e3cc2171ca}{exception\+\_\+table\+\_\+length}
+\item 
+\hyperlink{struct_exception_table}{Exception\+Table} $\ast$ \hyperlink{struct_code_attribute_a6140184ac696cdd4d000aa00388c5a0f}{exception\+\_\+table}
+\item 
+\hyperlink{estruturas_8h_a5f223212eef04d10a4550ded680cb1cf}{u2} \hyperlink{struct_code_attribute_a550161b02b161e5ab2c489d33831d175}{attributes\+\_\+count}
+\item 
+\hyperlink{estruturas_8h_a216a9f8b04b4f0af84a4ca9d1d85a6ca}{u1} $\ast$ \hyperlink{struct_code_attribute_adafab3efe6d9eefdead891ef70badea8}{attributes}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+Estrutura do Atributo code. 
+
+Estrutura utilizada para a representacao de um atributo do tipo code 
+
+\subsection{Campos}
+\index{Code\+Attribute@{Code\+Attribute}!attribute\+\_\+length@{attribute\+\_\+length}}
+\index{attribute\+\_\+length@{attribute\+\_\+length}!Code\+Attribute@{Code\+Attribute}}
+\subsubsection[{\texorpdfstring{attribute\+\_\+length}{attribute_length}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u4} Code\+Attribute\+::attribute\+\_\+length}\hypertarget{struct_code_attribute_a612405902fb38f8f04e8cd55e875a3a5}{}\label{struct_code_attribute_a612405902fb38f8f04e8cd55e875a3a5}
+\index{Code\+Attribute@{Code\+Attribute}!attribute\+\_\+name\+\_\+index@{attribute\+\_\+name\+\_\+index}}
+\index{attribute\+\_\+name\+\_\+index@{attribute\+\_\+name\+\_\+index}!Code\+Attribute@{Code\+Attribute}}
+\subsubsection[{\texorpdfstring{attribute\+\_\+name\+\_\+index}{attribute_name_index}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u2} Code\+Attribute\+::attribute\+\_\+name\+\_\+index}\hypertarget{struct_code_attribute_a87132111c747d163d9b94ec155c1e1db}{}\label{struct_code_attribute_a87132111c747d163d9b94ec155c1e1db}
+\index{Code\+Attribute@{Code\+Attribute}!attributes@{attributes}}
+\index{attributes@{attributes}!Code\+Attribute@{Code\+Attribute}}
+\subsubsection[{\texorpdfstring{attributes}{attributes}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u1}$\ast$ Code\+Attribute\+::attributes}\hypertarget{struct_code_attribute_adafab3efe6d9eefdead891ef70badea8}{}\label{struct_code_attribute_adafab3efe6d9eefdead891ef70badea8}
+\index{Code\+Attribute@{Code\+Attribute}!attributes\+\_\+count@{attributes\+\_\+count}}
+\index{attributes\+\_\+count@{attributes\+\_\+count}!Code\+Attribute@{Code\+Attribute}}
+\subsubsection[{\texorpdfstring{attributes\+\_\+count}{attributes_count}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u2} Code\+Attribute\+::attributes\+\_\+count}\hypertarget{struct_code_attribute_a550161b02b161e5ab2c489d33831d175}{}\label{struct_code_attribute_a550161b02b161e5ab2c489d33831d175}
+\index{Code\+Attribute@{Code\+Attribute}!code@{code}}
+\index{code@{code}!Code\+Attribute@{Code\+Attribute}}
+\subsubsection[{\texorpdfstring{code}{code}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u1}$\ast$ Code\+Attribute\+::code}\hypertarget{struct_code_attribute_ace67f68bc8bc1d0ee3f86f173a83d7aa}{}\label{struct_code_attribute_ace67f68bc8bc1d0ee3f86f173a83d7aa}
+\index{Code\+Attribute@{Code\+Attribute}!code\+\_\+length@{code\+\_\+length}}
+\index{code\+\_\+length@{code\+\_\+length}!Code\+Attribute@{Code\+Attribute}}
+\subsubsection[{\texorpdfstring{code\+\_\+length}{code_length}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u4} Code\+Attribute\+::code\+\_\+length}\hypertarget{struct_code_attribute_a6758c92d94ab2ba7db0ddc3e5f4520bc}{}\label{struct_code_attribute_a6758c92d94ab2ba7db0ddc3e5f4520bc}
+\index{Code\+Attribute@{Code\+Attribute}!exception\+\_\+table@{exception\+\_\+table}}
+\index{exception\+\_\+table@{exception\+\_\+table}!Code\+Attribute@{Code\+Attribute}}
+\subsubsection[{\texorpdfstring{exception\+\_\+table}{exception_table}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Exception\+Table}$\ast$ Code\+Attribute\+::exception\+\_\+table}\hypertarget{struct_code_attribute_a6140184ac696cdd4d000aa00388c5a0f}{}\label{struct_code_attribute_a6140184ac696cdd4d000aa00388c5a0f}
+\index{Code\+Attribute@{Code\+Attribute}!exception\+\_\+table\+\_\+length@{exception\+\_\+table\+\_\+length}}
+\index{exception\+\_\+table\+\_\+length@{exception\+\_\+table\+\_\+length}!Code\+Attribute@{Code\+Attribute}}
+\subsubsection[{\texorpdfstring{exception\+\_\+table\+\_\+length}{exception_table_length}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u2} Code\+Attribute\+::exception\+\_\+table\+\_\+length}\hypertarget{struct_code_attribute_a7c7ee411e88e741a868818e3cc2171ca}{}\label{struct_code_attribute_a7c7ee411e88e741a868818e3cc2171ca}
+\index{Code\+Attribute@{Code\+Attribute}!max\+\_\+locals@{max\+\_\+locals}}
+\index{max\+\_\+locals@{max\+\_\+locals}!Code\+Attribute@{Code\+Attribute}}
+\subsubsection[{\texorpdfstring{max\+\_\+locals}{max_locals}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u2} Code\+Attribute\+::max\+\_\+locals}\hypertarget{struct_code_attribute_a1407b9bddee5eca9e0b0b20fbf1a8f1f}{}\label{struct_code_attribute_a1407b9bddee5eca9e0b0b20fbf1a8f1f}
+\index{Code\+Attribute@{Code\+Attribute}!max\+\_\+stack@{max\+\_\+stack}}
+\index{max\+\_\+stack@{max\+\_\+stack}!Code\+Attribute@{Code\+Attribute}}
+\subsubsection[{\texorpdfstring{max\+\_\+stack}{max_stack}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u2} Code\+Attribute\+::max\+\_\+stack}\hypertarget{struct_code_attribute_a61e8f2685ef2bb170d72e402a0e72ca2}{}\label{struct_code_attribute_a61e8f2685ef2bb170d72e402a0e72ca2}
+
+
+A documentação para esta estrutura foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{estruturas_8h}{estruturas.\+h}\end{DoxyCompactItemize}

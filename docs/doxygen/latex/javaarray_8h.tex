@@ -1,0 +1,115 @@
+\hypertarget{javaarray_8h}{}\section{Referência do Arquivo include/javaarray.h}
+\label{javaarray_8h}\index{include/javaarray.\+h@{include/javaarray.\+h}}
+
+
+Biblioteca de arrays Java.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}estruturas.\+h\char`\"{}}\\*
+Gráfico de dependência de inclusões para javaarray.\+h\+:
+% FIG 0
+\subsection*{Estruturas de Dados}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_array_ref}{Array\+Ref}
+\begin{DoxyCompactList}\small\item\em Estrutura de Array Java. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Definições e Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{javaarray_8h_a3ff4fcf967d7d69d5ecfc4b51612ef7e}{E\+X\+T\+JA}~extern
+\item 
+\#define \hyperlink{javaarray_8h_ac2198ff35934b3dd78e881464159ae26}{T\+\_\+\+B\+O\+O\+L\+E\+AN}~4
+\item 
+\#define \hyperlink{javaarray_8h_ae2381f297a8fbb736886d7d1b6b99b42}{T\+\_\+\+C\+H\+AR}~5
+\item 
+\#define \hyperlink{javaarray_8h_a3d072e0c25cf678e9b8601b957b92eae}{T\+\_\+\+F\+L\+O\+AT}~6
+\item 
+\#define \hyperlink{javaarray_8h_a6e80924a839d0f80571bcd1d2b6ec084}{T\+\_\+\+D\+O\+U\+B\+LE}~7
+\item 
+\#define \hyperlink{javaarray_8h_a6f64c98fe49fdcf1d2939db817918696}{T\+\_\+\+B\+Y\+TE}~8
+\item 
+\#define \hyperlink{javaarray_8h_a23ab0d39813d2d5a59ccb7b9b68c3e6d}{T\+\_\+\+S\+H\+O\+RT}~9
+\item 
+\#define \hyperlink{javaarray_8h_a4fa28a492427bc4af75248e22537e9b4}{T\+\_\+\+I\+NT}~10
+\item 
+\#define \hyperlink{javaarray_8h_a2d9ac9f51c75bdb21cf9dfd1412fa194}{T\+\_\+\+L\+O\+NG}~11
+\end{DoxyCompactItemize}
+\subsection*{Definições de Tipos}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{struct_array_ref}{Array\+Ref} \hyperlink{javaarray_8h_a0c90cb0f11f179f64891a28b1a44cf3b}{Java\+Array}
+\begin{DoxyCompactList}\small\item\em Estrutura de Array Java. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{javaarray_8h_a3ff4fcf967d7d69d5ecfc4b51612ef7e}{E\+X\+T\+JA} \hyperlink{javaarray_8h_a0c90cb0f11f179f64891a28b1a44cf3b}{Java\+Array} $\ast$ \hyperlink{javaarray_8h_a5eb8540aaa3ccccc202f66ef6ad43cce}{new\+Java\+Array} (\hyperlink{estruturas_8h_aedf6ddc03df8caaaccbb4c60b9a9b850}{u4} n\+\_\+type, \hyperlink{estruturas_8h_a5f223212eef04d10a4550ded680cb1cf}{u2} n\+\_\+length, void $\ast$n\+\_\+array\+Address)
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+Biblioteca de arrays Java. 
+
+Biblioteca responsavel por prover as definicoes e metodos relacionados aos arrays da J\+VM 
+
+\subsection{Definições e macros}
+\index{javaarray.\+h@{javaarray.\+h}!E\+X\+T\+JA@{E\+X\+T\+JA}}
+\index{E\+X\+T\+JA@{E\+X\+T\+JA}!javaarray.\+h@{javaarray.\+h}}
+\subsubsection[{\texorpdfstring{E\+X\+T\+JA}{EXTJA}}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+X\+T\+JA~extern}\hypertarget{javaarray_8h_a3ff4fcf967d7d69d5ecfc4b51612ef7e}{}\label{javaarray_8h_a3ff4fcf967d7d69d5ecfc4b51612ef7e}
+\index{javaarray.\+h@{javaarray.\+h}!T\+\_\+\+B\+O\+O\+L\+E\+AN@{T\+\_\+\+B\+O\+O\+L\+E\+AN}}
+\index{T\+\_\+\+B\+O\+O\+L\+E\+AN@{T\+\_\+\+B\+O\+O\+L\+E\+AN}!javaarray.\+h@{javaarray.\+h}}
+\subsubsection[{\texorpdfstring{T\+\_\+\+B\+O\+O\+L\+E\+AN}{T_BOOLEAN}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+\_\+\+B\+O\+O\+L\+E\+AN~4}\hypertarget{javaarray_8h_ac2198ff35934b3dd78e881464159ae26}{}\label{javaarray_8h_ac2198ff35934b3dd78e881464159ae26}
+\index{javaarray.\+h@{javaarray.\+h}!T\+\_\+\+B\+Y\+TE@{T\+\_\+\+B\+Y\+TE}}
+\index{T\+\_\+\+B\+Y\+TE@{T\+\_\+\+B\+Y\+TE}!javaarray.\+h@{javaarray.\+h}}
+\subsubsection[{\texorpdfstring{T\+\_\+\+B\+Y\+TE}{T_BYTE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+\_\+\+B\+Y\+TE~8}\hypertarget{javaarray_8h_a6f64c98fe49fdcf1d2939db817918696}{}\label{javaarray_8h_a6f64c98fe49fdcf1d2939db817918696}
+\index{javaarray.\+h@{javaarray.\+h}!T\+\_\+\+C\+H\+AR@{T\+\_\+\+C\+H\+AR}}
+\index{T\+\_\+\+C\+H\+AR@{T\+\_\+\+C\+H\+AR}!javaarray.\+h@{javaarray.\+h}}
+\subsubsection[{\texorpdfstring{T\+\_\+\+C\+H\+AR}{T_CHAR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+\_\+\+C\+H\+AR~5}\hypertarget{javaarray_8h_ae2381f297a8fbb736886d7d1b6b99b42}{}\label{javaarray_8h_ae2381f297a8fbb736886d7d1b6b99b42}
+\index{javaarray.\+h@{javaarray.\+h}!T\+\_\+\+D\+O\+U\+B\+LE@{T\+\_\+\+D\+O\+U\+B\+LE}}
+\index{T\+\_\+\+D\+O\+U\+B\+LE@{T\+\_\+\+D\+O\+U\+B\+LE}!javaarray.\+h@{javaarray.\+h}}
+\subsubsection[{\texorpdfstring{T\+\_\+\+D\+O\+U\+B\+LE}{T_DOUBLE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+\_\+\+D\+O\+U\+B\+LE~7}\hypertarget{javaarray_8h_a6e80924a839d0f80571bcd1d2b6ec084}{}\label{javaarray_8h_a6e80924a839d0f80571bcd1d2b6ec084}
+\index{javaarray.\+h@{javaarray.\+h}!T\+\_\+\+F\+L\+O\+AT@{T\+\_\+\+F\+L\+O\+AT}}
+\index{T\+\_\+\+F\+L\+O\+AT@{T\+\_\+\+F\+L\+O\+AT}!javaarray.\+h@{javaarray.\+h}}
+\subsubsection[{\texorpdfstring{T\+\_\+\+F\+L\+O\+AT}{T_FLOAT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+\_\+\+F\+L\+O\+AT~6}\hypertarget{javaarray_8h_a3d072e0c25cf678e9b8601b957b92eae}{}\label{javaarray_8h_a3d072e0c25cf678e9b8601b957b92eae}
+\index{javaarray.\+h@{javaarray.\+h}!T\+\_\+\+I\+NT@{T\+\_\+\+I\+NT}}
+\index{T\+\_\+\+I\+NT@{T\+\_\+\+I\+NT}!javaarray.\+h@{javaarray.\+h}}
+\subsubsection[{\texorpdfstring{T\+\_\+\+I\+NT}{T_INT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+\_\+\+I\+NT~10}\hypertarget{javaarray_8h_a4fa28a492427bc4af75248e22537e9b4}{}\label{javaarray_8h_a4fa28a492427bc4af75248e22537e9b4}
+\index{javaarray.\+h@{javaarray.\+h}!T\+\_\+\+L\+O\+NG@{T\+\_\+\+L\+O\+NG}}
+\index{T\+\_\+\+L\+O\+NG@{T\+\_\+\+L\+O\+NG}!javaarray.\+h@{javaarray.\+h}}
+\subsubsection[{\texorpdfstring{T\+\_\+\+L\+O\+NG}{T_LONG}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+\_\+\+L\+O\+NG~11}\hypertarget{javaarray_8h_a2d9ac9f51c75bdb21cf9dfd1412fa194}{}\label{javaarray_8h_a2d9ac9f51c75bdb21cf9dfd1412fa194}
+\index{javaarray.\+h@{javaarray.\+h}!T\+\_\+\+S\+H\+O\+RT@{T\+\_\+\+S\+H\+O\+RT}}
+\index{T\+\_\+\+S\+H\+O\+RT@{T\+\_\+\+S\+H\+O\+RT}!javaarray.\+h@{javaarray.\+h}}
+\subsubsection[{\texorpdfstring{T\+\_\+\+S\+H\+O\+RT}{T_SHORT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+\_\+\+S\+H\+O\+RT~9}\hypertarget{javaarray_8h_a23ab0d39813d2d5a59ccb7b9b68c3e6d}{}\label{javaarray_8h_a23ab0d39813d2d5a59ccb7b9b68c3e6d}
+
+
+\subsection{Definições dos tipos}
+\index{javaarray.\+h@{javaarray.\+h}!Java\+Array@{Java\+Array}}
+\index{Java\+Array@{Java\+Array}!javaarray.\+h@{javaarray.\+h}}
+\subsubsection[{\texorpdfstring{Java\+Array}{JavaArray}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf Array\+Ref}  {\bf Java\+Array}}\hypertarget{javaarray_8h_a0c90cb0f11f179f64891a28b1a44cf3b}{}\label{javaarray_8h_a0c90cb0f11f179f64891a28b1a44cf3b}
+
+
+Estrutura de Array Java. 
+
+Estrutura utilizada para a representacao de um Array Java 
+
+\subsection{Funções}
+\index{javaarray.\+h@{javaarray.\+h}!new\+Java\+Array@{new\+Java\+Array}}
+\index{new\+Java\+Array@{new\+Java\+Array}!javaarray.\+h@{javaarray.\+h}}
+\subsubsection[{\texorpdfstring{new\+Java\+Array(u4 n\+\_\+type, u2 n\+\_\+length, void $\ast$n\+\_\+array\+Address)}{newJavaArray(u4 n_type, u2 n_length, void *n_arrayAddress)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+T\+JA} {\bf Java\+Array}$\ast$ new\+Java\+Array (
+\begin{DoxyParamCaption}
+\item[{{\bf u4}}]{n\+\_\+type, }
+\item[{{\bf u2}}]{n\+\_\+length, }
+\item[{void $\ast$}]{n\+\_\+array\+Address}
+\end{DoxyParamCaption}
+)}\hypertarget{javaarray_8h_a5eb8540aaa3ccccc202f66ef6ad43cce}{}\label{javaarray_8h_a5eb8540aaa3ccccc202f66ef6ad43cce}
+Metodo responsavel por inicializar e retornar uma estrutura de array java preenchida a partir de um vetor de char
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em value} & Value de tipo int, long, float, double, reference, byte, boolean, char ou short a ser carregado na estrutura java array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+estrutura Java\+Array preenchida 
+\end{DoxyReturn}

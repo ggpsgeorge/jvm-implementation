@@ -1,0 +1,378 @@
+\hypertarget{classloader_8h}{}\section{Referência do Arquivo include/classloader.h}
+\label{classloader_8h}\index{include/classloader.\+h@{include/classloader.\+h}}
+
+
+Interface do Carregador de Classes da J\+VM.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}estruturas.\+h\char`\"{}}\\*
+Gráfico de dependência de inclusões para classloader.\+h\+:
+% FIG 0
+\subsection*{Definições e Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{classloader_8h_ad3ebb20347e41fa68c791ac1f8c79294}{E\+X\+TC}~extern
+\end{DoxyCompactItemize}
+\subsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classloader_8h_ad3ebb20347e41fa68c791ac1f8c79294}{E\+X\+TC} F\+I\+LE $\ast$ \hyperlink{classloader_8h_a0fa72c5a5e7d74c1debb665987684e27}{obter\+\_\+entrada} (const char $\ast$nome\+\_\+arquivo)
+\item 
+\hyperlink{classloader_8h_ad3ebb20347e41fa68c791ac1f8c79294}{E\+X\+TC} \hyperlink{estruturas_8h_a216a9f8b04b4f0af84a4ca9d1d85a6ca}{u1} \hyperlink{classloader_8h_a8b76b7ea3540a167c597239d68852d41}{u1\+Le} (F\+I\+LE $\ast$arquivo)
+\item 
+\hyperlink{classloader_8h_ad3ebb20347e41fa68c791ac1f8c79294}{E\+X\+TC} \hyperlink{estruturas_8h_a5f223212eef04d10a4550ded680cb1cf}{u2} \hyperlink{classloader_8h_aa06ffbbf4a0c936a8458ab011753ddbc}{u2\+Le} (F\+I\+LE $\ast$arquivo)
+\item 
+\hyperlink{classloader_8h_ad3ebb20347e41fa68c791ac1f8c79294}{E\+X\+TC} \hyperlink{estruturas_8h_aedf6ddc03df8caaaccbb4c60b9a9b850}{u4} \hyperlink{classloader_8h_ad7091b40b58a4b3318fd5b9f8cd8c605}{u4\+Le} (F\+I\+LE $\ast$arquivo)
+\item 
+\hyperlink{classloader_8h_ad3ebb20347e41fa68c791ac1f8c79294}{E\+X\+TC} \hyperlink{estruturas_8h_aa7ceae3fd72b26a559a601910a17e2c3}{O\+Presult} \hyperlink{classloader_8h_a0608ac63bdae65dafb44edce1c7ae57e}{L\+E\+C\+L\+A\+S\+S\+\_\+leitor} (\hyperlink{estruturas_8h_a58bbd58859ab48cb1bd6c2ffb5874839}{Arq\+Class} $\ast$arq\+\_\+class, const char $\ast$arquivo\+\_\+entrada)
+\item 
+\hyperlink{classloader_8h_ad3ebb20347e41fa68c791ac1f8c79294}{E\+X\+TC} \hyperlink{estruturas_8h_aa7ceae3fd72b26a559a601910a17e2c3}{O\+Presult} \hyperlink{classloader_8h_ac5295b1270fc743700784ea2ef2d954d}{L\+E\+C\+L\+A\+S\+S\+\_\+exibidor} (\hyperlink{estruturas_8h_a58bbd58859ab48cb1bd6c2ffb5874839}{Arq\+Class} $\ast$arq\+\_\+class)
+\item 
+\hyperlink{classloader_8h_ad3ebb20347e41fa68c791ac1f8c79294}{E\+X\+TC} void \hyperlink{classloader_8h_ad6dfd778205a48b5e8b3d5b96da12e94}{L\+E\+C\+L\+A\+S\+S\+\_\+free} (\hyperlink{estruturas_8h_a58bbd58859ab48cb1bd6c2ffb5874839}{Arq\+Class} $\ast$arq\+\_\+class)
+\item 
+\hyperlink{classloader_8h_ad3ebb20347e41fa68c791ac1f8c79294}{E\+X\+TC} void \hyperlink{classloader_8h_a7653b52d02212c99d019c65239b8be13}{L\+E\+C\+L\+A\+S\+S\+\_\+exibe\+Erro\+Operacao} (\hyperlink{estruturas_8h_aa7ceae3fd72b26a559a601910a17e2c3}{O\+Presult} resultado, const char $\ast$file\+Name)
+\item 
+\hyperlink{classloader_8h_ad3ebb20347e41fa68c791ac1f8c79294}{E\+X\+TC} char $\ast$ \hyperlink{classloader_8h_a79d19543ee694325acc5cac267f01bb0}{get\+Class\+Name\+From\+Constant\+Pool} (\hyperlink{estruturas_8h_aafdf80b0992e652420382fcf19b9d074}{cp\+\_\+info} $\ast$cp, \hyperlink{estruturas_8h_a5f223212eef04d10a4550ded680cb1cf}{u2} index)
+\item 
+\hyperlink{classloader_8h_ad3ebb20347e41fa68c791ac1f8c79294}{E\+X\+TC} void \hyperlink{classloader_8h_a6b8ca6a4c35690d58b19d1f1db01a40e}{get\+Field\+Or\+Method\+Info\+Attributes\+From\+Constant\+Pool} (\hyperlink{estruturas_8h_a5f223212eef04d10a4550ded680cb1cf}{u2} index, \hyperlink{estruturas_8h_aafdf80b0992e652420382fcf19b9d074}{cp\+\_\+info} $\ast$constant\+\_\+pool, char $\ast$$\ast$class\+\_\+name, char $\ast$$\ast$name, char $\ast$$\ast$descriptor)
+\item 
+\hyperlink{classloader_8h_ad3ebb20347e41fa68c791ac1f8c79294}{E\+X\+TC} wchar\+\_\+t $\ast$ \hyperlink{classloader_8h_a58d9da2df27d0f15660067c679843566}{get\+Unicode\+From\+Constant\+Pool} (\hyperlink{estruturas_8h_aafdf80b0992e652420382fcf19b9d074}{cp\+\_\+info} $\ast$cp, \hyperlink{estruturas_8h_a5f223212eef04d10a4550ded680cb1cf}{u2} index)
+\item 
+\hyperlink{classloader_8h_ad3ebb20347e41fa68c791ac1f8c79294}{E\+X\+TC} char $\ast$ \hyperlink{classloader_8h_a22a9fa6c0af0113e9624d8042c301f2e}{get\+U\+T\+F8\+From\+Constant\+Pool} (\hyperlink{estruturas_8h_aafdf80b0992e652420382fcf19b9d074}{cp\+\_\+info} $\ast$cp, \hyperlink{estruturas_8h_a5f223212eef04d10a4550ded680cb1cf}{u2} index)
+\item 
+\hyperlink{classloader_8h_ad3ebb20347e41fa68c791ac1f8c79294}{E\+X\+TC} \hyperlink{struct_code_attribute}{Code\+Attribute} $\ast$ \hyperlink{classloader_8h_a36826a2b903b8ba26e0b2a911343c5dc}{parse\+Code} (\hyperlink{estruturas_8h_a216a9f8b04b4f0af84a4ca9d1d85a6ca}{u1} $\ast$info)
+\item 
+\hyperlink{classloader_8h_ad3ebb20347e41fa68c791ac1f8c79294}{E\+X\+TC} \hyperlink{struct_constant_value_attribute}{Constant\+Value\+Attribute} $\ast$ \hyperlink{classloader_8h_a65e19f7aa722cdcdbad1cbb77ab77483}{parse\+Constant\+Value} (\hyperlink{estruturas_8h_a216a9f8b04b4f0af84a4ca9d1d85a6ca}{u1} $\ast$info)
+\item 
+\hyperlink{classloader_8h_ad3ebb20347e41fa68c791ac1f8c79294}{E\+X\+TC} \hyperlink{struct_exception_attribute}{Exception\+Attribute} $\ast$ \hyperlink{classloader_8h_a085184ac883207cbf9016d1815a95102}{parse\+Exception} (\hyperlink{estruturas_8h_a216a9f8b04b4f0af84a4ca9d1d85a6ca}{u1} $\ast$info)
+\item 
+\hyperlink{classloader_8h_ad3ebb20347e41fa68c791ac1f8c79294}{E\+X\+TC} \hyperlink{struct_java_class}{Java\+Class} $\ast$ \hyperlink{classloader_8h_a8940c8ee7e538c6335ee29402d61fe76}{load\+C\+Lass} (const char $\ast$qualified\+Name, \hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+\hyperlink{classloader_8h_ad3ebb20347e41fa68c791ac1f8c79294}{E\+X\+TC} \hyperlink{struct_fields}{Fields} $\ast$ \hyperlink{classloader_8h_a3b9b86dbf09884c05ec3711e51f5767f}{class\+Initialize\+Fields} (\hyperlink{struct_java_class}{Java\+Class} $\ast$java\+Class, \hyperlink{estruturas_8h_a5f223212eef04d10a4550ded680cb1cf}{u2} flags\+Accept, \hyperlink{estruturas_8h_a5f223212eef04d10a4550ded680cb1cf}{u2} flags\+Regect)
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+Interface do Carregador de Classes da J\+VM. 
+
+Interface responsavel por implementar os servicos relacionados ao carregamento de classes da J\+VM. Contem submodulos responsaveis por\+:
+\begin{DoxyItemize}
+\item Implementar os metodos relacionados a exibicao de um arquivo \char`\"{}.\+class\char`\"{}.
+\item Implementar os metodos de leitura de arquivos \char`\"{}.\+class\char`\"{}
+\item Implementar os metodos relacionados a manutencao de uma estrutura Arq\+Class
+\item Implementar os metodos responsaveis pela manipulacao de arquivos 
+\end{DoxyItemize}
+
+\subsection{Definições e macros}
+\index{classloader.\+h@{classloader.\+h}!E\+X\+TC@{E\+X\+TC}}
+\index{E\+X\+TC@{E\+X\+TC}!classloader.\+h@{classloader.\+h}}
+\subsubsection[{\texorpdfstring{E\+X\+TC}{EXTC}}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+X\+TC~extern}\hypertarget{classloader_8h_ad3ebb20347e41fa68c791ac1f8c79294}{}\label{classloader_8h_ad3ebb20347e41fa68c791ac1f8c79294}
+
+
+\subsection{Funções}
+\index{classloader.\+h@{classloader.\+h}!class\+Initialize\+Fields@{class\+Initialize\+Fields}}
+\index{class\+Initialize\+Fields@{class\+Initialize\+Fields}!classloader.\+h@{classloader.\+h}}
+\subsubsection[{\texorpdfstring{class\+Initialize\+Fields(\+Java\+Class $\ast$java\+Class, u2 flags\+Accept, u2 flags\+Regect)}{classInitializeFields(JavaClass *javaClass, u2 flagsAccept, u2 flagsRegect)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+TC} {\bf Fields}$\ast$ class\+Initialize\+Fields (
+\begin{DoxyParamCaption}
+\item[{{\bf Java\+Class} $\ast$}]{java\+Class, }
+\item[{{\bf u2}}]{flags\+Accept, }
+\item[{{\bf u2}}]{flags\+Regect}
+\end{DoxyParamCaption}
+)}\hypertarget{classloader_8h_a3b9b86dbf09884c05ec3711e51f5767f}{}\label{classloader_8h_a3b9b86dbf09884c05ec3711e51f5767f}
+Método que aloca todos os espaços de memoria necessarios para os campos de uma classe ou objeto e inicializa os inicializa com os valores default.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em java\+Class} & Referencia para a estrutura de classe com os parametros \\
+\hline
+{\em flags\+Accept} & Flags para o tipos de campos aceitos (Ex.\+: S\+T\+A\+T\+IC, F\+I\+N\+AL) \\
+\hline
+{\em flags\+Regect} & Flags para o tipos de campos rejeitados (Ex.\+: S\+T\+A\+T\+IC, F\+I\+N\+AL) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Estrutura de campos preenchida 
+\end{DoxyReturn}
+\index{classloader.\+h@{classloader.\+h}!get\+Class\+Name\+From\+Constant\+Pool@{get\+Class\+Name\+From\+Constant\+Pool}}
+\index{get\+Class\+Name\+From\+Constant\+Pool@{get\+Class\+Name\+From\+Constant\+Pool}!classloader.\+h@{classloader.\+h}}
+\subsubsection[{\texorpdfstring{get\+Class\+Name\+From\+Constant\+Pool(cp\+\_\+info $\ast$cp, u2 index)}{getClassNameFromConstantPool(cp_info *cp, u2 index)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+TC} char$\ast$ get\+Class\+Name\+From\+Constant\+Pool (
+\begin{DoxyParamCaption}
+\item[{{\bf cp\+\_\+info} $\ast$}]{cp, }
+\item[{{\bf u2}}]{index}
+\end{DoxyParamCaption}
+)}\hypertarget{classloader_8h_a79d19543ee694325acc5cac267f01bb0}{}\label{classloader_8h_a79d19543ee694325acc5cac267f01bb0}
+Metodo que que obtem uma string de caracteres unicode no pool de constantes de uma estrutura C\+O\+N\+S\+T\+\_\+\+U\+T\+F8 referente ao nome da classe apontada pelo indice passado
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em cp} & ponteiro para o pool de constantes \\
+\hline
+{\em index} & indice da classe no pool de constantes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+string de char de 16bits (w\+\_\+char\+\_\+t). 
+\end{DoxyReturn}
+\index{classloader.\+h@{classloader.\+h}!get\+Field\+Or\+Method\+Info\+Attributes\+From\+Constant\+Pool@{get\+Field\+Or\+Method\+Info\+Attributes\+From\+Constant\+Pool}}
+\index{get\+Field\+Or\+Method\+Info\+Attributes\+From\+Constant\+Pool@{get\+Field\+Or\+Method\+Info\+Attributes\+From\+Constant\+Pool}!classloader.\+h@{classloader.\+h}}
+\subsubsection[{\texorpdfstring{get\+Field\+Or\+Method\+Info\+Attributes\+From\+Constant\+Pool(u2 index, cp\+\_\+info $\ast$constant\+\_\+pool, char $\ast$$\ast$class\+\_\+name, char $\ast$$\ast$name, char $\ast$$\ast$descriptor)}{getFieldOrMethodInfoAttributesFromConstantPool(u2 index, cp_info *constant_pool, char **class_name, char **name, char **descriptor)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+TC} void get\+Field\+Or\+Method\+Info\+Attributes\+From\+Constant\+Pool (
+\begin{DoxyParamCaption}
+\item[{{\bf u2}}]{index, }
+\item[{{\bf cp\+\_\+info} $\ast$}]{constant\+\_\+pool, }
+\item[{char $\ast$$\ast$}]{class\+\_\+name, }
+\item[{char $\ast$$\ast$}]{name, }
+\item[{char $\ast$$\ast$}]{descriptor}
+\end{DoxyParamCaption}
+)}\hypertarget{classloader_8h_a6b8ca6a4c35690d58b19d1f1db01a40e}{}\label{classloader_8h_a6b8ca6a4c35690d58b19d1f1db01a40e}
+Metodo que, dado um indice valido de field\+\_\+info ou methdo\+\_\+info para um pool de constantes, procura e retorna por referencia o nome da classe do field/metd, o nome do field/metd, e o descritor do field/metd.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em index} & Indice valido para o field\+Info. \\
+\hline
+{\em constant\+\_\+pool} & Referencia para o pool de constantes a ser utilizado. \\
+\hline
+{\em class\+\_\+name} & Referencia para um vetor de char a receber o nome da classe do field/metd \\
+\hline
+{\em name} & Referencia para um vetor de char a receber o nome do field/metd \\
+\hline
+{\em descriptor} & Referencia para um vetor de char a receber o descritor do field/metd \\
+\hline
+\end{DoxyParams}
+\index{classloader.\+h@{classloader.\+h}!get\+Unicode\+From\+Constant\+Pool@{get\+Unicode\+From\+Constant\+Pool}}
+\index{get\+Unicode\+From\+Constant\+Pool@{get\+Unicode\+From\+Constant\+Pool}!classloader.\+h@{classloader.\+h}}
+\subsubsection[{\texorpdfstring{get\+Unicode\+From\+Constant\+Pool(cp\+\_\+info $\ast$cp, u2 index)}{getUnicodeFromConstantPool(cp_info *cp, u2 index)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+TC} wchar\+\_\+t$\ast$ get\+Unicode\+From\+Constant\+Pool (
+\begin{DoxyParamCaption}
+\item[{{\bf cp\+\_\+info} $\ast$}]{cp, }
+\item[{{\bf u2}}]{index}
+\end{DoxyParamCaption}
+)}\hypertarget{classloader_8h_a58d9da2df27d0f15660067c679843566}{}\label{classloader_8h_a58d9da2df27d0f15660067c679843566}
+Metodo que que obtem uma string de caracteres unicode no pool de constantes de uma estrutura C\+O\+N\+S\+T\+\_\+\+U\+T\+F8 apontada pelo indice passado
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em cp} & ponteiro para o pool de constantes \\
+\hline
+{\em index} & indice da estrutura U\+T\+F8\+\_\+\+Info no pool de constantes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+string de char de 16bits (w\+\_\+char\+\_\+t). 
+\end{DoxyReturn}
+\index{classloader.\+h@{classloader.\+h}!get\+U\+T\+F8\+From\+Constant\+Pool@{get\+U\+T\+F8\+From\+Constant\+Pool}}
+\index{get\+U\+T\+F8\+From\+Constant\+Pool@{get\+U\+T\+F8\+From\+Constant\+Pool}!classloader.\+h@{classloader.\+h}}
+\subsubsection[{\texorpdfstring{get\+U\+T\+F8\+From\+Constant\+Pool(cp\+\_\+info $\ast$cp, u2 index)}{getUTF8FromConstantPool(cp_info *cp, u2 index)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+TC} char$\ast$ get\+U\+T\+F8\+From\+Constant\+Pool (
+\begin{DoxyParamCaption}
+\item[{{\bf cp\+\_\+info} $\ast$}]{cp, }
+\item[{{\bf u2}}]{index}
+\end{DoxyParamCaption}
+)}\hypertarget{classloader_8h_a22a9fa6c0af0113e9624d8042c301f2e}{}\label{classloader_8h_a22a9fa6c0af0113e9624d8042c301f2e}
+Metodo que que obtem uma string de caracteres U\+T\+F8 no pool de constantes de uma estrutura C\+O\+N\+S\+T\+\_\+\+U\+T\+F8 apontada pelo indice passado
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em cp} & ponteiro para o pool de constantes \\
+\hline
+{\em index} & indice da estrutura U\+T\+F8\+\_\+\+Info no pool de constantes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+string de char de 8bits (char $\ast$). 
+\end{DoxyReturn}
+\index{classloader.\+h@{classloader.\+h}!L\+E\+C\+L\+A\+S\+S\+\_\+exibe\+Erro\+Operacao@{L\+E\+C\+L\+A\+S\+S\+\_\+exibe\+Erro\+Operacao}}
+\index{L\+E\+C\+L\+A\+S\+S\+\_\+exibe\+Erro\+Operacao@{L\+E\+C\+L\+A\+S\+S\+\_\+exibe\+Erro\+Operacao}!classloader.\+h@{classloader.\+h}}
+\subsubsection[{\texorpdfstring{L\+E\+C\+L\+A\+S\+S\+\_\+exibe\+Erro\+Operacao(\+O\+Presult resultado, const char $\ast$file\+Name)}{LECLASS_exibeErroOperacao(OPresult resultado, const char *fileName)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+TC} void L\+E\+C\+L\+A\+S\+S\+\_\+exibe\+Erro\+Operacao (
+\begin{DoxyParamCaption}
+\item[{{\bf O\+Presult}}]{resultado, }
+\item[{const char $\ast$}]{file\+Name}
+\end{DoxyParamCaption}
+)}\hypertarget{classloader_8h_a7653b52d02212c99d019c65239b8be13}{}\label{classloader_8h_a7653b52d02212c99d019c65239b8be13}
+Metodo responsavel por prover mensagens de resuldados de erro de operacoes do leitor \char`\"{}.\+class\char`\"{}
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em resultado} & Tipo resultado a ser decodificado \\
+\hline
+{\em file\+Name} & Nome do arquivo \\
+\hline
+\end{DoxyParams}
+\index{classloader.\+h@{classloader.\+h}!L\+E\+C\+L\+A\+S\+S\+\_\+exibidor@{L\+E\+C\+L\+A\+S\+S\+\_\+exibidor}}
+\index{L\+E\+C\+L\+A\+S\+S\+\_\+exibidor@{L\+E\+C\+L\+A\+S\+S\+\_\+exibidor}!classloader.\+h@{classloader.\+h}}
+\subsubsection[{\texorpdfstring{L\+E\+C\+L\+A\+S\+S\+\_\+exibidor(\+Arq\+Class $\ast$arq\+\_\+class)}{LECLASS_exibidor(ArqClass *arq_class)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+TC} {\bf O\+Presult} L\+E\+C\+L\+A\+S\+S\+\_\+exibidor (
+\begin{DoxyParamCaption}
+\item[{{\bf Arq\+Class} $\ast$}]{arq\+\_\+class}
+\end{DoxyParamCaption}
+)}\hypertarget{classloader_8h_ac5295b1270fc743700784ea2ef2d954d}{}\label{classloader_8h_ac5295b1270fc743700784ea2ef2d954d}
+Metodo responsavel por prover o servico de exibicao de uma estrutura \char`\"{}.\+class\char`\"{}
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em arq\+\_\+class} & Estrutura inicializada do tipo Arq\+Class a ser exibida. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Resultado da operacao 
+\end{DoxyReturn}
+\index{classloader.\+h@{classloader.\+h}!L\+E\+C\+L\+A\+S\+S\+\_\+free@{L\+E\+C\+L\+A\+S\+S\+\_\+free}}
+\index{L\+E\+C\+L\+A\+S\+S\+\_\+free@{L\+E\+C\+L\+A\+S\+S\+\_\+free}!classloader.\+h@{classloader.\+h}}
+\subsubsection[{\texorpdfstring{L\+E\+C\+L\+A\+S\+S\+\_\+free(\+Arq\+Class $\ast$arq\+\_\+class)}{LECLASS_free(ArqClass *arq_class)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+TC} void L\+E\+C\+L\+A\+S\+S\+\_\+free (
+\begin{DoxyParamCaption}
+\item[{{\bf Arq\+Class} $\ast$}]{arq\+\_\+class}
+\end{DoxyParamCaption}
+)}\hypertarget{classloader_8h_ad6dfd778205a48b5e8b3d5b96da12e94}{}\label{classloader_8h_ad6dfd778205a48b5e8b3d5b96da12e94}
+Metodo responsavel por prover o servico de liberacao recursiva de uma estrutura \char`\"{}.\+class\char`\"{}
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em arq\+\_\+class} & Estrutura inicializada do tipo Arq\+Class a ser liberada. \\
+\hline
+\end{DoxyParams}
+\index{classloader.\+h@{classloader.\+h}!L\+E\+C\+L\+A\+S\+S\+\_\+leitor@{L\+E\+C\+L\+A\+S\+S\+\_\+leitor}}
+\index{L\+E\+C\+L\+A\+S\+S\+\_\+leitor@{L\+E\+C\+L\+A\+S\+S\+\_\+leitor}!classloader.\+h@{classloader.\+h}}
+\subsubsection[{\texorpdfstring{L\+E\+C\+L\+A\+S\+S\+\_\+leitor(\+Arq\+Class $\ast$arq\+\_\+class, const char $\ast$arquivo\+\_\+entrada)}{LECLASS_leitor(ArqClass *arq_class, const char *arquivo_entrada)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+TC} {\bf O\+Presult} L\+E\+C\+L\+A\+S\+S\+\_\+leitor (
+\begin{DoxyParamCaption}
+\item[{{\bf Arq\+Class} $\ast$}]{arq\+\_\+class, }
+\item[{const char $\ast$}]{arquivo\+\_\+entrada}
+\end{DoxyParamCaption}
+)}\hypertarget{classloader_8h_a0608ac63bdae65dafb44edce1c7ae57e}{}\label{classloader_8h_a0608ac63bdae65dafb44edce1c7ae57e}
+Metodo responsavel por prover o servico de leitura de um arquivo \char`\"{}.\+class\char`\"{}, preenchendo uma estrutura Arq\+Class.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em arq\+\_\+class} & Estrutura inicializada do tipo Arq\+Class a ser preenchida. \\
+\hline
+{\em arquivo\+\_\+entrada} & Arquivo \char`\"{}.\+class\char`\"{} a ser lido. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Resultado da operacao 
+\end{DoxyReturn}
+\index{classloader.\+h@{classloader.\+h}!load\+C\+Lass@{load\+C\+Lass}}
+\index{load\+C\+Lass@{load\+C\+Lass}!classloader.\+h@{classloader.\+h}}
+\subsubsection[{\texorpdfstring{load\+C\+Lass(const char $\ast$qualified\+Name, Environment $\ast$environment)}{loadCLass(const char *qualifiedName, Environment *environment)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+TC} {\bf Java\+Class}$\ast$ load\+C\+Lass (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{qualified\+Name, }
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\hypertarget{classloader_8h_a8940c8ee7e538c6335ee29402d61fe76}{}\label{classloader_8h_a8940c8ee7e538c6335ee29402d61fe76}
+Metodo que, dado um nome qualificado de classe, retorna uma estrutura \hyperlink{struct_java_class}{Java\+Class} preenchida
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em qualified\+Name} & Nome qualificado da classe a ser carregada \\
+\hline
+{\em environment} & Ambiente de execucao atual \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Estrutura \hyperlink{structarq_class}{arq\+Class} preenchida com os dados da classe carregada 
+\end{DoxyReturn}
+\index{classloader.\+h@{classloader.\+h}!obter\+\_\+entrada@{obter\+\_\+entrada}}
+\index{obter\+\_\+entrada@{obter\+\_\+entrada}!classloader.\+h@{classloader.\+h}}
+\subsubsection[{\texorpdfstring{obter\+\_\+entrada(const char $\ast$nome\+\_\+arquivo)}{obter_entrada(const char *nome_arquivo)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+TC} F\+I\+LE$\ast$ obter\+\_\+entrada (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{nome\+\_\+arquivo}
+\end{DoxyParamCaption}
+)}\hypertarget{classloader_8h_a0fa72c5a5e7d74c1debb665987684e27}{}\label{classloader_8h_a0fa72c5a5e7d74c1debb665987684e27}
+Metodo responsavel por abrir e retornar um arquivo em modo de leitura.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em nome\+\_\+arquivo} & Nome ou caminho do arquivo a ser aberto. \\
+\hline
+\end{DoxyParams}
+\index{classloader.\+h@{classloader.\+h}!parse\+Code@{parse\+Code}}
+\index{parse\+Code@{parse\+Code}!classloader.\+h@{classloader.\+h}}
+\subsubsection[{\texorpdfstring{parse\+Code(u1 $\ast$info)}{parseCode(u1 *info)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+TC} {\bf Code\+Attribute}$\ast$ parse\+Code (
+\begin{DoxyParamCaption}
+\item[{{\bf u1} $\ast$}]{info}
+\end{DoxyParamCaption}
+)}\hypertarget{classloader_8h_a36826a2b903b8ba26e0b2a911343c5dc}{}\label{classloader_8h_a36826a2b903b8ba26e0b2a911343c5dc}
+Metodo que, dado uma referencia para um vetor de informacoes de um atributo do tipo code, preenche e retorna uma estrutura \hyperlink{struct_code_attribute}{Code\+Attribute}.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em info} & Referencia para o atributo code \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Estrutura code\+Attribute preenchida 
+\end{DoxyReturn}
+\index{classloader.\+h@{classloader.\+h}!parse\+Constant\+Value@{parse\+Constant\+Value}}
+\index{parse\+Constant\+Value@{parse\+Constant\+Value}!classloader.\+h@{classloader.\+h}}
+\subsubsection[{\texorpdfstring{parse\+Constant\+Value(u1 $\ast$info)}{parseConstantValue(u1 *info)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+TC} {\bf Constant\+Value\+Attribute}$\ast$ parse\+Constant\+Value (
+\begin{DoxyParamCaption}
+\item[{{\bf u1} $\ast$}]{info}
+\end{DoxyParamCaption}
+)}\hypertarget{classloader_8h_a65e19f7aa722cdcdbad1cbb77ab77483}{}\label{classloader_8h_a65e19f7aa722cdcdbad1cbb77ab77483}
+Metodo que, dado uma referencia para um vetor de informacoes de um atributo do tipo constant value, preenche e retorna uma estrutura Constant\+Value\+Atribute.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em info} & Referencia para o atributo constant value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Estrutura \hyperlink{struct_constant_value_attribute}{Constant\+Value\+Attribute} preenchida 
+\end{DoxyReturn}
+\index{classloader.\+h@{classloader.\+h}!parse\+Exception@{parse\+Exception}}
+\index{parse\+Exception@{parse\+Exception}!classloader.\+h@{classloader.\+h}}
+\subsubsection[{\texorpdfstring{parse\+Exception(u1 $\ast$info)}{parseException(u1 *info)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+TC} {\bf Exception\+Attribute}$\ast$ parse\+Exception (
+\begin{DoxyParamCaption}
+\item[{{\bf u1} $\ast$}]{info}
+\end{DoxyParamCaption}
+)}\hypertarget{classloader_8h_a085184ac883207cbf9016d1815a95102}{}\label{classloader_8h_a085184ac883207cbf9016d1815a95102}
+Metodo que, dado uma referencia para um vetor de informacoes de um atributo do tipo exception, preenche e retorna uma estrutura \hyperlink{struct_exception_attribute}{Exception\+Attribute}.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em info} & Referencia para o atributo exception \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Estrutura \hyperlink{struct_exception_attribute}{Exception\+Attribute} preenchida 
+\end{DoxyReturn}
+\index{classloader.\+h@{classloader.\+h}!u1\+Le@{u1\+Le}}
+\index{u1\+Le@{u1\+Le}!classloader.\+h@{classloader.\+h}}
+\subsubsection[{\texorpdfstring{u1\+Le(\+F\+I\+L\+E $\ast$arquivo)}{u1Le(FILE *arquivo)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+TC} {\bf u1} u1\+Le (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{arquivo}
+\end{DoxyParamCaption}
+)}\hypertarget{classloader_8h_a8b76b7ea3540a167c597239d68852d41}{}\label{classloader_8h_a8b76b7ea3540a167c597239d68852d41}
+Le um tipo u1 (8bits) do arquivo.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em arquivo} & Arquivo no qual sera realizada a leitura. \\
+\hline
+\end{DoxyParams}
+\index{classloader.\+h@{classloader.\+h}!u2\+Le@{u2\+Le}}
+\index{u2\+Le@{u2\+Le}!classloader.\+h@{classloader.\+h}}
+\subsubsection[{\texorpdfstring{u2\+Le(\+F\+I\+L\+E $\ast$arquivo)}{u2Le(FILE *arquivo)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+TC} {\bf u2} u2\+Le (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{arquivo}
+\end{DoxyParamCaption}
+)}\hypertarget{classloader_8h_aa06ffbbf4a0c936a8458ab011753ddbc}{}\label{classloader_8h_aa06ffbbf4a0c936a8458ab011753ddbc}
+Le um tipo u2 (16bits) do arquivo.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em arquivo} & Arquivo no qual sera realizada a leitura. \\
+\hline
+\end{DoxyParams}
+\index{classloader.\+h@{classloader.\+h}!u4\+Le@{u4\+Le}}
+\index{u4\+Le@{u4\+Le}!classloader.\+h@{classloader.\+h}}
+\subsubsection[{\texorpdfstring{u4\+Le(\+F\+I\+L\+E $\ast$arquivo)}{u4Le(FILE *arquivo)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+TC} {\bf u4} u4\+Le (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{arquivo}
+\end{DoxyParamCaption}
+)}\hypertarget{classloader_8h_ad7091b40b58a4b3318fd5b9f8cd8c605}{}\label{classloader_8h_ad7091b40b58a4b3318fd5b9f8cd8c605}
+Le um tipo u4 (32bits) do arquivo.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em arquivo} & Arquivo no qual sera realizada a leitura. \\
+\hline
+\end{DoxyParams}

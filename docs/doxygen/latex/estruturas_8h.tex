@@ -1,0 +1,733 @@
+\hypertarget{estruturas_8h}{}\section{Referência do Arquivo include/estruturas.h}
+\label{estruturas_8h}\index{include/estruturas.\+h@{include/estruturas.\+h}}
+
+
+Estruturas da J\+VM.  
+
+
+{\ttfamily \#include $<$stdint.\+h$>$}\\*
+Gráfico de dependência de inclusões para estruturas.\+h\+:
+% FIG 0
+Este grafo mostra quais arquivos estão direta ou indiretamente relacionados com este arquivo\+:
+% FIG 1
+\subsection*{Estruturas de Dados}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structconst_pool}{const\+Pool}
+\begin{DoxyCompactList}\small\item\em Estrutura do Pool de Constantes. \end{DoxyCompactList}\item 
+struct \hyperlink{structattribute}{attribute}
+\begin{DoxyCompactList}\small\item\em Estrutura de Atributos. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_exception_table}{Exception\+Table}
+\begin{DoxyCompactList}\small\item\em Estrutura de uma tabela de excessoes. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_code_attribute}{Code\+Attribute}
+\begin{DoxyCompactList}\small\item\em Estrutura do Atributo code. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_constant_value_attribute}{Constant\+Value\+Attribute}
+\begin{DoxyCompactList}\small\item\em Estrutura do Atributo Constant Value. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_exception_attribute}{Exception\+Attribute}
+\begin{DoxyCompactList}\small\item\em Estrutura do Atributo Exception. \end{DoxyCompactList}\item 
+struct \hyperlink{structfield_and_method}{field\+And\+Method}
+\begin{DoxyCompactList}\small\item\em Estrutura de Campos e Metodos. \end{DoxyCompactList}\item 
+struct \hyperlink{structarq_class}{arq\+Class}
+\begin{DoxyCompactList}\small\item\em um metodo. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_fields_table}{Fields\+Table}
+\begin{DoxyCompactList}\small\item\em Estrutura da \hyperlink{struct_fields_table}{Fields\+Table}. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_fields}{Fields}
+\begin{DoxyCompactList}\small\item\em Estrutura da \hyperlink{struct_fields_table}{Fields\+Table}. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_handler}{Handler}
+\begin{DoxyCompactList}\small\item\em Estrutura da \hyperlink{struct_handler}{Handler}. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_object}{Object}
+\begin{DoxyCompactList}\small\item\em Estrutura do \hyperlink{struct_object}{Object}. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_object_list}{Object\+List}
+\begin{DoxyCompactList}\small\item\em Estrutura da \hyperlink{struct_object_list}{Object\+List}. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_java_class}{Java\+Class}
+\begin{DoxyCompactList}\small\item\em Estrutura da \hyperlink{struct_java_class}{Java\+Class}. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_class_table}{Class\+Table}
+\begin{DoxyCompactList}\small\item\em Estrutura da \hyperlink{struct_class_table}{Class\+Table}. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_method_area}{Method\+Area}
+\begin{DoxyCompactList}\small\item\em Estrutura da \hyperlink{struct_method_area}{Method\+Area}. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_stack}{Stack}
+\begin{DoxyCompactList}\small\item\em Estrutura da \hyperlink{struct_stack}{Stack}. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_operand_stack}{Operand\+Stack}
+\item 
+struct \hyperlink{struct_frame}{Frame}
+\begin{DoxyCompactList}\small\item\em Estrutura da \hyperlink{struct_frame}{Frame}. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_v_m_stack}{V\+M\+Stack}
+\item 
+struct \hyperlink{struct_thread}{Thread}
+\begin{DoxyCompactList}\small\item\em Estrutura da \hyperlink{struct_thread}{Thread}. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_environment}{Environment}
+\begin{DoxyCompactList}\small\item\em Estrutura do ambiente de execucao da J\+VM. \end{DoxyCompactList}\item 
+struct \hyperlink{structnpair}{npair}
+\begin{DoxyCompactList}\small\item\em Estrutura do auxiliar de comparação de pares para a Table\+Switch. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Definições e Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{estruturas_8h_a21842132ee76c8a0d12ca8e62a361062}{Linkage\+Success}~0
+\begin{DoxyCompactList}\small\item\em Sucesso na operacao. \end{DoxyCompactList}\item 
+\#define \hyperlink{estruturas_8h_adf8d1e9df57a99c0db1f29004a0aa4b1}{Linkage\+Error\+\_\+\+Class\+Format\+Error}~1
+\begin{DoxyCompactList}\small\item\em Arquivo corrompido. \end{DoxyCompactList}\item 
+\#define \hyperlink{estruturas_8h_a2c193d3567a29d04f3549afab80a390a}{Linkage\+Error\+\_\+\+Unsupported\+Class\+Version\+Error}~2
+\begin{DoxyCompactList}\small\item\em Arquivo possui versao nao suportada. \end{DoxyCompactList}\item 
+\#define \hyperlink{estruturas_8h_a84afc176e011aed99b5e4489dbc458a5}{Linkage\+Error\+\_\+\+Class\+Circulatity\+Error}~3
+\begin{DoxyCompactList}\small\item\em Classe seria a sua propria superclasse. \end{DoxyCompactList}\item 
+\#define \hyperlink{estruturas_8h_a7702c0fb4e152844097e16d7a7375462}{Linkage\+Error\+\_\+\+No\+Class\+Def\+Found\+Error}~4
+\begin{DoxyCompactList}\small\item\em Erro de abertura do arquivo. \end{DoxyCompactList}\item 
+\#define \hyperlink{estruturas_8h_aff29f3ef74126089997a778bb0cc098f}{Initializer\+Success}~10
+\begin{DoxyCompactList}\small\item\em Sucesso na operacao. \end{DoxyCompactList}\item 
+\#define \hyperlink{estruturas_8h_aae4024d9c0723e574019f7e255d15f07}{Initializer\+Error}~11
+\begin{DoxyCompactList}\small\item\em Sucesso na inicializacao da classe. \end{DoxyCompactList}\item 
+\#define \hyperlink{estruturas_8h_a78decb34a8bb27d808f38e1868067523}{L\+E\+C\+L\+A\+S\+S\+\_\+\+M\+I\+N\+\_\+\+Version}~0
+\begin{DoxyCompactList}\small\item\em Versao minima compativel. \end{DoxyCompactList}\item 
+\#define \hyperlink{estruturas_8h_abe281d98b3eeea824560a7ef86ad31d6}{L\+E\+C\+L\+A\+S\+S\+\_\+\+M\+A\+J\+\_\+\+Version}~48
+\begin{DoxyCompactList}\small\item\em Versao maxima compativel. \end{DoxyCompactList}\item 
+\#define \hyperlink{estruturas_8h_a72b5b534aa409975da610a36f648fa0a}{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Class}~7
+\item 
+\#define \hyperlink{estruturas_8h_a008d43478c2e2973e7413f5d1c48095d}{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Fieldref}~9
+\item 
+\#define \hyperlink{estruturas_8h_a2a179cf178ea867c6ab1700508c269dd}{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Methodref}~10
+\item 
+\#define \hyperlink{estruturas_8h_ac0e92044d246c6e4d691116f89a70ebb}{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Interface\+Methodref}~11
+\item 
+\#define \hyperlink{estruturas_8h_a0a7acbe175de56072a2f0a1a051418e1}{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+String}~8
+\item 
+\#define \hyperlink{estruturas_8h_a856a6553a55d721970ca5450eb1ccd2c}{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Integer}~3
+\item 
+\#define \hyperlink{estruturas_8h_ab914627ce5b25c4acfc98f2eacb78473}{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Float}~4
+\item 
+\#define \hyperlink{estruturas_8h_a426ca017b895fc522671a561d460be7a}{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Long}~5
+\item 
+\#define \hyperlink{estruturas_8h_ab49341c3b4ade4bfa1a64be8d2f73ae1}{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Double}~6
+\item 
+\#define \hyperlink{estruturas_8h_a5b6ba749976ae61415983ca0b890c91a}{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Name\+And\+Type}~12
+\item 
+\#define \hyperlink{estruturas_8h_afc46559a7d3f7baf519fc183c2fad2b4}{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Utf8}~1
+\item 
+\#define \hyperlink{estruturas_8h_a0fdbb084daf13068941396db9988bb8d}{A\+C\+C\+\_\+\+P\+U\+B\+L\+IC}~0x0001
+\begin{DoxyCompactList}\small\item\em Publica\+: pode ser acessada de fora do pacote. \end{DoxyCompactList}\item 
+\#define \hyperlink{estruturas_8h_ab4a89247b3598c31a5999c76bf168a6a}{A\+C\+C\+\_\+\+P\+R\+I\+V\+A\+TE}~0x0002
+\begin{DoxyCompactList}\small\item\em Privada\+: contexto restrito a definição da classe. \end{DoxyCompactList}\item 
+\#define \hyperlink{estruturas_8h_aab759ad3d0d4d4ed59b7f516f1a4e271}{A\+C\+C\+\_\+\+P\+R\+O\+T\+E\+C\+T\+ED}~0x0004
+\begin{DoxyCompactList}\small\item\em Protegida\+: pode ser usada na classe e nas subclasses. \end{DoxyCompactList}\item 
+\#define \hyperlink{estruturas_8h_a7980f70a1935dcd3a74bf0e24fd2bce7}{A\+C\+C\+\_\+\+S\+T\+A\+T\+IC}~0x0008
+\begin{DoxyCompactList}\small\item\em Estatica\+: variavel de classe e nao de instancia. \end{DoxyCompactList}\item 
+\#define \hyperlink{estruturas_8h_ad170615172fa272627b79f604e3471b9}{A\+C\+C\+\_\+\+F\+I\+N\+AL}~0x0010
+\begin{DoxyCompactList}\small\item\em Final\+: não pode ter subclasses. \end{DoxyCompactList}\item 
+\#define \hyperlink{estruturas_8h_a64ab0ee48e02f736237394d4580bad5a}{A\+C\+C\+\_\+\+S\+U\+P\+ER}~0x0020
+\begin{DoxyCompactList}\small\item\em invokespecial. \end{DoxyCompactList}\item 
+\#define \hyperlink{estruturas_8h_a6eb88a744819be2fd9b240ed56bbb421}{A\+C\+C\+\_\+\+S\+Y\+N\+C\+H\+R\+O\+N\+I\+Z\+ED}~0x0020
+\begin{DoxyCompactList}\small\item\em executado (\hyperlink{struct_thread}{Thread}). \end{DoxyCompactList}\item 
+\#define \hyperlink{estruturas_8h_afa6aaa9fa8e6b7c139a6f459ab3a42b1}{A\+C\+C\+\_\+\+V\+O\+L\+A\+T\+I\+LE}~0x0040
+\begin{DoxyCompactList}\small\item\em Nao pode ser colocada em cache. \end{DoxyCompactList}\item 
+\#define \hyperlink{estruturas_8h_a79b164828e45ca7eb81b895b8ee4960e}{A\+C\+C\+\_\+\+T\+R\+A\+N\+S\+I\+E\+NT}~0x0080
+\begin{DoxyCompactList}\small\item\em persistente. \end{DoxyCompactList}\item 
+\#define \hyperlink{estruturas_8h_a21cd44dc8506e7f393a8e90936a22613}{A\+C\+C\+\_\+\+N\+A\+T\+I\+VE}~0x0100
+\begin{DoxyCompactList}\small\item\em Implementado em linguagem nao Java (C, C++, Assembly). \end{DoxyCompactList}\item 
+\#define \hyperlink{estruturas_8h_aca0c3297ae6a71033cf324d99793189a}{A\+C\+C\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE}~0x0200
+\begin{DoxyCompactList}\small\item\em Eh interface, nao uma classe. \end{DoxyCompactList}\item 
+\#define \hyperlink{estruturas_8h_a638658b616d4e7c16078f606224dc9ba}{A\+C\+C\+\_\+\+A\+B\+S\+T\+R\+A\+CT}~0x0400
+\begin{DoxyCompactList}\small\item\em Declarada abstrata\+: nao pode ser instanciada. \end{DoxyCompactList}\item 
+\#define \hyperlink{estruturas_8h_a896d91d006ed72a57d9ce427f7699555}{A\+C\+C\+\_\+\+S\+T\+R\+I\+CT}~0x0800
+\begin{DoxyCompactList}\small\item\em utiliza modo de ponto flutuante F\+P-\/strict (nao normalizado). \end{DoxyCompactList}\item 
+\#define \hyperlink{estruturas_8h_ad30ea23fc21d595d9ac8e88ec3f156fd}{A\+T\+T\+\_\+\+Code}~L\char`\"{}Code\char`\"{}
+\item 
+\#define \hyperlink{estruturas_8h_a8f0a19953f3ccdd14497a060827d39e1}{A\+T\+T\+\_\+\+Constant\+Value}~L\char`\"{}Constant\+Value\char`\"{}
+\item 
+\#define \hyperlink{estruturas_8h_a996f9f84aa48010d2d92c7f65e5375e7}{A\+T\+T\+\_\+\+Exceptions}~L\char`\"{}Exeptions\char`\"{}
+\item 
+\#define \hyperlink{estruturas_8h_a70f89fe4e0367e1d2fb93d0a275c449e}{F\+L\+O\+A\+T\+\_\+\+Positive\+\_\+infity}~0x7f800000
+\begin{DoxyCompactList}\small\item\em Float infinito positivo. \end{DoxyCompactList}\item 
+\#define \hyperlink{estruturas_8h_a7280d0f656c133a8e672cd6651814820}{F\+L\+O\+A\+T\+\_\+\+Negative\+\_\+infity}~0xff800000
+\begin{DoxyCompactList}\small\item\em Float infinito negativo. \end{DoxyCompactList}\item 
+\#define \hyperlink{estruturas_8h_a6a6ecc0fe8f7f8e3eb84b358c079121b}{F\+L\+O\+A\+T\+\_\+\+M\+I\+N\+\_\+\+Na\+N1}~0x7f800001
+\begin{DoxyCompactList}\small\item\em Float valor minimo da primeira faixa de NaN. \end{DoxyCompactList}\item 
+\#define \hyperlink{estruturas_8h_af69cb76c45ad4d64c74642f68c72d9b5}{F\+L\+O\+A\+T\+\_\+\+M\+A\+X\+\_\+\+Na\+N1}~0x7fffffff
+\begin{DoxyCompactList}\small\item\em Float valor maximo da primeira faixa de NaN. \end{DoxyCompactList}\item 
+\#define \hyperlink{estruturas_8h_a82ddf66cfbc511ee205cc251911d814b}{F\+L\+O\+A\+T\+\_\+\+M\+I\+N\+\_\+\+Na\+N2}~0xff800001
+\begin{DoxyCompactList}\small\item\em Float valor minimo da segunda faixa de NaN. \end{DoxyCompactList}\item 
+\#define \hyperlink{estruturas_8h_a86f777d5c10e16be7fbcf8f7d86769b6}{F\+L\+O\+A\+T\+\_\+\+M\+A\+X\+\_\+\+Na\+N2}~0xffffffff
+\begin{DoxyCompactList}\small\item\em Float valor maximo da segunda faixa de NaN. \end{DoxyCompactList}\item 
+\#define \hyperlink{estruturas_8h_ab5bc910e1a8dfa7e2bfc3685acbb655b}{D\+O\+U\+B\+L\+E\+\_\+\+Positive\+\_\+infity}~0x7ff0000000000000
+\begin{DoxyCompactList}\small\item\em Double infinito positivo. \end{DoxyCompactList}\item 
+\#define \hyperlink{estruturas_8h_a437b56271f6e80eb3f2beb8e442f8d12}{D\+O\+U\+B\+L\+E\+\_\+\+Negative\+\_\+infity}~0xfff0000000000000
+\begin{DoxyCompactList}\small\item\em Double infinito negativo. \end{DoxyCompactList}\item 
+\#define \hyperlink{estruturas_8h_af20d602144fa8e75fbc475a9a3e84387}{D\+O\+U\+B\+L\+E\+\_\+\+M\+I\+N\+\_\+\+Na\+N1}~0x7ff0000000000001
+\begin{DoxyCompactList}\small\item\em Double valor minimo da primeira faixa de NaN. \end{DoxyCompactList}\item 
+\#define \hyperlink{estruturas_8h_aa7bf3d349f152b93b71fbfe317d64d6b}{D\+O\+U\+B\+L\+E\+\_\+\+M\+A\+X\+\_\+\+Na\+N1}~0x7fffffffffffffff
+\begin{DoxyCompactList}\small\item\em Double valor maximo da primeira faixa de NaN. \end{DoxyCompactList}\item 
+\#define \hyperlink{estruturas_8h_a27e21f5880b4253eb503ebb93aeffe4a}{D\+O\+U\+B\+L\+E\+\_\+\+M\+I\+N\+\_\+\+Na\+N2}~0xfff0000000000001
+\begin{DoxyCompactList}\small\item\em Double valor minimo da segunda faixa de NaN. \end{DoxyCompactList}\item 
+\#define \hyperlink{estruturas_8h_a99ba49afff5f9b4d6bc7f7937495b586}{D\+O\+U\+B\+L\+E\+\_\+\+M\+A\+X\+\_\+\+Na\+N2}~0xffffffffffffffff
+\begin{DoxyCompactList}\small\item\em Double valor maximo da segunda faixa de NaN. \end{DoxyCompactList}\item 
+\#define \hyperlink{estruturas_8h_ac829415013d8120cedee928452ae0f55}{S\+T\+R\+I\+N\+G\+\_\+\+L\+E\+N\+G\+TH}~100
+\end{DoxyCompactItemize}
+\subsection*{Definições de Tipos}
+\begin{DoxyCompactItemize}
+\item 
+typedef unsigned char \hyperlink{estruturas_8h_a216a9f8b04b4f0af84a4ca9d1d85a6ca}{u1}
+\begin{DoxyCompactList}\small\item\em Representa 1 byte. \end{DoxyCompactList}\item 
+typedef unsigned short \hyperlink{estruturas_8h_a5f223212eef04d10a4550ded680cb1cf}{u2}
+\begin{DoxyCompactList}\small\item\em Representa 2 bytes. \end{DoxyCompactList}\item 
+typedef unsigned int \hyperlink{estruturas_8h_aedf6ddc03df8caaaccbb4c60b9a9b850}{u4}
+\begin{DoxyCompactList}\small\item\em Representa 4 bytes. \end{DoxyCompactList}\item 
+typedef uint64\+\_\+t \hyperlink{estruturas_8h_ae4d1c3d548028e31400378ec81026110}{u8}
+\begin{DoxyCompactList}\small\item\em Representa 4 bytes. \end{DoxyCompactList}\item 
+typedef unsigned short \hyperlink{estruturas_8h_aa7ceae3fd72b26a559a601910a17e2c3}{O\+Presult}
+\begin{DoxyCompactList}\small\item\em Representa o resultado de uma operacao. \end{DoxyCompactList}\item 
+typedef char \hyperlink{estruturas_8h_a9ffedfebd21a940154d9fb5f22968d68}{String}\mbox{[}\hyperlink{estruturas_8h_ac829415013d8120cedee928452ae0f55}{S\+T\+R\+I\+N\+G\+\_\+\+L\+E\+N\+G\+TH}\mbox{]}
+\item 
+typedef struct \hyperlink{structconst_pool}{const\+Pool} \hyperlink{estruturas_8h_aafdf80b0992e652420382fcf19b9d074}{cp\+\_\+info}
+\begin{DoxyCompactList}\small\item\em Estrutura do Pool de Constantes. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{structattribute}{attribute} \hyperlink{estruturas_8h_a4c2796d61bb99bf730b1807fc838c847}{attribute\+\_\+info}
+\begin{DoxyCompactList}\small\item\em Estrutura de Atributos. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{struct_exception_table}{Exception\+Table} \hyperlink{estruturas_8h_aff0dd57a8aacb724c1e8a559745597c0}{Exception\+Table}
+\begin{DoxyCompactList}\small\item\em Estrutura de uma tabela de excessoes. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{struct_code_attribute}{Code\+Attribute} \hyperlink{estruturas_8h_a33a73fc4eb288c6fb10a53b37561e34d}{Code\+Attribute}
+\begin{DoxyCompactList}\small\item\em Estrutura do Atributo code. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{struct_constant_value_attribute}{Constant\+Value\+Attribute} \hyperlink{estruturas_8h_a3626457ac12ad1ac58b2299de62df56d}{Constant\+Value\+Attribute}
+\begin{DoxyCompactList}\small\item\em Estrutura do Atributo Constant Value. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{struct_exception_attribute}{Exception\+Attribute} \hyperlink{estruturas_8h_aa3fbed739ae03cf5d42622cb6962528f}{Exception\+Attribute}
+\begin{DoxyCompactList}\small\item\em Estrutura do Atributo Exception. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{structfield_and_method}{field\+And\+Method} \hyperlink{estruturas_8h_aea7ef0bb5a23a224f7241ece56f10ea7}{field\+\_\+or\+\_\+method}
+\begin{DoxyCompactList}\small\item\em Estrutura de Campos e Metodos. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{structfield_and_method}{field\+And\+Method} \hyperlink{estruturas_8h_a53c0da222997bf70321f1aebc84d8e02}{field\+\_\+info}
+\begin{DoxyCompactList}\small\item\em Estrutura utilizada para a representacao de um campo. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{structfield_and_method}{field\+And\+Method} \hyperlink{estruturas_8h_a02c1a928a94e9fab2c72044003c7bce6}{method\+\_\+info}
+\item 
+typedef struct \hyperlink{structarq_class}{arq\+Class} \hyperlink{estruturas_8h_a58bbd58859ab48cb1bd6c2ffb5874839}{Arq\+Class}
+\begin{DoxyCompactList}\small\item\em um metodo. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{struct_fields_table}{Fields\+Table} \hyperlink{estruturas_8h_a1df551d6e4bc33a094aa8806bc409343}{Fields\+Table}
+\begin{DoxyCompactList}\small\item\em Estrutura da \hyperlink{struct_fields_table}{Fields\+Table}. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{struct_fields}{Fields} \hyperlink{estruturas_8h_ab16816d1eca412d48c5e93b7e03a2bb5}{Fields}
+\begin{DoxyCompactList}\small\item\em Estrutura da \hyperlink{struct_fields_table}{Fields\+Table}. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{struct_handler}{Handler} \hyperlink{estruturas_8h_af8f70b42a01b72ae3da31c35525f9565}{Handler}
+\begin{DoxyCompactList}\small\item\em Estrutura da \hyperlink{struct_handler}{Handler}. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{struct_object}{Object} \hyperlink{estruturas_8h_a71c0c698be85fce6ae7d701b736c1a0a}{Object}
+\begin{DoxyCompactList}\small\item\em Estrutura do \hyperlink{struct_object}{Object}. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{struct_object_list}{Object\+List} \hyperlink{estruturas_8h_a51d7e9eb1bade5cd0dac13bb3e32a9e8}{Object\+List}
+\begin{DoxyCompactList}\small\item\em Estrutura da \hyperlink{struct_object_list}{Object\+List}. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{struct_java_class}{Java\+Class} \hyperlink{estruturas_8h_ac17e902332f273fa155c5f3591e192b5}{Java\+Class}
+\begin{DoxyCompactList}\small\item\em Estrutura da \hyperlink{struct_java_class}{Java\+Class}. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{struct_class_table}{Class\+Table} \hyperlink{estruturas_8h_a4e9ad1d439eef19128b86664460e0fa4}{Class\+Table}
+\begin{DoxyCompactList}\small\item\em Estrutura da \hyperlink{struct_class_table}{Class\+Table}. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{struct_method_area}{Method\+Area} \hyperlink{estruturas_8h_a3ab276e3480da80a219853822e0828af}{Method\+Area}
+\begin{DoxyCompactList}\small\item\em Estrutura da \hyperlink{struct_method_area}{Method\+Area}. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{struct_stack}{Stack} \hyperlink{estruturas_8h_acccdaeb94a63f3757825012007215c0d}{Stack}
+\begin{DoxyCompactList}\small\item\em Estrutura da \hyperlink{struct_stack}{Stack}. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{struct_operand_stack}{Operand\+Stack} \hyperlink{estruturas_8h_a346a5006b3ffde66941ce40c277fbf86}{Operand\+Stack}
+\item 
+typedef struct \hyperlink{struct_frame}{Frame} \hyperlink{estruturas_8h_a8bed1e36372ccc1470e37e91647cce20}{Frame}
+\begin{DoxyCompactList}\small\item\em Estrutura da \hyperlink{struct_frame}{Frame}. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{struct_v_m_stack}{V\+M\+Stack} \hyperlink{estruturas_8h_ae8c207048b4b683e0e66c25d01fa7d00}{V\+M\+Stack}
+\item 
+typedef struct \hyperlink{struct_thread}{Thread} \hyperlink{estruturas_8h_a4a082fe0af1bc973b7351f98727dc16e}{Thread}
+\begin{DoxyCompactList}\small\item\em Estrutura da \hyperlink{struct_thread}{Thread}. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{struct_environment}{Environment} \hyperlink{estruturas_8h_a2939780e6e449ccdc63802638f1ec09c}{Environment}
+\begin{DoxyCompactList}\small\item\em Estrutura do ambiente de execucao da J\+VM. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{structnpair}{npair} \hyperlink{estruturas_8h_a04ba3fc66efc7ead5fabd5e6b3a435d6}{npair}
+\begin{DoxyCompactList}\small\item\em Estrutura do auxiliar de comparação de pares para a Table\+Switch. \end{DoxyCompactList}\item 
+typedef void($\ast$ \hyperlink{estruturas_8h_a0000d84fd9007ff8ecae19f59d835517}{instruction}) (\hyperlink{struct_environment}{Environment} $\ast$)
+\begin{DoxyCompactList}\small\item\em Ponteiro para uma instrucao. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+Estruturas da J\+VM. 
+
+Arquivo com a definicao das estruturas, tipos e constantes associadas ao sistema. 
+
+\subsection{Definições e macros}
+\index{estruturas.\+h@{estruturas.\+h}!A\+C\+C\+\_\+\+A\+B\+S\+T\+R\+A\+CT@{A\+C\+C\+\_\+\+A\+B\+S\+T\+R\+A\+CT}}
+\index{A\+C\+C\+\_\+\+A\+B\+S\+T\+R\+A\+CT@{A\+C\+C\+\_\+\+A\+B\+S\+T\+R\+A\+CT}!estruturas.\+h@{estruturas.\+h}}
+\subsubsection[{\texorpdfstring{A\+C\+C\+\_\+\+A\+B\+S\+T\+R\+A\+CT}{ACC_ABSTRACT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+C\+C\+\_\+\+A\+B\+S\+T\+R\+A\+CT~0x0400}\hypertarget{estruturas_8h_a638658b616d4e7c16078f606224dc9ba}{}\label{estruturas_8h_a638658b616d4e7c16078f606224dc9ba}
+
+
+Declarada abstrata\+: nao pode ser instanciada. 
+
+\index{estruturas.\+h@{estruturas.\+h}!A\+C\+C\+\_\+\+F\+I\+N\+AL@{A\+C\+C\+\_\+\+F\+I\+N\+AL}}
+\index{A\+C\+C\+\_\+\+F\+I\+N\+AL@{A\+C\+C\+\_\+\+F\+I\+N\+AL}!estruturas.\+h@{estruturas.\+h}}
+\subsubsection[{\texorpdfstring{A\+C\+C\+\_\+\+F\+I\+N\+AL}{ACC_FINAL}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+C\+C\+\_\+\+F\+I\+N\+AL~0x0010}\hypertarget{estruturas_8h_ad170615172fa272627b79f604e3471b9}{}\label{estruturas_8h_ad170615172fa272627b79f604e3471b9}
+
+
+Final\+: não pode ter subclasses. 
+
+\index{estruturas.\+h@{estruturas.\+h}!A\+C\+C\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE@{A\+C\+C\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE}}
+\index{A\+C\+C\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE@{A\+C\+C\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE}!estruturas.\+h@{estruturas.\+h}}
+\subsubsection[{\texorpdfstring{A\+C\+C\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE}{ACC_INTERFACE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+C\+C\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE~0x0200}\hypertarget{estruturas_8h_aca0c3297ae6a71033cf324d99793189a}{}\label{estruturas_8h_aca0c3297ae6a71033cf324d99793189a}
+
+
+Eh interface, nao uma classe. 
+
+\index{estruturas.\+h@{estruturas.\+h}!A\+C\+C\+\_\+\+N\+A\+T\+I\+VE@{A\+C\+C\+\_\+\+N\+A\+T\+I\+VE}}
+\index{A\+C\+C\+\_\+\+N\+A\+T\+I\+VE@{A\+C\+C\+\_\+\+N\+A\+T\+I\+VE}!estruturas.\+h@{estruturas.\+h}}
+\subsubsection[{\texorpdfstring{A\+C\+C\+\_\+\+N\+A\+T\+I\+VE}{ACC_NATIVE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+C\+C\+\_\+\+N\+A\+T\+I\+VE~0x0100}\hypertarget{estruturas_8h_a21cd44dc8506e7f393a8e90936a22613}{}\label{estruturas_8h_a21cd44dc8506e7f393a8e90936a22613}
+
+
+Implementado em linguagem nao Java (C, C++, Assembly). 
+
+\index{estruturas.\+h@{estruturas.\+h}!A\+C\+C\+\_\+\+P\+R\+I\+V\+A\+TE@{A\+C\+C\+\_\+\+P\+R\+I\+V\+A\+TE}}
+\index{A\+C\+C\+\_\+\+P\+R\+I\+V\+A\+TE@{A\+C\+C\+\_\+\+P\+R\+I\+V\+A\+TE}!estruturas.\+h@{estruturas.\+h}}
+\subsubsection[{\texorpdfstring{A\+C\+C\+\_\+\+P\+R\+I\+V\+A\+TE}{ACC_PRIVATE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+C\+C\+\_\+\+P\+R\+I\+V\+A\+TE~0x0002}\hypertarget{estruturas_8h_ab4a89247b3598c31a5999c76bf168a6a}{}\label{estruturas_8h_ab4a89247b3598c31a5999c76bf168a6a}
+
+
+Privada\+: contexto restrito a definição da classe. 
+
+\index{estruturas.\+h@{estruturas.\+h}!A\+C\+C\+\_\+\+P\+R\+O\+T\+E\+C\+T\+ED@{A\+C\+C\+\_\+\+P\+R\+O\+T\+E\+C\+T\+ED}}
+\index{A\+C\+C\+\_\+\+P\+R\+O\+T\+E\+C\+T\+ED@{A\+C\+C\+\_\+\+P\+R\+O\+T\+E\+C\+T\+ED}!estruturas.\+h@{estruturas.\+h}}
+\subsubsection[{\texorpdfstring{A\+C\+C\+\_\+\+P\+R\+O\+T\+E\+C\+T\+ED}{ACC_PROTECTED}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+C\+C\+\_\+\+P\+R\+O\+T\+E\+C\+T\+ED~0x0004}\hypertarget{estruturas_8h_aab759ad3d0d4d4ed59b7f516f1a4e271}{}\label{estruturas_8h_aab759ad3d0d4d4ed59b7f516f1a4e271}
+
+
+Protegida\+: pode ser usada na classe e nas subclasses. 
+
+\index{estruturas.\+h@{estruturas.\+h}!A\+C\+C\+\_\+\+P\+U\+B\+L\+IC@{A\+C\+C\+\_\+\+P\+U\+B\+L\+IC}}
+\index{A\+C\+C\+\_\+\+P\+U\+B\+L\+IC@{A\+C\+C\+\_\+\+P\+U\+B\+L\+IC}!estruturas.\+h@{estruturas.\+h}}
+\subsubsection[{\texorpdfstring{A\+C\+C\+\_\+\+P\+U\+B\+L\+IC}{ACC_PUBLIC}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+C\+C\+\_\+\+P\+U\+B\+L\+IC~0x0001}\hypertarget{estruturas_8h_a0fdbb084daf13068941396db9988bb8d}{}\label{estruturas_8h_a0fdbb084daf13068941396db9988bb8d}
+
+
+Publica\+: pode ser acessada de fora do pacote. 
+
+\index{estruturas.\+h@{estruturas.\+h}!A\+C\+C\+\_\+\+S\+T\+A\+T\+IC@{A\+C\+C\+\_\+\+S\+T\+A\+T\+IC}}
+\index{A\+C\+C\+\_\+\+S\+T\+A\+T\+IC@{A\+C\+C\+\_\+\+S\+T\+A\+T\+IC}!estruturas.\+h@{estruturas.\+h}}
+\subsubsection[{\texorpdfstring{A\+C\+C\+\_\+\+S\+T\+A\+T\+IC}{ACC_STATIC}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+C\+C\+\_\+\+S\+T\+A\+T\+IC~0x0008}\hypertarget{estruturas_8h_a7980f70a1935dcd3a74bf0e24fd2bce7}{}\label{estruturas_8h_a7980f70a1935dcd3a74bf0e24fd2bce7}
+
+
+Estatica\+: variavel de classe e nao de instancia. 
+
+\index{estruturas.\+h@{estruturas.\+h}!A\+C\+C\+\_\+\+S\+T\+R\+I\+CT@{A\+C\+C\+\_\+\+S\+T\+R\+I\+CT}}
+\index{A\+C\+C\+\_\+\+S\+T\+R\+I\+CT@{A\+C\+C\+\_\+\+S\+T\+R\+I\+CT}!estruturas.\+h@{estruturas.\+h}}
+\subsubsection[{\texorpdfstring{A\+C\+C\+\_\+\+S\+T\+R\+I\+CT}{ACC_STRICT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+C\+C\+\_\+\+S\+T\+R\+I\+CT~0x0800}\hypertarget{estruturas_8h_a896d91d006ed72a57d9ce427f7699555}{}\label{estruturas_8h_a896d91d006ed72a57d9ce427f7699555}
+
+
+utiliza modo de ponto flutuante F\+P-\/strict (nao normalizado). 
+
+\index{estruturas.\+h@{estruturas.\+h}!A\+C\+C\+\_\+\+S\+U\+P\+ER@{A\+C\+C\+\_\+\+S\+U\+P\+ER}}
+\index{A\+C\+C\+\_\+\+S\+U\+P\+ER@{A\+C\+C\+\_\+\+S\+U\+P\+ER}!estruturas.\+h@{estruturas.\+h}}
+\subsubsection[{\texorpdfstring{A\+C\+C\+\_\+\+S\+U\+P\+ER}{ACC_SUPER}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+C\+C\+\_\+\+S\+U\+P\+ER~0x0020}\hypertarget{estruturas_8h_a64ab0ee48e02f736237394d4580bad5a}{}\label{estruturas_8h_a64ab0ee48e02f736237394d4580bad5a}
+
+
+invokespecial. 
+
+Chama metodos de superclasse via a instrucao \index{estruturas.\+h@{estruturas.\+h}!A\+C\+C\+\_\+\+S\+Y\+N\+C\+H\+R\+O\+N\+I\+Z\+ED@{A\+C\+C\+\_\+\+S\+Y\+N\+C\+H\+R\+O\+N\+I\+Z\+ED}}
+\index{A\+C\+C\+\_\+\+S\+Y\+N\+C\+H\+R\+O\+N\+I\+Z\+ED@{A\+C\+C\+\_\+\+S\+Y\+N\+C\+H\+R\+O\+N\+I\+Z\+ED}!estruturas.\+h@{estruturas.\+h}}
+\subsubsection[{\texorpdfstring{A\+C\+C\+\_\+\+S\+Y\+N\+C\+H\+R\+O\+N\+I\+Z\+ED}{ACC_SYNCHRONIZED}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+C\+C\+\_\+\+S\+Y\+N\+C\+H\+R\+O\+N\+I\+Z\+ED~0x0020}\hypertarget{estruturas_8h_a6eb88a744819be2fd9b240ed56bbb421}{}\label{estruturas_8h_a6eb88a744819be2fd9b240ed56bbb421}
+
+
+executado (\hyperlink{struct_thread}{Thread}). 
+
+Sincronizado\+: requer um monitor antes de ser \index{estruturas.\+h@{estruturas.\+h}!A\+C\+C\+\_\+\+T\+R\+A\+N\+S\+I\+E\+NT@{A\+C\+C\+\_\+\+T\+R\+A\+N\+S\+I\+E\+NT}}
+\index{A\+C\+C\+\_\+\+T\+R\+A\+N\+S\+I\+E\+NT@{A\+C\+C\+\_\+\+T\+R\+A\+N\+S\+I\+E\+NT}!estruturas.\+h@{estruturas.\+h}}
+\subsubsection[{\texorpdfstring{A\+C\+C\+\_\+\+T\+R\+A\+N\+S\+I\+E\+NT}{ACC_TRANSIENT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+C\+C\+\_\+\+T\+R\+A\+N\+S\+I\+E\+NT~0x0080}\hypertarget{estruturas_8h_a79b164828e45ca7eb81b895b8ee4960e}{}\label{estruturas_8h_a79b164828e45ca7eb81b895b8ee4960e}
+
+
+persistente. 
+
+não pode ser lida ou gravada por um gerente de objetos \index{estruturas.\+h@{estruturas.\+h}!A\+C\+C\+\_\+\+V\+O\+L\+A\+T\+I\+LE@{A\+C\+C\+\_\+\+V\+O\+L\+A\+T\+I\+LE}}
+\index{A\+C\+C\+\_\+\+V\+O\+L\+A\+T\+I\+LE@{A\+C\+C\+\_\+\+V\+O\+L\+A\+T\+I\+LE}!estruturas.\+h@{estruturas.\+h}}
+\subsubsection[{\texorpdfstring{A\+C\+C\+\_\+\+V\+O\+L\+A\+T\+I\+LE}{ACC_VOLATILE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+C\+C\+\_\+\+V\+O\+L\+A\+T\+I\+LE~0x0040}\hypertarget{estruturas_8h_afa6aaa9fa8e6b7c139a6f459ab3a42b1}{}\label{estruturas_8h_afa6aaa9fa8e6b7c139a6f459ab3a42b1}
+
+
+Nao pode ser colocada em cache. 
+
+\index{estruturas.\+h@{estruturas.\+h}!A\+T\+T\+\_\+\+Code@{A\+T\+T\+\_\+\+Code}}
+\index{A\+T\+T\+\_\+\+Code@{A\+T\+T\+\_\+\+Code}!estruturas.\+h@{estruturas.\+h}}
+\subsubsection[{\texorpdfstring{A\+T\+T\+\_\+\+Code}{ATT_Code}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+T\+T\+\_\+\+Code~L\char`\"{}Code\char`\"{}}\hypertarget{estruturas_8h_ad30ea23fc21d595d9ac8e88ec3f156fd}{}\label{estruturas_8h_ad30ea23fc21d595d9ac8e88ec3f156fd}
+\index{estruturas.\+h@{estruturas.\+h}!A\+T\+T\+\_\+\+Constant\+Value@{A\+T\+T\+\_\+\+Constant\+Value}}
+\index{A\+T\+T\+\_\+\+Constant\+Value@{A\+T\+T\+\_\+\+Constant\+Value}!estruturas.\+h@{estruturas.\+h}}
+\subsubsection[{\texorpdfstring{A\+T\+T\+\_\+\+Constant\+Value}{ATT_ConstantValue}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+T\+T\+\_\+\+Constant\+Value~L\char`\"{}Constant\+Value\char`\"{}}\hypertarget{estruturas_8h_a8f0a19953f3ccdd14497a060827d39e1}{}\label{estruturas_8h_a8f0a19953f3ccdd14497a060827d39e1}
+\index{estruturas.\+h@{estruturas.\+h}!A\+T\+T\+\_\+\+Exceptions@{A\+T\+T\+\_\+\+Exceptions}}
+\index{A\+T\+T\+\_\+\+Exceptions@{A\+T\+T\+\_\+\+Exceptions}!estruturas.\+h@{estruturas.\+h}}
+\subsubsection[{\texorpdfstring{A\+T\+T\+\_\+\+Exceptions}{ATT_Exceptions}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+T\+T\+\_\+\+Exceptions~L\char`\"{}Exeptions\char`\"{}}\hypertarget{estruturas_8h_a996f9f84aa48010d2d92c7f65e5375e7}{}\label{estruturas_8h_a996f9f84aa48010d2d92c7f65e5375e7}
+\index{estruturas.\+h@{estruturas.\+h}!C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Class@{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Class}}
+\index{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Class@{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Class}!estruturas.\+h@{estruturas.\+h}}
+\subsubsection[{\texorpdfstring{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Class}{CONSTANT_Class}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Class~7}\hypertarget{estruturas_8h_a72b5b534aa409975da610a36f648fa0a}{}\label{estruturas_8h_a72b5b534aa409975da610a36f648fa0a}
+\index{estruturas.\+h@{estruturas.\+h}!C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Double@{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Double}}
+\index{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Double@{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Double}!estruturas.\+h@{estruturas.\+h}}
+\subsubsection[{\texorpdfstring{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Double}{CONSTANT_Double}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Double~6}\hypertarget{estruturas_8h_ab49341c3b4ade4bfa1a64be8d2f73ae1}{}\label{estruturas_8h_ab49341c3b4ade4bfa1a64be8d2f73ae1}
+\index{estruturas.\+h@{estruturas.\+h}!C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Fieldref@{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Fieldref}}
+\index{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Fieldref@{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Fieldref}!estruturas.\+h@{estruturas.\+h}}
+\subsubsection[{\texorpdfstring{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Fieldref}{CONSTANT_Fieldref}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Fieldref~9}\hypertarget{estruturas_8h_a008d43478c2e2973e7413f5d1c48095d}{}\label{estruturas_8h_a008d43478c2e2973e7413f5d1c48095d}
+\index{estruturas.\+h@{estruturas.\+h}!C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Float@{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Float}}
+\index{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Float@{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Float}!estruturas.\+h@{estruturas.\+h}}
+\subsubsection[{\texorpdfstring{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Float}{CONSTANT_Float}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Float~4}\hypertarget{estruturas_8h_ab914627ce5b25c4acfc98f2eacb78473}{}\label{estruturas_8h_ab914627ce5b25c4acfc98f2eacb78473}
+\index{estruturas.\+h@{estruturas.\+h}!C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Integer@{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Integer}}
+\index{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Integer@{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Integer}!estruturas.\+h@{estruturas.\+h}}
+\subsubsection[{\texorpdfstring{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Integer}{CONSTANT_Integer}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Integer~3}\hypertarget{estruturas_8h_a856a6553a55d721970ca5450eb1ccd2c}{}\label{estruturas_8h_a856a6553a55d721970ca5450eb1ccd2c}
+\index{estruturas.\+h@{estruturas.\+h}!C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Interface\+Methodref@{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Interface\+Methodref}}
+\index{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Interface\+Methodref@{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Interface\+Methodref}!estruturas.\+h@{estruturas.\+h}}
+\subsubsection[{\texorpdfstring{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Interface\+Methodref}{CONSTANT_InterfaceMethodref}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Interface\+Methodref~11}\hypertarget{estruturas_8h_ac0e92044d246c6e4d691116f89a70ebb}{}\label{estruturas_8h_ac0e92044d246c6e4d691116f89a70ebb}
+\index{estruturas.\+h@{estruturas.\+h}!C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Long@{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Long}}
+\index{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Long@{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Long}!estruturas.\+h@{estruturas.\+h}}
+\subsubsection[{\texorpdfstring{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Long}{CONSTANT_Long}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Long~5}\hypertarget{estruturas_8h_a426ca017b895fc522671a561d460be7a}{}\label{estruturas_8h_a426ca017b895fc522671a561d460be7a}
+\index{estruturas.\+h@{estruturas.\+h}!C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Methodref@{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Methodref}}
+\index{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Methodref@{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Methodref}!estruturas.\+h@{estruturas.\+h}}
+\subsubsection[{\texorpdfstring{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Methodref}{CONSTANT_Methodref}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Methodref~10}\hypertarget{estruturas_8h_a2a179cf178ea867c6ab1700508c269dd}{}\label{estruturas_8h_a2a179cf178ea867c6ab1700508c269dd}
+\index{estruturas.\+h@{estruturas.\+h}!C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Name\+And\+Type@{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Name\+And\+Type}}
+\index{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Name\+And\+Type@{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Name\+And\+Type}!estruturas.\+h@{estruturas.\+h}}
+\subsubsection[{\texorpdfstring{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Name\+And\+Type}{CONSTANT_NameAndType}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Name\+And\+Type~12}\hypertarget{estruturas_8h_a5b6ba749976ae61415983ca0b890c91a}{}\label{estruturas_8h_a5b6ba749976ae61415983ca0b890c91a}
+\index{estruturas.\+h@{estruturas.\+h}!C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+String@{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+String}}
+\index{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+String@{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+String}!estruturas.\+h@{estruturas.\+h}}
+\subsubsection[{\texorpdfstring{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+String}{CONSTANT_String}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+String~8}\hypertarget{estruturas_8h_a0a7acbe175de56072a2f0a1a051418e1}{}\label{estruturas_8h_a0a7acbe175de56072a2f0a1a051418e1}
+\index{estruturas.\+h@{estruturas.\+h}!C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Utf8@{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Utf8}}
+\index{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Utf8@{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Utf8}!estruturas.\+h@{estruturas.\+h}}
+\subsubsection[{\texorpdfstring{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Utf8}{CONSTANT_Utf8}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+Utf8~1}\hypertarget{estruturas_8h_afc46559a7d3f7baf519fc183c2fad2b4}{}\label{estruturas_8h_afc46559a7d3f7baf519fc183c2fad2b4}
+\index{estruturas.\+h@{estruturas.\+h}!D\+O\+U\+B\+L\+E\+\_\+\+M\+A\+X\+\_\+\+Na\+N1@{D\+O\+U\+B\+L\+E\+\_\+\+M\+A\+X\+\_\+\+Na\+N1}}
+\index{D\+O\+U\+B\+L\+E\+\_\+\+M\+A\+X\+\_\+\+Na\+N1@{D\+O\+U\+B\+L\+E\+\_\+\+M\+A\+X\+\_\+\+Na\+N1}!estruturas.\+h@{estruturas.\+h}}
+\subsubsection[{\texorpdfstring{D\+O\+U\+B\+L\+E\+\_\+\+M\+A\+X\+\_\+\+Na\+N1}{DOUBLE_MAX_NaN1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+O\+U\+B\+L\+E\+\_\+\+M\+A\+X\+\_\+\+Na\+N1~0x7fffffffffffffff}\hypertarget{estruturas_8h_aa7bf3d349f152b93b71fbfe317d64d6b}{}\label{estruturas_8h_aa7bf3d349f152b93b71fbfe317d64d6b}
+
+
+Double valor maximo da primeira faixa de NaN. 
+
+\index{estruturas.\+h@{estruturas.\+h}!D\+O\+U\+B\+L\+E\+\_\+\+M\+A\+X\+\_\+\+Na\+N2@{D\+O\+U\+B\+L\+E\+\_\+\+M\+A\+X\+\_\+\+Na\+N2}}
+\index{D\+O\+U\+B\+L\+E\+\_\+\+M\+A\+X\+\_\+\+Na\+N2@{D\+O\+U\+B\+L\+E\+\_\+\+M\+A\+X\+\_\+\+Na\+N2}!estruturas.\+h@{estruturas.\+h}}
+\subsubsection[{\texorpdfstring{D\+O\+U\+B\+L\+E\+\_\+\+M\+A\+X\+\_\+\+Na\+N2}{DOUBLE_MAX_NaN2}}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+O\+U\+B\+L\+E\+\_\+\+M\+A\+X\+\_\+\+Na\+N2~0xffffffffffffffff}\hypertarget{estruturas_8h_a99ba49afff5f9b4d6bc7f7937495b586}{}\label{estruturas_8h_a99ba49afff5f9b4d6bc7f7937495b586}
+
+
+Double valor maximo da segunda faixa de NaN. 
+
+\index{estruturas.\+h@{estruturas.\+h}!D\+O\+U\+B\+L\+E\+\_\+\+M\+I\+N\+\_\+\+Na\+N1@{D\+O\+U\+B\+L\+E\+\_\+\+M\+I\+N\+\_\+\+Na\+N1}}
+\index{D\+O\+U\+B\+L\+E\+\_\+\+M\+I\+N\+\_\+\+Na\+N1@{D\+O\+U\+B\+L\+E\+\_\+\+M\+I\+N\+\_\+\+Na\+N1}!estruturas.\+h@{estruturas.\+h}}
+\subsubsection[{\texorpdfstring{D\+O\+U\+B\+L\+E\+\_\+\+M\+I\+N\+\_\+\+Na\+N1}{DOUBLE_MIN_NaN1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+O\+U\+B\+L\+E\+\_\+\+M\+I\+N\+\_\+\+Na\+N1~0x7ff0000000000001}\hypertarget{estruturas_8h_af20d602144fa8e75fbc475a9a3e84387}{}\label{estruturas_8h_af20d602144fa8e75fbc475a9a3e84387}
+
+
+Double valor minimo da primeira faixa de NaN. 
+
+\index{estruturas.\+h@{estruturas.\+h}!D\+O\+U\+B\+L\+E\+\_\+\+M\+I\+N\+\_\+\+Na\+N2@{D\+O\+U\+B\+L\+E\+\_\+\+M\+I\+N\+\_\+\+Na\+N2}}
+\index{D\+O\+U\+B\+L\+E\+\_\+\+M\+I\+N\+\_\+\+Na\+N2@{D\+O\+U\+B\+L\+E\+\_\+\+M\+I\+N\+\_\+\+Na\+N2}!estruturas.\+h@{estruturas.\+h}}
+\subsubsection[{\texorpdfstring{D\+O\+U\+B\+L\+E\+\_\+\+M\+I\+N\+\_\+\+Na\+N2}{DOUBLE_MIN_NaN2}}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+O\+U\+B\+L\+E\+\_\+\+M\+I\+N\+\_\+\+Na\+N2~0xfff0000000000001}\hypertarget{estruturas_8h_a27e21f5880b4253eb503ebb93aeffe4a}{}\label{estruturas_8h_a27e21f5880b4253eb503ebb93aeffe4a}
+
+
+Double valor minimo da segunda faixa de NaN. 
+
+\index{estruturas.\+h@{estruturas.\+h}!D\+O\+U\+B\+L\+E\+\_\+\+Negative\+\_\+infity@{D\+O\+U\+B\+L\+E\+\_\+\+Negative\+\_\+infity}}
+\index{D\+O\+U\+B\+L\+E\+\_\+\+Negative\+\_\+infity@{D\+O\+U\+B\+L\+E\+\_\+\+Negative\+\_\+infity}!estruturas.\+h@{estruturas.\+h}}
+\subsubsection[{\texorpdfstring{D\+O\+U\+B\+L\+E\+\_\+\+Negative\+\_\+infity}{DOUBLE_Negative_infity}}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+O\+U\+B\+L\+E\+\_\+\+Negative\+\_\+infity~0xfff0000000000000}\hypertarget{estruturas_8h_a437b56271f6e80eb3f2beb8e442f8d12}{}\label{estruturas_8h_a437b56271f6e80eb3f2beb8e442f8d12}
+
+
+Double infinito negativo. 
+
+\index{estruturas.\+h@{estruturas.\+h}!D\+O\+U\+B\+L\+E\+\_\+\+Positive\+\_\+infity@{D\+O\+U\+B\+L\+E\+\_\+\+Positive\+\_\+infity}}
+\index{D\+O\+U\+B\+L\+E\+\_\+\+Positive\+\_\+infity@{D\+O\+U\+B\+L\+E\+\_\+\+Positive\+\_\+infity}!estruturas.\+h@{estruturas.\+h}}
+\subsubsection[{\texorpdfstring{D\+O\+U\+B\+L\+E\+\_\+\+Positive\+\_\+infity}{DOUBLE_Positive_infity}}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+O\+U\+B\+L\+E\+\_\+\+Positive\+\_\+infity~0x7ff0000000000000}\hypertarget{estruturas_8h_ab5bc910e1a8dfa7e2bfc3685acbb655b}{}\label{estruturas_8h_ab5bc910e1a8dfa7e2bfc3685acbb655b}
+
+
+Double infinito positivo. 
+
+\index{estruturas.\+h@{estruturas.\+h}!F\+L\+O\+A\+T\+\_\+\+M\+A\+X\+\_\+\+Na\+N1@{F\+L\+O\+A\+T\+\_\+\+M\+A\+X\+\_\+\+Na\+N1}}
+\index{F\+L\+O\+A\+T\+\_\+\+M\+A\+X\+\_\+\+Na\+N1@{F\+L\+O\+A\+T\+\_\+\+M\+A\+X\+\_\+\+Na\+N1}!estruturas.\+h@{estruturas.\+h}}
+\subsubsection[{\texorpdfstring{F\+L\+O\+A\+T\+\_\+\+M\+A\+X\+\_\+\+Na\+N1}{FLOAT_MAX_NaN1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+L\+O\+A\+T\+\_\+\+M\+A\+X\+\_\+\+Na\+N1~0x7fffffff}\hypertarget{estruturas_8h_af69cb76c45ad4d64c74642f68c72d9b5}{}\label{estruturas_8h_af69cb76c45ad4d64c74642f68c72d9b5}
+
+
+Float valor maximo da primeira faixa de NaN. 
+
+\index{estruturas.\+h@{estruturas.\+h}!F\+L\+O\+A\+T\+\_\+\+M\+A\+X\+\_\+\+Na\+N2@{F\+L\+O\+A\+T\+\_\+\+M\+A\+X\+\_\+\+Na\+N2}}
+\index{F\+L\+O\+A\+T\+\_\+\+M\+A\+X\+\_\+\+Na\+N2@{F\+L\+O\+A\+T\+\_\+\+M\+A\+X\+\_\+\+Na\+N2}!estruturas.\+h@{estruturas.\+h}}
+\subsubsection[{\texorpdfstring{F\+L\+O\+A\+T\+\_\+\+M\+A\+X\+\_\+\+Na\+N2}{FLOAT_MAX_NaN2}}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+L\+O\+A\+T\+\_\+\+M\+A\+X\+\_\+\+Na\+N2~0xffffffff}\hypertarget{estruturas_8h_a86f777d5c10e16be7fbcf8f7d86769b6}{}\label{estruturas_8h_a86f777d5c10e16be7fbcf8f7d86769b6}
+
+
+Float valor maximo da segunda faixa de NaN. 
+
+\index{estruturas.\+h@{estruturas.\+h}!F\+L\+O\+A\+T\+\_\+\+M\+I\+N\+\_\+\+Na\+N1@{F\+L\+O\+A\+T\+\_\+\+M\+I\+N\+\_\+\+Na\+N1}}
+\index{F\+L\+O\+A\+T\+\_\+\+M\+I\+N\+\_\+\+Na\+N1@{F\+L\+O\+A\+T\+\_\+\+M\+I\+N\+\_\+\+Na\+N1}!estruturas.\+h@{estruturas.\+h}}
+\subsubsection[{\texorpdfstring{F\+L\+O\+A\+T\+\_\+\+M\+I\+N\+\_\+\+Na\+N1}{FLOAT_MIN_NaN1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+L\+O\+A\+T\+\_\+\+M\+I\+N\+\_\+\+Na\+N1~0x7f800001}\hypertarget{estruturas_8h_a6a6ecc0fe8f7f8e3eb84b358c079121b}{}\label{estruturas_8h_a6a6ecc0fe8f7f8e3eb84b358c079121b}
+
+
+Float valor minimo da primeira faixa de NaN. 
+
+\index{estruturas.\+h@{estruturas.\+h}!F\+L\+O\+A\+T\+\_\+\+M\+I\+N\+\_\+\+Na\+N2@{F\+L\+O\+A\+T\+\_\+\+M\+I\+N\+\_\+\+Na\+N2}}
+\index{F\+L\+O\+A\+T\+\_\+\+M\+I\+N\+\_\+\+Na\+N2@{F\+L\+O\+A\+T\+\_\+\+M\+I\+N\+\_\+\+Na\+N2}!estruturas.\+h@{estruturas.\+h}}
+\subsubsection[{\texorpdfstring{F\+L\+O\+A\+T\+\_\+\+M\+I\+N\+\_\+\+Na\+N2}{FLOAT_MIN_NaN2}}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+L\+O\+A\+T\+\_\+\+M\+I\+N\+\_\+\+Na\+N2~0xff800001}\hypertarget{estruturas_8h_a82ddf66cfbc511ee205cc251911d814b}{}\label{estruturas_8h_a82ddf66cfbc511ee205cc251911d814b}
+
+
+Float valor minimo da segunda faixa de NaN. 
+
+\index{estruturas.\+h@{estruturas.\+h}!F\+L\+O\+A\+T\+\_\+\+Negative\+\_\+infity@{F\+L\+O\+A\+T\+\_\+\+Negative\+\_\+infity}}
+\index{F\+L\+O\+A\+T\+\_\+\+Negative\+\_\+infity@{F\+L\+O\+A\+T\+\_\+\+Negative\+\_\+infity}!estruturas.\+h@{estruturas.\+h}}
+\subsubsection[{\texorpdfstring{F\+L\+O\+A\+T\+\_\+\+Negative\+\_\+infity}{FLOAT_Negative_infity}}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+L\+O\+A\+T\+\_\+\+Negative\+\_\+infity~0xff800000}\hypertarget{estruturas_8h_a7280d0f656c133a8e672cd6651814820}{}\label{estruturas_8h_a7280d0f656c133a8e672cd6651814820}
+
+
+Float infinito negativo. 
+
+\index{estruturas.\+h@{estruturas.\+h}!F\+L\+O\+A\+T\+\_\+\+Positive\+\_\+infity@{F\+L\+O\+A\+T\+\_\+\+Positive\+\_\+infity}}
+\index{F\+L\+O\+A\+T\+\_\+\+Positive\+\_\+infity@{F\+L\+O\+A\+T\+\_\+\+Positive\+\_\+infity}!estruturas.\+h@{estruturas.\+h}}
+\subsubsection[{\texorpdfstring{F\+L\+O\+A\+T\+\_\+\+Positive\+\_\+infity}{FLOAT_Positive_infity}}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+L\+O\+A\+T\+\_\+\+Positive\+\_\+infity~0x7f800000}\hypertarget{estruturas_8h_a70f89fe4e0367e1d2fb93d0a275c449e}{}\label{estruturas_8h_a70f89fe4e0367e1d2fb93d0a275c449e}
+
+
+Float infinito positivo. 
+
+\index{estruturas.\+h@{estruturas.\+h}!Initializer\+Error@{Initializer\+Error}}
+\index{Initializer\+Error@{Initializer\+Error}!estruturas.\+h@{estruturas.\+h}}
+\subsubsection[{\texorpdfstring{Initializer\+Error}{InitializerError}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Initializer\+Error~11}\hypertarget{estruturas_8h_aae4024d9c0723e574019f7e255d15f07}{}\label{estruturas_8h_aae4024d9c0723e574019f7e255d15f07}
+
+
+Sucesso na inicializacao da classe. 
+
+\index{estruturas.\+h@{estruturas.\+h}!Initializer\+Success@{Initializer\+Success}}
+\index{Initializer\+Success@{Initializer\+Success}!estruturas.\+h@{estruturas.\+h}}
+\subsubsection[{\texorpdfstring{Initializer\+Success}{InitializerSuccess}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Initializer\+Success~10}\hypertarget{estruturas_8h_aff29f3ef74126089997a778bb0cc098f}{}\label{estruturas_8h_aff29f3ef74126089997a778bb0cc098f}
+
+
+Sucesso na operacao. 
+
+\index{estruturas.\+h@{estruturas.\+h}!L\+E\+C\+L\+A\+S\+S\+\_\+\+M\+A\+J\+\_\+\+Version@{L\+E\+C\+L\+A\+S\+S\+\_\+\+M\+A\+J\+\_\+\+Version}}
+\index{L\+E\+C\+L\+A\+S\+S\+\_\+\+M\+A\+J\+\_\+\+Version@{L\+E\+C\+L\+A\+S\+S\+\_\+\+M\+A\+J\+\_\+\+Version}!estruturas.\+h@{estruturas.\+h}}
+\subsubsection[{\texorpdfstring{L\+E\+C\+L\+A\+S\+S\+\_\+\+M\+A\+J\+\_\+\+Version}{LECLASS_MAJ_Version}}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+E\+C\+L\+A\+S\+S\+\_\+\+M\+A\+J\+\_\+\+Version~48}\hypertarget{estruturas_8h_abe281d98b3eeea824560a7ef86ad31d6}{}\label{estruturas_8h_abe281d98b3eeea824560a7ef86ad31d6}
+
+
+Versao maxima compativel. 
+
+\index{estruturas.\+h@{estruturas.\+h}!L\+E\+C\+L\+A\+S\+S\+\_\+\+M\+I\+N\+\_\+\+Version@{L\+E\+C\+L\+A\+S\+S\+\_\+\+M\+I\+N\+\_\+\+Version}}
+\index{L\+E\+C\+L\+A\+S\+S\+\_\+\+M\+I\+N\+\_\+\+Version@{L\+E\+C\+L\+A\+S\+S\+\_\+\+M\+I\+N\+\_\+\+Version}!estruturas.\+h@{estruturas.\+h}}
+\subsubsection[{\texorpdfstring{L\+E\+C\+L\+A\+S\+S\+\_\+\+M\+I\+N\+\_\+\+Version}{LECLASS_MIN_Version}}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+E\+C\+L\+A\+S\+S\+\_\+\+M\+I\+N\+\_\+\+Version~0}\hypertarget{estruturas_8h_a78decb34a8bb27d808f38e1868067523}{}\label{estruturas_8h_a78decb34a8bb27d808f38e1868067523}
+
+
+Versao minima compativel. 
+
+\index{estruturas.\+h@{estruturas.\+h}!Linkage\+Error\+\_\+\+Class\+Circulatity\+Error@{Linkage\+Error\+\_\+\+Class\+Circulatity\+Error}}
+\index{Linkage\+Error\+\_\+\+Class\+Circulatity\+Error@{Linkage\+Error\+\_\+\+Class\+Circulatity\+Error}!estruturas.\+h@{estruturas.\+h}}
+\subsubsection[{\texorpdfstring{Linkage\+Error\+\_\+\+Class\+Circulatity\+Error}{LinkageError_ClassCirculatityError}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Linkage\+Error\+\_\+\+Class\+Circulatity\+Error~3}\hypertarget{estruturas_8h_a84afc176e011aed99b5e4489dbc458a5}{}\label{estruturas_8h_a84afc176e011aed99b5e4489dbc458a5}
+
+
+Classe seria a sua propria superclasse. 
+
+\index{estruturas.\+h@{estruturas.\+h}!Linkage\+Error\+\_\+\+Class\+Format\+Error@{Linkage\+Error\+\_\+\+Class\+Format\+Error}}
+\index{Linkage\+Error\+\_\+\+Class\+Format\+Error@{Linkage\+Error\+\_\+\+Class\+Format\+Error}!estruturas.\+h@{estruturas.\+h}}
+\subsubsection[{\texorpdfstring{Linkage\+Error\+\_\+\+Class\+Format\+Error}{LinkageError_ClassFormatError}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Linkage\+Error\+\_\+\+Class\+Format\+Error~1}\hypertarget{estruturas_8h_adf8d1e9df57a99c0db1f29004a0aa4b1}{}\label{estruturas_8h_adf8d1e9df57a99c0db1f29004a0aa4b1}
+
+
+Arquivo corrompido. 
+
+\index{estruturas.\+h@{estruturas.\+h}!Linkage\+Error\+\_\+\+No\+Class\+Def\+Found\+Error@{Linkage\+Error\+\_\+\+No\+Class\+Def\+Found\+Error}}
+\index{Linkage\+Error\+\_\+\+No\+Class\+Def\+Found\+Error@{Linkage\+Error\+\_\+\+No\+Class\+Def\+Found\+Error}!estruturas.\+h@{estruturas.\+h}}
+\subsubsection[{\texorpdfstring{Linkage\+Error\+\_\+\+No\+Class\+Def\+Found\+Error}{LinkageError_NoClassDefFoundError}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Linkage\+Error\+\_\+\+No\+Class\+Def\+Found\+Error~4}\hypertarget{estruturas_8h_a7702c0fb4e152844097e16d7a7375462}{}\label{estruturas_8h_a7702c0fb4e152844097e16d7a7375462}
+
+
+Erro de abertura do arquivo. 
+
+\index{estruturas.\+h@{estruturas.\+h}!Linkage\+Error\+\_\+\+Unsupported\+Class\+Version\+Error@{Linkage\+Error\+\_\+\+Unsupported\+Class\+Version\+Error}}
+\index{Linkage\+Error\+\_\+\+Unsupported\+Class\+Version\+Error@{Linkage\+Error\+\_\+\+Unsupported\+Class\+Version\+Error}!estruturas.\+h@{estruturas.\+h}}
+\subsubsection[{\texorpdfstring{Linkage\+Error\+\_\+\+Unsupported\+Class\+Version\+Error}{LinkageError_UnsupportedClassVersionError}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Linkage\+Error\+\_\+\+Unsupported\+Class\+Version\+Error~2}\hypertarget{estruturas_8h_a2c193d3567a29d04f3549afab80a390a}{}\label{estruturas_8h_a2c193d3567a29d04f3549afab80a390a}
+
+
+Arquivo possui versao nao suportada. 
+
+\index{estruturas.\+h@{estruturas.\+h}!Linkage\+Success@{Linkage\+Success}}
+\index{Linkage\+Success@{Linkage\+Success}!estruturas.\+h@{estruturas.\+h}}
+\subsubsection[{\texorpdfstring{Linkage\+Success}{LinkageSuccess}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Linkage\+Success~0}\hypertarget{estruturas_8h_a21842132ee76c8a0d12ca8e62a361062}{}\label{estruturas_8h_a21842132ee76c8a0d12ca8e62a361062}
+
+
+Sucesso na operacao. 
+
+\index{estruturas.\+h@{estruturas.\+h}!S\+T\+R\+I\+N\+G\+\_\+\+L\+E\+N\+G\+TH@{S\+T\+R\+I\+N\+G\+\_\+\+L\+E\+N\+G\+TH}}
+\index{S\+T\+R\+I\+N\+G\+\_\+\+L\+E\+N\+G\+TH@{S\+T\+R\+I\+N\+G\+\_\+\+L\+E\+N\+G\+TH}!estruturas.\+h@{estruturas.\+h}}
+\subsubsection[{\texorpdfstring{S\+T\+R\+I\+N\+G\+\_\+\+L\+E\+N\+G\+TH}{STRING_LENGTH}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+T\+R\+I\+N\+G\+\_\+\+L\+E\+N\+G\+TH~100}\hypertarget{estruturas_8h_ac829415013d8120cedee928452ae0f55}{}\label{estruturas_8h_ac829415013d8120cedee928452ae0f55}
+
+
+\subsection{Definições dos tipos}
+\index{estruturas.\+h@{estruturas.\+h}!Arq\+Class@{Arq\+Class}}
+\index{Arq\+Class@{Arq\+Class}!estruturas.\+h@{estruturas.\+h}}
+\subsubsection[{\texorpdfstring{Arq\+Class}{ArqClass}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf arq\+Class}  {\bf Arq\+Class}}\hypertarget{estruturas_8h_a58bbd58859ab48cb1bd6c2ffb5874839}{}\label{estruturas_8h_a58bbd58859ab48cb1bd6c2ffb5874839}
+
+
+um metodo. 
+
+Estrutura de Arquivo .class
+
+Estrutura utilizada para a representacao de um arquivo \char`\"{}.\+class\char`\"{}. \index{estruturas.\+h@{estruturas.\+h}!attribute\+\_\+info@{attribute\+\_\+info}}
+\index{attribute\+\_\+info@{attribute\+\_\+info}!estruturas.\+h@{estruturas.\+h}}
+\subsubsection[{\texorpdfstring{attribute\+\_\+info}{attribute_info}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf attribute}  {\bf attribute\+\_\+info}}\hypertarget{estruturas_8h_a4c2796d61bb99bf730b1807fc838c847}{}\label{estruturas_8h_a4c2796d61bb99bf730b1807fc838c847}
+
+
+Estrutura de Atributos. 
+
+Estrutura utilizada para a representacao de um atributo de um arquivo \char`\"{}.\+class\char`\"{}. \index{estruturas.\+h@{estruturas.\+h}!Class\+Table@{Class\+Table}}
+\index{Class\+Table@{Class\+Table}!estruturas.\+h@{estruturas.\+h}}
+\subsubsection[{\texorpdfstring{Class\+Table}{ClassTable}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf Class\+Table} {\bf Class\+Table}}\hypertarget{estruturas_8h_a4e9ad1d439eef19128b86664460e0fa4}{}\label{estruturas_8h_a4e9ad1d439eef19128b86664460e0fa4}
+
+
+Estrutura da \hyperlink{struct_class_table}{Class\+Table}. 
+
+\hyperlink{struct_class_table}{Class\+Table} mesmo sem a criacao do \hyperlink{struct_java_class}{Java\+Class} \index{estruturas.\+h@{estruturas.\+h}!Code\+Attribute@{Code\+Attribute}}
+\index{Code\+Attribute@{Code\+Attribute}!estruturas.\+h@{estruturas.\+h}}
+\subsubsection[{\texorpdfstring{Code\+Attribute}{CodeAttribute}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf Code\+Attribute}  {\bf Code\+Attribute}}\hypertarget{estruturas_8h_a33a73fc4eb288c6fb10a53b37561e34d}{}\label{estruturas_8h_a33a73fc4eb288c6fb10a53b37561e34d}
+
+
+Estrutura do Atributo code. 
+
+Estrutura utilizada para a representacao de um atributo do tipo code \index{estruturas.\+h@{estruturas.\+h}!Constant\+Value\+Attribute@{Constant\+Value\+Attribute}}
+\index{Constant\+Value\+Attribute@{Constant\+Value\+Attribute}!estruturas.\+h@{estruturas.\+h}}
+\subsubsection[{\texorpdfstring{Constant\+Value\+Attribute}{ConstantValueAttribute}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf Constant\+Value\+Attribute}  {\bf Constant\+Value\+Attribute}}\hypertarget{estruturas_8h_a3626457ac12ad1ac58b2299de62df56d}{}\label{estruturas_8h_a3626457ac12ad1ac58b2299de62df56d}
+
+
+Estrutura do Atributo Constant Value. 
+
+Estrutura utilizada para a representacao de um atributo do tipo constant value \index{estruturas.\+h@{estruturas.\+h}!cp\+\_\+info@{cp\+\_\+info}}
+\index{cp\+\_\+info@{cp\+\_\+info}!estruturas.\+h@{estruturas.\+h}}
+\subsubsection[{\texorpdfstring{cp\+\_\+info}{cp_info}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf const\+Pool}  {\bf cp\+\_\+info}}\hypertarget{estruturas_8h_aafdf80b0992e652420382fcf19b9d074}{}\label{estruturas_8h_aafdf80b0992e652420382fcf19b9d074}
+
+
+Estrutura do Pool de Constantes. 
+
+Estrutura utilizada para a representacao de um pool de constantes. \index{estruturas.\+h@{estruturas.\+h}!Environment@{Environment}}
+\index{Environment@{Environment}!estruturas.\+h@{estruturas.\+h}}
+\subsubsection[{\texorpdfstring{Environment}{Environment}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf Environment} {\bf Environment}}\hypertarget{estruturas_8h_a2939780e6e449ccdc63802638f1ec09c}{}\label{estruturas_8h_a2939780e6e449ccdc63802638f1ec09c}
+
+
+Estrutura do ambiente de execucao da J\+VM. 
+
+Estrura que apresenta um ambiente de execucao, a qual contem uma thread e uma area de metodos \index{estruturas.\+h@{estruturas.\+h}!Exception\+Attribute@{Exception\+Attribute}}
+\index{Exception\+Attribute@{Exception\+Attribute}!estruturas.\+h@{estruturas.\+h}}
+\subsubsection[{\texorpdfstring{Exception\+Attribute}{ExceptionAttribute}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf Exception\+Attribute}  {\bf Exception\+Attribute}}\hypertarget{estruturas_8h_aa3fbed739ae03cf5d42622cb6962528f}{}\label{estruturas_8h_aa3fbed739ae03cf5d42622cb6962528f}
+
+
+Estrutura do Atributo Exception. 
+
+Estrutura utilizada para a representacao de um atributo do tipo exception \index{estruturas.\+h@{estruturas.\+h}!Exception\+Table@{Exception\+Table}}
+\index{Exception\+Table@{Exception\+Table}!estruturas.\+h@{estruturas.\+h}}
+\subsubsection[{\texorpdfstring{Exception\+Table}{ExceptionTable}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf Exception\+Table}	 {\bf Exception\+Table}}\hypertarget{estruturas_8h_aff0dd57a8aacb724c1e8a559745597c0}{}\label{estruturas_8h_aff0dd57a8aacb724c1e8a559745597c0}
+
+
+Estrutura de uma tabela de excessoes. 
+
+Estrutura utilizada para a representacao de uma tabela de excessoes de um atributo do tipo code \index{estruturas.\+h@{estruturas.\+h}!field\+\_\+info@{field\+\_\+info}}
+\index{field\+\_\+info@{field\+\_\+info}!estruturas.\+h@{estruturas.\+h}}
+\subsubsection[{\texorpdfstring{field\+\_\+info}{field_info}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf field\+And\+Method} {\bf field\+\_\+info}}\hypertarget{estruturas_8h_a53c0da222997bf70321f1aebc84d8e02}{}\label{estruturas_8h_a53c0da222997bf70321f1aebc84d8e02}
+
+
+Estrutura utilizada para a representacao de um campo. 
+
+\index{estruturas.\+h@{estruturas.\+h}!field\+\_\+or\+\_\+method@{field\+\_\+or\+\_\+method}}
+\index{field\+\_\+or\+\_\+method@{field\+\_\+or\+\_\+method}!estruturas.\+h@{estruturas.\+h}}
+\subsubsection[{\texorpdfstring{field\+\_\+or\+\_\+method}{field_or_method}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf field\+And\+Method}  {\bf field\+\_\+or\+\_\+method}}\hypertarget{estruturas_8h_aea7ef0bb5a23a224f7241ece56f10ea7}{}\label{estruturas_8h_aea7ef0bb5a23a224f7241ece56f10ea7}
+
+
+Estrutura de Campos e Metodos. 
+
+Estrutura utilizada para a representacao de um campo ou metodo. \index{estruturas.\+h@{estruturas.\+h}!Fields@{Fields}}
+\index{Fields@{Fields}!estruturas.\+h@{estruturas.\+h}}
+\subsubsection[{\texorpdfstring{Fields}{Fields}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf Fields}  {\bf Fields}}\hypertarget{estruturas_8h_ab16816d1eca412d48c5e93b7e03a2bb5}{}\label{estruturas_8h_ab16816d1eca412d48c5e93b7e03a2bb5}
+
+
+Estrutura da \hyperlink{struct_fields_table}{Fields\+Table}. 
+
+\index{estruturas.\+h@{estruturas.\+h}!Fields\+Table@{Fields\+Table}}
+\index{Fields\+Table@{Fields\+Table}!estruturas.\+h@{estruturas.\+h}}
+\subsubsection[{\texorpdfstring{Fields\+Table}{FieldsTable}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf Fields\+Table}  {\bf Fields\+Table}}\hypertarget{estruturas_8h_a1df551d6e4bc33a094aa8806bc409343}{}\label{estruturas_8h_a1df551d6e4bc33a094aa8806bc409343}
+
+
+Estrutura da \hyperlink{struct_fields_table}{Fields\+Table}. 
+
+\index{estruturas.\+h@{estruturas.\+h}!Frame@{Frame}}
+\index{Frame@{Frame}!estruturas.\+h@{estruturas.\+h}}
+\subsubsection[{\texorpdfstring{Frame}{Frame}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf Frame} {\bf Frame}}\hypertarget{estruturas_8h_a8bed1e36372ccc1470e37e91647cce20}{}\label{estruturas_8h_a8bed1e36372ccc1470e37e91647cce20}
+
+
+Estrutura da \hyperlink{struct_frame}{Frame}. 
+
+Construcao da estrutura de \hyperlink{struct_frame}{Frame} \index{estruturas.\+h@{estruturas.\+h}!Handler@{Handler}}
+\index{Handler@{Handler}!estruturas.\+h@{estruturas.\+h}}
+\subsubsection[{\texorpdfstring{Handler}{Handler}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf Handler}  {\bf Handler}}\hypertarget{estruturas_8h_af8f70b42a01b72ae3da31c35525f9565}{}\label{estruturas_8h_af8f70b42a01b72ae3da31c35525f9565}
+
+
+Estrutura da \hyperlink{struct_handler}{Handler}. 
+
+\index{estruturas.\+h@{estruturas.\+h}!instruction@{instruction}}
+\index{instruction@{instruction}!estruturas.\+h@{estruturas.\+h}}
+\subsubsection[{\texorpdfstring{instruction}{instruction}}]{\setlength{\rightskip}{0pt plus 5cm}typedef void($\ast$ instruction) ({\bf Environment} $\ast$)}\hypertarget{estruturas_8h_a0000d84fd9007ff8ecae19f59d835517}{}\label{estruturas_8h_a0000d84fd9007ff8ecae19f59d835517}
+
+
+Ponteiro para uma instrucao. 
+
+Tipo que define um ponteiro para uma instrucao. Todas as instrucoes devem receber uma referencia para a o ambiente de execucao. \index{estruturas.\+h@{estruturas.\+h}!Java\+Class@{Java\+Class}}
+\index{Java\+Class@{Java\+Class}!estruturas.\+h@{estruturas.\+h}}
+\subsubsection[{\texorpdfstring{Java\+Class}{JavaClass}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf Java\+Class} {\bf Java\+Class}}\hypertarget{estruturas_8h_ac17e902332f273fa155c5f3591e192b5}{}\label{estruturas_8h_ac17e902332f273fa155c5f3591e192b5}
+
+
+Estrutura da \hyperlink{struct_java_class}{Java\+Class}. 
+
+A Static\+Fields\+Table do \hyperlink{struct_java_class}{Java\+Class} foi generalizada como uma \hyperlink{struct_fields_table}{Fields\+Table} normal \index{estruturas.\+h@{estruturas.\+h}!method\+\_\+info@{method\+\_\+info}}
+\index{method\+\_\+info@{method\+\_\+info}!estruturas.\+h@{estruturas.\+h}}
+\subsubsection[{\texorpdfstring{method\+\_\+info}{method_info}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf field\+And\+Method} {\bf method\+\_\+info}}\hypertarget{estruturas_8h_a02c1a928a94e9fab2c72044003c7bce6}{}\label{estruturas_8h_a02c1a928a94e9fab2c72044003c7bce6}
+Estrutura utilizada para a representacao de \index{estruturas.\+h@{estruturas.\+h}!Method\+Area@{Method\+Area}}
+\index{Method\+Area@{Method\+Area}!estruturas.\+h@{estruturas.\+h}}
+\subsubsection[{\texorpdfstring{Method\+Area}{MethodArea}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf Method\+Area}  {\bf Method\+Area}}\hypertarget{estruturas_8h_a3ab276e3480da80a219853822e0828af}{}\label{estruturas_8h_a3ab276e3480da80a219853822e0828af}
+
+
+Estrutura da \hyperlink{struct_method_area}{Method\+Area}. 
+
+\index{estruturas.\+h@{estruturas.\+h}!npair@{npair}}
+\index{npair@{npair}!estruturas.\+h@{estruturas.\+h}}
+\subsubsection[{\texorpdfstring{npair}{npair}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf npair} {\bf npair}}\hypertarget{estruturas_8h_a04ba3fc66efc7ead5fabd5e6b3a435d6}{}\label{estruturas_8h_a04ba3fc66efc7ead5fabd5e6b3a435d6}
+
+
+Estrutura do auxiliar de comparação de pares para a Table\+Switch. 
+
+Estrura que apresenta um indicador de igualdade e o offset \index{estruturas.\+h@{estruturas.\+h}!Object@{Object}}
+\index{Object@{Object}!estruturas.\+h@{estruturas.\+h}}
+\subsubsection[{\texorpdfstring{Object}{Object}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf Object}  {\bf Object}}\hypertarget{estruturas_8h_a71c0c698be85fce6ae7d701b736c1a0a}{}\label{estruturas_8h_a71c0c698be85fce6ae7d701b736c1a0a}
+
+
+Estrutura do \hyperlink{struct_object}{Object}. 
+
+\index{estruturas.\+h@{estruturas.\+h}!Object\+List@{Object\+List}}
+\index{Object\+List@{Object\+List}!estruturas.\+h@{estruturas.\+h}}
+\subsubsection[{\texorpdfstring{Object\+List}{ObjectList}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf Object\+List}  {\bf Object\+List}}\hypertarget{estruturas_8h_a51d7e9eb1bade5cd0dac13bb3e32a9e8}{}\label{estruturas_8h_a51d7e9eb1bade5cd0dac13bb3e32a9e8}
+
+
+Estrutura da \hyperlink{struct_object_list}{Object\+List}. 
+
+\index{estruturas.\+h@{estruturas.\+h}!Operand\+Stack@{Operand\+Stack}}
+\index{Operand\+Stack@{Operand\+Stack}!estruturas.\+h@{estruturas.\+h}}
+\subsubsection[{\texorpdfstring{Operand\+Stack}{OperandStack}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf Operand\+Stack} {\bf Operand\+Stack}}\hypertarget{estruturas_8h_a346a5006b3ffde66941ce40c277fbf86}{}\label{estruturas_8h_a346a5006b3ffde66941ce40c277fbf86}
+\index{estruturas.\+h@{estruturas.\+h}!O\+Presult@{O\+Presult}}
+\index{O\+Presult@{O\+Presult}!estruturas.\+h@{estruturas.\+h}}
+\subsubsection[{\texorpdfstring{O\+Presult}{OPresult}}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned short {\bf O\+Presult}}\hypertarget{estruturas_8h_aa7ceae3fd72b26a559a601910a17e2c3}{}\label{estruturas_8h_aa7ceae3fd72b26a559a601910a17e2c3}
+
+
+Representa o resultado de uma operacao. 
+
+\index{estruturas.\+h@{estruturas.\+h}!Stack@{Stack}}
+\index{Stack@{Stack}!estruturas.\+h@{estruturas.\+h}}
+\subsubsection[{\texorpdfstring{Stack}{Stack}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf Stack} {\bf Stack}}\hypertarget{estruturas_8h_acccdaeb94a63f3757825012007215c0d}{}\label{estruturas_8h_acccdaeb94a63f3757825012007215c0d}
+
+
+Estrutura da \hyperlink{struct_stack}{Stack}. 
+
+Abstracao da pilha para que ficasse mais simples a estrutura das outra Caso seja uma abstracao desnecessaria basta modificar as outras pilhas Criando os vetores com seus respectivos tipos \index{estruturas.\+h@{estruturas.\+h}!String@{String}}
+\index{String@{String}!estruturas.\+h@{estruturas.\+h}}
+\subsubsection[{\texorpdfstring{String}{String}}]{\setlength{\rightskip}{0pt plus 5cm}typedef char String\mbox{[}{\bf S\+T\+R\+I\+N\+G\+\_\+\+L\+E\+N\+G\+TH}\mbox{]}}\hypertarget{estruturas_8h_a9ffedfebd21a940154d9fb5f22968d68}{}\label{estruturas_8h_a9ffedfebd21a940154d9fb5f22968d68}
+\index{estruturas.\+h@{estruturas.\+h}!Thread@{Thread}}
+\index{Thread@{Thread}!estruturas.\+h@{estruturas.\+h}}
+\subsubsection[{\texorpdfstring{Thread}{Thread}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf Thread} {\bf Thread}}\hypertarget{estruturas_8h_a4a082fe0af1bc973b7351f98727dc16e}{}\label{estruturas_8h_a4a082fe0af1bc973b7351f98727dc16e}
+
+
+Estrutura da \hyperlink{struct_thread}{Thread}. 
+
+Construcao da estrutura de \hyperlink{struct_thread}{Thread} \index{estruturas.\+h@{estruturas.\+h}!u1@{u1}}
+\index{u1@{u1}!estruturas.\+h@{estruturas.\+h}}
+\subsubsection[{\texorpdfstring{u1}{u1}}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned char {\bf u1}}\hypertarget{estruturas_8h_a216a9f8b04b4f0af84a4ca9d1d85a6ca}{}\label{estruturas_8h_a216a9f8b04b4f0af84a4ca9d1d85a6ca}
+
+
+Representa 1 byte. 
+
+\index{estruturas.\+h@{estruturas.\+h}!u2@{u2}}
+\index{u2@{u2}!estruturas.\+h@{estruturas.\+h}}
+\subsubsection[{\texorpdfstring{u2}{u2}}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned short {\bf u2}}\hypertarget{estruturas_8h_a5f223212eef04d10a4550ded680cb1cf}{}\label{estruturas_8h_a5f223212eef04d10a4550ded680cb1cf}
+
+
+Representa 2 bytes. 
+
+\index{estruturas.\+h@{estruturas.\+h}!u4@{u4}}
+\index{u4@{u4}!estruturas.\+h@{estruturas.\+h}}
+\subsubsection[{\texorpdfstring{u4}{u4}}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned int {\bf u4}}\hypertarget{estruturas_8h_aedf6ddc03df8caaaccbb4c60b9a9b850}{}\label{estruturas_8h_aedf6ddc03df8caaaccbb4c60b9a9b850}
+
+
+Representa 4 bytes. 
+
+\index{estruturas.\+h@{estruturas.\+h}!u8@{u8}}
+\index{u8@{u8}!estruturas.\+h@{estruturas.\+h}}
+\subsubsection[{\texorpdfstring{u8}{u8}}]{\setlength{\rightskip}{0pt plus 5cm}typedef uint64\+\_\+t {\bf u8}}\hypertarget{estruturas_8h_ae4d1c3d548028e31400378ec81026110}{}\label{estruturas_8h_ae4d1c3d548028e31400378ec81026110}
+
+
+Representa 4 bytes. 
+
+\index{estruturas.\+h@{estruturas.\+h}!V\+M\+Stack@{V\+M\+Stack}}
+\index{V\+M\+Stack@{V\+M\+Stack}!estruturas.\+h@{estruturas.\+h}}
+\subsubsection[{\texorpdfstring{V\+M\+Stack}{VMStack}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf V\+M\+Stack} {\bf V\+M\+Stack}}\hypertarget{estruturas_8h_ae8c207048b4b683e0e66c25d01fa7d00}{}\label{estruturas_8h_ae8c207048b4b683e0e66c25d01fa7d00}

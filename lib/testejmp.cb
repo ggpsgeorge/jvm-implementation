@@ -1,0 +1,90 @@
+Compiled from "TestJmp.java"
+public class TestJmp {
+  public TestJmp();
+    Code:
+       0: aload_0
+       1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+       4: return
+
+  public static void main(java.lang.String[]);
+    Code:
+       0: iconst_0
+       1: istore_1
+       2: iload_1
+       3: bipush        10
+       5: if_icmpge     21
+       8: getstatic     #2                  // Field java/lang/System.out:Ljava/io/PrintStream;
+      11: iload_1
+      12: invokevirtual #3                  // Method java/io/PrintStream.println:(I)V
+      15: iinc          1, 1
+      18: goto          2
+      21: getstatic     #2                  // Field java/lang/System.out:Ljava/io/PrintStream;
+      24: ldc           #4                  // String Goto funcionando
+      26: invokevirtual #5                  // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+      29: iconst_1
+      30: invokestatic  #6                  // Method testeJsr:(Z)I
+      33: istore_1
+      34: iconst_1
+      35: istore_1
+      36: getstatic     #2                  // Field java/lang/System.out:Ljava/io/PrintStream;
+      39: ldc           #7                  // String Começando testo T-S
+      41: invokevirtual #5                  // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+      44: iload_1
+      45: tableswitch   { // 1 to 3
+                     1: 72
+                     2: 83
+                     3: 94
+               default: 105
+          }
+      72: getstatic     #2                  // Field java/lang/System.out:Ljava/io/PrintStream;
+      75: ldc           #8                  // String 1
+      77: invokevirtual #5                  // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+      80: goto          113
+      83: getstatic     #2                  // Field java/lang/System.out:Ljava/io/PrintStream;
+      86: ldc           #9                  // String 2
+      88: invokevirtual #5                  // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+      91: goto          113
+      94: getstatic     #2                  // Field java/lang/System.out:Ljava/io/PrintStream;
+      97: ldc           #10                 // String 3
+      99: invokevirtual #5                  // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+     102: goto          113
+     105: getstatic     #2                  // Field java/lang/System.out:Ljava/io/PrintStream;
+     108: ldc           #11                 // String default
+     110: invokevirtual #5                  // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+     113: return
+
+  static int testeJsr(boolean);
+    Code:
+       0: iload_0
+       1: ifeq          24
+       4: getstatic     #2                  // Field java/lang/System.out:Ljava/io/PrintStream;
+       7: ldc           #8                  // String 1
+       9: invokevirtual #5                  // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+      12: iconst_1
+      13: istore_1
+      14: getstatic     #2                  // Field java/lang/System.out:Ljava/io/PrintStream;
+      17: ldc           #12                 // String finally
+      19: invokevirtual #5                  // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+      22: iload_1
+      23: ireturn
+      24: getstatic     #2                  // Field java/lang/System.out:Ljava/io/PrintStream;
+      27: ldc           #13                 // String 0
+      29: invokevirtual #5                  // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+      32: iconst_0
+      33: istore_1
+      34: getstatic     #2                  // Field java/lang/System.out:Ljava/io/PrintStream;
+      37: ldc           #12                 // String finally
+      39: invokevirtual #5                  // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+      42: iload_1
+      43: ireturn
+      44: astore_2
+      45: getstatic     #2                  // Field java/lang/System.out:Ljava/io/PrintStream;
+      48: ldc           #12                 // String finally
+      50: invokevirtual #5                  // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+      53: aload_2
+      54: athrow
+    Exception table:
+       from    to  target type
+           0    14    44   any
+          24    34    44   any
+}

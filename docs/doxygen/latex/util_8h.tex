@@ -1,0 +1,323 @@
+\hypertarget{util_8h}{}\section{Referência do Arquivo include/util.h}
+\label{util_8h}\index{include/util.\+h@{include/util.\+h}}
+
+
+Interface com funcoes de utilidade para a J\+VM operar.  
+
+
+{\ttfamily \#include \char`\"{}estruturas.\+h\char`\"{}}\\*
+Gráfico de dependência de inclusões para util.\+h\+:
+% FIG 0
+Este grafo mostra quais arquivos estão direta ou indiretamente relacionados com este arquivo\+:
+% FIG 1
+\subsection*{Definições e Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{util_8h_a9bd5285c877f639cb85cd6a0c7837dbb}{E\+X\+TU}~extern
+\end{DoxyCompactItemize}
+\subsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{util_8h_a9bd5285c877f639cb85cd6a0c7837dbb}{E\+X\+TU} int \hyperlink{util_8h_ad282d7ee41ca35483d9e91387b794894}{java\+Lib\+Is\+From} (const char $\ast$name)
+\item 
+\hyperlink{util_8h_a9bd5285c877f639cb85cd6a0c7837dbb}{E\+X\+TU} void \hyperlink{util_8h_a5a8aa9220dfe2c012bec1c87571afb20}{java\+Lib\+Execute\+Method} (const char $\ast$class\+Name, const char $\ast$method\+Name, const char $\ast$descriptor\+Name, \hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+\hyperlink{util_8h_a9bd5285c877f639cb85cd6a0c7837dbb}{E\+X\+TU} void \hyperlink{util_8h_ac68231116a80d38cdd259b171e10840a}{java\+Lib\+Get\+Static} (const char $\ast$class\+Name, const char $\ast$field\+Name, const char $\ast$field\+Descriptor, \hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+\hyperlink{util_8h_a9bd5285c877f639cb85cd6a0c7837dbb}{E\+X\+TU} void \hyperlink{util_8h_a2a82f86e51c7d1c6fa2ab0da7c6f4028}{java\+Lib\+New\+Object} (const char $\ast$class\+Name, \hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+\hyperlink{util_8h_a9bd5285c877f639cb85cd6a0c7837dbb}{E\+X\+TU} double \hyperlink{util_8h_a676850f7a3aad98bc3617f5f3d726239}{u4\+To\+Double} (\hyperlink{estruturas_8h_aedf6ddc03df8caaaccbb4c60b9a9b850}{u4} high\+\_\+bytes, \hyperlink{estruturas_8h_aedf6ddc03df8caaaccbb4c60b9a9b850}{u4} low\+\_\+bytes)
+\item 
+\hyperlink{util_8h_a9bd5285c877f639cb85cd6a0c7837dbb}{E\+X\+TU} float \hyperlink{util_8h_a81aacb37842676b84d7a4adfd47a664f}{u4\+To\+F\+Loat} (\hyperlink{estruturas_8h_aedf6ddc03df8caaaccbb4c60b9a9b850}{u4} bytes)
+\item 
+\hyperlink{util_8h_a9bd5285c877f639cb85cd6a0c7837dbb}{E\+X\+TU} \hyperlink{estruturas_8h_a5f223212eef04d10a4550ded680cb1cf}{u2} \hyperlink{util_8h_a86cbc05780e172477dfd3cb5b92c3dfd}{concat2\+Bytes} (\hyperlink{estruturas_8h_a216a9f8b04b4f0af84a4ca9d1d85a6ca}{u1} high\+\_\+bytes, \hyperlink{estruturas_8h_a216a9f8b04b4f0af84a4ca9d1d85a6ca}{u1} low\+\_\+bytes)
+\item 
+\hyperlink{util_8h_a9bd5285c877f639cb85cd6a0c7837dbb}{E\+X\+TU} void \hyperlink{util_8h_aa9fb4377a894081b3df240aebf9432d6}{java\+I\+O\+Execute\+Method} (const char $\ast$class\+Name, const char $\ast$method\+Name, const char $\ast$descriptor\+Name, \hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+\hyperlink{util_8h_a9bd5285c877f639cb85cd6a0c7837dbb}{E\+X\+TU} void \hyperlink{util_8h_aede35414a5e427e1daeb4a360dbe1aa9}{java\+I\+O\+Get\+Static} (const char $\ast$class\+Name, const char $\ast$field\+Name, const char $\ast$field\+Descriptor, \hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+\hyperlink{util_8h_a9bd5285c877f639cb85cd6a0c7837dbb}{E\+X\+TU} void \hyperlink{util_8h_adfa5d1857c541a678b4a44c6962ed131}{java\+I\+O\+New\+Object} (const char $\ast$class\+Name, \hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+\hyperlink{util_8h_a9bd5285c877f639cb85cd6a0c7837dbb}{E\+X\+TU} void \hyperlink{util_8h_aa01eb03dd0a24c6b187ea94d320bb532}{java\+Lang\+Execute\+Method} (const char $\ast$class\+Name, const char $\ast$method\+Name, const char $\ast$descriptor\+Name, \hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+\hyperlink{util_8h_a9bd5285c877f639cb85cd6a0c7837dbb}{E\+X\+TU} void \hyperlink{util_8h_a2aa6b468648208b948ec164158f8eae1}{java\+Lang\+Get\+Static} (const char $\ast$class\+Name, const char $\ast$field\+Name, const char $\ast$field\+Descriptor, \hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+\hyperlink{util_8h_a9bd5285c877f639cb85cd6a0c7837dbb}{E\+X\+TU} void \hyperlink{util_8h_a136bd66a689e37ebee492a66c78656a2}{java\+Lang\+New\+Object} (const char $\ast$class\+Name, \hyperlink{struct_environment}{Environment} $\ast$environment)
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+Interface com funcoes de utilidade para a J\+VM operar. 
+
+Interface responsavel por implementar os servicos uteis para a J\+VM, com submodulos responsaveis por\+:
+\begin{DoxyItemize}
+\item Decoder\+: Decodificacao de metodos, campos e estuturas que simulam o acesso a bibliotecas Java.
+\item Conversion\+: Servicos relacionados a conversao de tipos.
+\item java.\+io\+: Servicos que simulam os metodos e atributos da biblioteca java.\+io
+\item java.\+lang\+: Servicos que simulam os metodos e atributos da biblioteca java.\+lang 
+\end{DoxyItemize}
+
+\subsection{Definições e macros}
+\index{util.\+h@{util.\+h}!E\+X\+TU@{E\+X\+TU}}
+\index{E\+X\+TU@{E\+X\+TU}!util.\+h@{util.\+h}}
+\subsubsection[{\texorpdfstring{E\+X\+TU}{EXTU}}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+X\+TU~extern}\hypertarget{util_8h_a9bd5285c877f639cb85cd6a0c7837dbb}{}\label{util_8h_a9bd5285c877f639cb85cd6a0c7837dbb}
+
+
+\subsection{Funções}
+\index{util.\+h@{util.\+h}!concat2\+Bytes@{concat2\+Bytes}}
+\index{concat2\+Bytes@{concat2\+Bytes}!util.\+h@{util.\+h}}
+\subsubsection[{\texorpdfstring{concat2\+Bytes(u1 high\+\_\+bytes, u1 low\+\_\+bytes)}{concat2Bytes(u1 high_bytes, u1 low_bytes)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+TU} {\bf u2} concat2\+Bytes (
+\begin{DoxyParamCaption}
+\item[{{\bf u1}}]{high\+\_\+bytes, }
+\item[{{\bf u1}}]{low\+\_\+bytes}
+\end{DoxyParamCaption}
+)}\hypertarget{util_8h_a86cbc05780e172477dfd3cb5b92c3dfd}{}\label{util_8h_a86cbc05780e172477dfd3cb5b92c3dfd}
+Metodo que concatena 2bytes em um u2
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em high\+\_\+bytes} & Bytes mais siginificativos. \\
+\hline
+{\em low\+\_\+bytes} & Bytes menos siginificativos. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+high\+\_\+bytes $<$$<$ 8 $\vert$ low\+\_\+bytes 
+\end{DoxyReturn}
+\index{util.\+h@{util.\+h}!java\+I\+O\+Execute\+Method@{java\+I\+O\+Execute\+Method}}
+\index{java\+I\+O\+Execute\+Method@{java\+I\+O\+Execute\+Method}!util.\+h@{util.\+h}}
+\subsubsection[{\texorpdfstring{java\+I\+O\+Execute\+Method(const char $\ast$class\+Name, const char $\ast$method\+Name, const char $\ast$descriptor\+Name, Environment $\ast$environment)}{javaIOExecuteMethod(const char *className, const char *methodName, const char *descriptorName, Environment *environment)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+TU} void java\+I\+O\+Execute\+Method (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{class\+Name, }
+\item[{const char $\ast$}]{method\+Name, }
+\item[{const char $\ast$}]{descriptor\+Name, }
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\hypertarget{util_8h_aa9fb4377a894081b3df240aebf9432d6}{}\label{util_8h_aa9fb4377a894081b3df240aebf9432d6}
+Metodo que decodifica e simula a execucao de um metodo da biblioteca java.\+io
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em class\+Name} & Nome da classe do metodo \\
+\hline
+{\em method\+Name} & Nome do metodo a ser executado. \\
+\hline
+{\em descriptor} & Descritor do metodo a ser executado. \\
+\hline
+{\em environment} & Ambiente de execucao atual. \\
+\hline
+\end{DoxyParams}
+\index{util.\+h@{util.\+h}!java\+I\+O\+Get\+Static@{java\+I\+O\+Get\+Static}}
+\index{java\+I\+O\+Get\+Static@{java\+I\+O\+Get\+Static}!util.\+h@{util.\+h}}
+\subsubsection[{\texorpdfstring{java\+I\+O\+Get\+Static(const char $\ast$class\+Name, const char $\ast$field\+Name, const char $\ast$field\+Descriptor, Environment $\ast$environment)}{javaIOGetStatic(const char *className, const char *fieldName, const char *fieldDescriptor, Environment *environment)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+TU} void java\+I\+O\+Get\+Static (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{class\+Name, }
+\item[{const char $\ast$}]{field\+Name, }
+\item[{const char $\ast$}]{field\+Descriptor, }
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\hypertarget{util_8h_aede35414a5e427e1daeb4a360dbe1aa9}{}\label{util_8h_aede35414a5e427e1daeb4a360dbe1aa9}
+Metodo que obtem o valor de um campo estatico da biblioteca java.\+io e empilha na pilha de operandos.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em class\+Name} & Nome da classe do campo \\
+\hline
+{\em field\+Name} & Nome do campo a ser obtido. \\
+\hline
+{\em field\+Descriptor} & Descritor do campo a ser obtido. \\
+\hline
+{\em environment} & Ambiente de execucao atual. \\
+\hline
+\end{DoxyParams}
+\index{util.\+h@{util.\+h}!java\+I\+O\+New\+Object@{java\+I\+O\+New\+Object}}
+\index{java\+I\+O\+New\+Object@{java\+I\+O\+New\+Object}!util.\+h@{util.\+h}}
+\subsubsection[{\texorpdfstring{java\+I\+O\+New\+Object(const char $\ast$class\+Name, Environment $\ast$environment)}{javaIONewObject(const char *className, Environment *environment)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+TU} void java\+I\+O\+New\+Object (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{class\+Name, }
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\hypertarget{util_8h_adfa5d1857c541a678b4a44c6962ed131}{}\label{util_8h_adfa5d1857c541a678b4a44c6962ed131}
+Metodo que cria um objeto da biblioteca java.\+io e empilha uma referencia na pilha de operandos.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em class\+Name} & Nome da classe do objeto a ser criado. \\
+\hline
+{\em environment} & Ambiente de execucao atual. \\
+\hline
+\end{DoxyParams}
+\index{util.\+h@{util.\+h}!java\+Lang\+Execute\+Method@{java\+Lang\+Execute\+Method}}
+\index{java\+Lang\+Execute\+Method@{java\+Lang\+Execute\+Method}!util.\+h@{util.\+h}}
+\subsubsection[{\texorpdfstring{java\+Lang\+Execute\+Method(const char $\ast$class\+Name, const char $\ast$method\+Name, const char $\ast$descriptor\+Name, Environment $\ast$environment)}{javaLangExecuteMethod(const char *className, const char *methodName, const char *descriptorName, Environment *environment)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+TU} void java\+Lang\+Execute\+Method (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{class\+Name, }
+\item[{const char $\ast$}]{method\+Name, }
+\item[{const char $\ast$}]{descriptor\+Name, }
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\hypertarget{util_8h_aa01eb03dd0a24c6b187ea94d320bb532}{}\label{util_8h_aa01eb03dd0a24c6b187ea94d320bb532}
+Metodo que decodifica e simula a execucao de um metodo da biblioteca java.\+lang
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em class\+Name} & Nome da classe do metodo \\
+\hline
+{\em method\+Name} & Nome do metodo a ser executado. \\
+\hline
+{\em descriptor} & Descritor do metodo a ser executado. \\
+\hline
+{\em environment} & Ambiente de execucao atual. \\
+\hline
+\end{DoxyParams}
+\index{util.\+h@{util.\+h}!java\+Lang\+Get\+Static@{java\+Lang\+Get\+Static}}
+\index{java\+Lang\+Get\+Static@{java\+Lang\+Get\+Static}!util.\+h@{util.\+h}}
+\subsubsection[{\texorpdfstring{java\+Lang\+Get\+Static(const char $\ast$class\+Name, const char $\ast$field\+Name, const char $\ast$field\+Descriptor, Environment $\ast$environment)}{javaLangGetStatic(const char *className, const char *fieldName, const char *fieldDescriptor, Environment *environment)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+TU} void java\+Lang\+Get\+Static (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{class\+Name, }
+\item[{const char $\ast$}]{field\+Name, }
+\item[{const char $\ast$}]{field\+Descriptor, }
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\hypertarget{util_8h_a2aa6b468648208b948ec164158f8eae1}{}\label{util_8h_a2aa6b468648208b948ec164158f8eae1}
+Metodo que obtem o valor de um campo estatico da biblioteca java.\+lang e empilha na pilha de operandos.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em class\+Name} & Nome da classe do campo \\
+\hline
+{\em field\+Name} & Nome do campo a ser obtido. \\
+\hline
+{\em field\+Descriptor} & Descritor do campo a ser obtido. \\
+\hline
+{\em environment} & Ambiente de execucao atual. \\
+\hline
+\end{DoxyParams}
+\index{util.\+h@{util.\+h}!java\+Lang\+New\+Object@{java\+Lang\+New\+Object}}
+\index{java\+Lang\+New\+Object@{java\+Lang\+New\+Object}!util.\+h@{util.\+h}}
+\subsubsection[{\texorpdfstring{java\+Lang\+New\+Object(const char $\ast$class\+Name, Environment $\ast$environment)}{javaLangNewObject(const char *className, Environment *environment)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+TU} void java\+Lang\+New\+Object (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{class\+Name, }
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\hypertarget{util_8h_a136bd66a689e37ebee492a66c78656a2}{}\label{util_8h_a136bd66a689e37ebee492a66c78656a2}
+Metodo que cria um objeto da biblioteca java.\+lang e empilha uma referencia na pilha de operandos.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em class\+Name} & Nome da classe do objeto a ser criado. \\
+\hline
+{\em environment} & Ambiente de execucao atual. \\
+\hline
+\end{DoxyParams}
+\index{util.\+h@{util.\+h}!java\+Lib\+Execute\+Method@{java\+Lib\+Execute\+Method}}
+\index{java\+Lib\+Execute\+Method@{java\+Lib\+Execute\+Method}!util.\+h@{util.\+h}}
+\subsubsection[{\texorpdfstring{java\+Lib\+Execute\+Method(const char $\ast$class\+Name, const char $\ast$method\+Name, const char $\ast$descriptor\+Name, Environment $\ast$environment)}{javaLibExecuteMethod(const char *className, const char *methodName, const char *descriptorName, Environment *environment)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+TU} void java\+Lib\+Execute\+Method (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{class\+Name, }
+\item[{const char $\ast$}]{method\+Name, }
+\item[{const char $\ast$}]{descriptor\+Name, }
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\hypertarget{util_8h_a5a8aa9220dfe2c012bec1c87571afb20}{}\label{util_8h_a5a8aa9220dfe2c012bec1c87571afb20}
+Metodo que decodifica e simula a execucao de um metodo de uma biblioteca java
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em class\+Name} & Nome da classe do metodo \\
+\hline
+{\em method\+Name} & Nome do metodo a ser executado. \\
+\hline
+{\em descriptor} & Descritor do metodo a ser executado. \\
+\hline
+{\em environment} & Ambiente de execucao atual. \\
+\hline
+\end{DoxyParams}
+\index{util.\+h@{util.\+h}!java\+Lib\+Get\+Static@{java\+Lib\+Get\+Static}}
+\index{java\+Lib\+Get\+Static@{java\+Lib\+Get\+Static}!util.\+h@{util.\+h}}
+\subsubsection[{\texorpdfstring{java\+Lib\+Get\+Static(const char $\ast$class\+Name, const char $\ast$field\+Name, const char $\ast$field\+Descriptor, Environment $\ast$environment)}{javaLibGetStatic(const char *className, const char *fieldName, const char *fieldDescriptor, Environment *environment)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+TU} void java\+Lib\+Get\+Static (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{class\+Name, }
+\item[{const char $\ast$}]{field\+Name, }
+\item[{const char $\ast$}]{field\+Descriptor, }
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\hypertarget{util_8h_ac68231116a80d38cdd259b171e10840a}{}\label{util_8h_ac68231116a80d38cdd259b171e10840a}
+Metodo que obtem o valor de um campo estatico de uma biblioteca java e empilha na pilha de operandos.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em class\+Name} & Nome da classe do campo \\
+\hline
+{\em field\+Name} & Nome do campo a ser obtido. \\
+\hline
+{\em field\+Descriptor} & Descritor do campo a ser obtido. \\
+\hline
+{\em environment} & Ambiente de execucao atual. \\
+\hline
+\end{DoxyParams}
+\index{util.\+h@{util.\+h}!java\+Lib\+Is\+From@{java\+Lib\+Is\+From}}
+\index{java\+Lib\+Is\+From@{java\+Lib\+Is\+From}!util.\+h@{util.\+h}}
+\subsubsection[{\texorpdfstring{java\+Lib\+Is\+From(const char $\ast$name)}{javaLibIsFrom(const char *name)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+TU} int java\+Lib\+Is\+From (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name}
+\end{DoxyParamCaption}
+)}\hypertarget{util_8h_ad282d7ee41ca35483d9e91387b794894}{}\label{util_8h_ad282d7ee41ca35483d9e91387b794894}
+Metodo que verifica se a classe, instancia ou campo pertencem a java/$<$pacote$>$
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em name} & Nome a ser verificado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+1 caso sim, 0 caso nao. 
+\end{DoxyReturn}
+\index{util.\+h@{util.\+h}!java\+Lib\+New\+Object@{java\+Lib\+New\+Object}}
+\index{java\+Lib\+New\+Object@{java\+Lib\+New\+Object}!util.\+h@{util.\+h}}
+\subsubsection[{\texorpdfstring{java\+Lib\+New\+Object(const char $\ast$class\+Name, Environment $\ast$environment)}{javaLibNewObject(const char *className, Environment *environment)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+TU} void java\+Lib\+New\+Object (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{class\+Name, }
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\hypertarget{util_8h_a2a82f86e51c7d1c6fa2ab0da7c6f4028}{}\label{util_8h_a2a82f86e51c7d1c6fa2ab0da7c6f4028}
+Metodo que cria um objeto de uma biblioteca java e empilha uma referencia na pilha de operandos.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em class\+Name} & Nome da classe do objeto a ser criado. \\
+\hline
+{\em environment} & Ambiente de execucao atual. \\
+\hline
+\end{DoxyParams}
+\index{util.\+h@{util.\+h}!u4\+To\+Double@{u4\+To\+Double}}
+\index{u4\+To\+Double@{u4\+To\+Double}!util.\+h@{util.\+h}}
+\subsubsection[{\texorpdfstring{u4\+To\+Double(u4 high\+\_\+bytes, u4 low\+\_\+bytes)}{u4ToDouble(u4 high_bytes, u4 low_bytes)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+TU} double u4\+To\+Double (
+\begin{DoxyParamCaption}
+\item[{{\bf u4}}]{high\+\_\+bytes, }
+\item[{{\bf u4}}]{low\+\_\+bytes}
+\end{DoxyParamCaption}
+)}\hypertarget{util_8h_a676850f7a3aad98bc3617f5f3d726239}{}\label{util_8h_a676850f7a3aad98bc3617f5f3d726239}
+Metodo que que realiza a conversao de um u4 (little-\/endian) para um double em big-\/endian order.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em high\+\_\+bytes} & Bytes de mais alta ordem. \\
+\hline
+{\em low\+\_\+bytes} & Bytes de mais baixa ordem. \\
+\hline
+\end{DoxyParams}
+\index{util.\+h@{util.\+h}!u4\+To\+F\+Loat@{u4\+To\+F\+Loat}}
+\index{u4\+To\+F\+Loat@{u4\+To\+F\+Loat}!util.\+h@{util.\+h}}
+\subsubsection[{\texorpdfstring{u4\+To\+F\+Loat(u4 bytes)}{u4ToFLoat(u4 bytes)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+TU} float u4\+To\+F\+Loat (
+\begin{DoxyParamCaption}
+\item[{{\bf u4}}]{bytes}
+\end{DoxyParamCaption}
+)}\hypertarget{util_8h_a81aacb37842676b84d7a4adfd47a664f}{}\label{util_8h_a81aacb37842676b84d7a4adfd47a664f}
+Metodo que que realiza a conversao de um u4 (little-\/endian) para um float em big-\/endian order.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em bytes} & Bytes em u4. \\
+\hline
+\end{DoxyParams}

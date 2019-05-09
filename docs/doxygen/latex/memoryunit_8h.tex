@@ -1,0 +1,411 @@
+\hypertarget{memoryunit_8h}{}\section{Referência do Arquivo include/memoryunit.h}
+\label{memoryunit_8h}\index{include/memoryunit.\+h@{include/memoryunit.\+h}}
+
+
+Interface da Unidade de Memoria da J\+VM.  
+
+
+{\ttfamily \#include \char`\"{}estruturas.\+h\char`\"{}}\\*
+Gráfico de dependência de inclusões para memoryunit.\+h\+:
+% FIG 0
+Este grafo mostra quais arquivos estão direta ou indiretamente relacionados com este arquivo\+:
+% FIG 1
+\subsection*{Definições e Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{memoryunit_8h_a3f4a72f4192118026f35e7787999667d}{E\+X\+TM}~extern
+\end{DoxyCompactItemize}
+\subsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{memoryunit_8h_a3f4a72f4192118026f35e7787999667d}{E\+X\+TM} \hyperlink{struct_thread}{Thread} $\ast$ \hyperlink{memoryunit_8h_aad0fadbd7a01142a4edd7dae8710866f}{new\+Thread} ()
+\item 
+\hyperlink{memoryunit_8h_a3f4a72f4192118026f35e7787999667d}{E\+X\+TM} \hyperlink{struct_method_area}{Method\+Area} $\ast$ \hyperlink{memoryunit_8h_a13483ecdbbd264e5bd6927527223b1e3}{new\+Method\+Area} ()
+\item 
+\hyperlink{memoryunit_8h_a3f4a72f4192118026f35e7787999667d}{E\+X\+TM} \hyperlink{struct_frame}{Frame} $\ast$ \hyperlink{memoryunit_8h_a85585c5fd0eaac9f4fd90103c2b60543}{push\+Frame} (\hyperlink{struct_environment}{Environment} $\ast$environment, const char $\ast$class\+Name, const char $\ast$method\+Name, const char $\ast$method\+Descriptor)
+\item 
+\hyperlink{memoryunit_8h_a3f4a72f4192118026f35e7787999667d}{E\+X\+TM} void \hyperlink{memoryunit_8h_a28f3f006b82eb7eea1fe2b9bf1157f49}{pop\+Frame} (\hyperlink{struct_thread}{Thread} $\ast$thread)
+\item 
+\hyperlink{memoryunit_8h_a3f4a72f4192118026f35e7787999667d}{E\+X\+TM} \hyperlink{struct_frame}{Frame} $\ast$ \hyperlink{memoryunit_8h_a4159044cf4e7432efd5b797f4d0bcab0}{get\+Current\+Frame} (\hyperlink{struct_thread}{Thread} $\ast$thread)
+\item 
+\hyperlink{memoryunit_8h_a3f4a72f4192118026f35e7787999667d}{E\+X\+TM} \hyperlink{struct_java_class}{Java\+Class} $\ast$ \hyperlink{memoryunit_8h_a692ce92d51f280e1de6bc99f65a07b98}{find\+Java\+Class\+On\+Method\+Area} (const char $\ast$qualified\+Name, \hyperlink{struct_method_area}{Method\+Area} $\ast$method\+Area)
+\item 
+\hyperlink{memoryunit_8h_a3f4a72f4192118026f35e7787999667d}{E\+X\+TM} \hyperlink{struct_java_class}{Java\+Class} $\ast$ \hyperlink{memoryunit_8h_ae53a6de5808a743bf8cb12d2fc68fe6e}{get\+Class} (const char $\ast$qualified\+Name, \hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+\hyperlink{memoryunit_8h_a3f4a72f4192118026f35e7787999667d}{E\+X\+TM} void \hyperlink{memoryunit_8h_a3c9bb41304aa98e56ba13d1bf45cda63}{add\+Java\+Class\+To\+Method\+Area} (\hyperlink{struct_java_class}{Java\+Class} $\ast$java\+Class, \hyperlink{struct_method_area}{Method\+Area} $\ast$method\+Area)
+\item 
+\hyperlink{memoryunit_8h_a3f4a72f4192118026f35e7787999667d}{E\+X\+TM} \hyperlink{estruturas_8h_a02c1a928a94e9fab2c72044003c7bce6}{method\+\_\+info} $\ast$ \hyperlink{memoryunit_8h_af1fb76f3f2a68cb2a5ead2ea396fe178}{get\+Method\+Info\+From\+Class} (\hyperlink{struct_java_class}{Java\+Class} $\ast$java\+Class, const char $\ast$method\+Name, const char $\ast$method\+Descriptor)
+\item 
+\hyperlink{memoryunit_8h_a3f4a72f4192118026f35e7787999667d}{E\+X\+TM} \hyperlink{struct_code_attribute}{Code\+Attribute} $\ast$ \hyperlink{memoryunit_8h_a03d1978f5c9573da4e1b92490f988be7}{get\+Code\+Attribute\+From\+Method} (\hyperlink{struct_java_class}{Java\+Class} $\ast$java\+Class, const char $\ast$method\+Name, const char $\ast$method\+Descriptor)
+\item 
+\hyperlink{memoryunit_8h_a3f4a72f4192118026f35e7787999667d}{E\+X\+TM} \hyperlink{struct_code_attribute}{Code\+Attribute} $\ast$ \hyperlink{memoryunit_8h_af8563e2811ed8ae28dc0219eca8cf8ab}{get\+Code\+From\+Method\+Info} (\hyperlink{estruturas_8h_a02c1a928a94e9fab2c72044003c7bce6}{method\+\_\+info} $\ast$method, \hyperlink{estruturas_8h_aafdf80b0992e652420382fcf19b9d074}{cp\+\_\+info} $\ast$constant\+\_\+pool)
+\item 
+\hyperlink{memoryunit_8h_a3f4a72f4192118026f35e7787999667d}{E\+X\+TM} \hyperlink{estruturas_8h_a216a9f8b04b4f0af84a4ca9d1d85a6ca}{u1} \hyperlink{memoryunit_8h_a8e676ac498218295aa968518a401ccfd}{get\+Byte\+Code\+From\+Method} (\hyperlink{estruturas_8h_a02c1a928a94e9fab2c72044003c7bce6}{method\+\_\+info} $\ast$method\+Info, \hyperlink{estruturas_8h_aafdf80b0992e652420382fcf19b9d074}{cp\+\_\+info} $\ast$constant\+\_\+pool, int pc)
+\item 
+\hyperlink{memoryunit_8h_a3f4a72f4192118026f35e7787999667d}{E\+X\+TM} void $\ast$ \hyperlink{memoryunit_8h_ad036a41a92851097328405c2359893bc}{get\+Class\+Attribute\+Reference} (const char $\ast$class\+Name, const char $\ast$attribute\+Namem, \hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+\hyperlink{memoryunit_8h_a3f4a72f4192118026f35e7787999667d}{E\+X\+TM} void $\ast$ \hyperlink{memoryunit_8h_a63c8137e5f41466a5f64531c855325b3}{get\+Object\+Attribute\+Reference} (\hyperlink{struct_object}{Object} $\ast$object, const char $\ast$attribute\+Name)
+\item 
+\hyperlink{memoryunit_8h_a3f4a72f4192118026f35e7787999667d}{E\+X\+TM} \hyperlink{struct_object}{Object} $\ast$ \hyperlink{memoryunit_8h_ab08b3f67f966670cf1687cb93ef13c40}{new\+Object\+From\+Class} (const char $\ast$class\+Name, \hyperlink{struct_environment}{Environment} $\ast$environment)
+\item 
+\hyperlink{memoryunit_8h_a3f4a72f4192118026f35e7787999667d}{E\+X\+TM} void \hyperlink{memoryunit_8h_adec55e54bb3757dc3e171ff4ff06e5a6}{push\+In\+Operand\+Stack} (\hyperlink{struct_thread}{Thread} $\ast$thread, \hyperlink{estruturas_8h_aedf6ddc03df8caaaccbb4c60b9a9b850}{u4} value)
+\item 
+\hyperlink{memoryunit_8h_a3f4a72f4192118026f35e7787999667d}{E\+X\+TM} void \hyperlink{memoryunit_8h_a7444f8f5212aeb7a6af81cff78f7e8f0}{push\+In\+Operand\+Stack\+From\+Frame} (\hyperlink{struct_frame}{Frame} $\ast$frame, \hyperlink{estruturas_8h_aedf6ddc03df8caaaccbb4c60b9a9b850}{u4} value)
+\item 
+\hyperlink{memoryunit_8h_a3f4a72f4192118026f35e7787999667d}{E\+X\+TM} \hyperlink{estruturas_8h_aedf6ddc03df8caaaccbb4c60b9a9b850}{u4} \hyperlink{memoryunit_8h_acb385de81972c4101cbe3cc48b0b236b}{pop\+From\+Operand\+Stack} (\hyperlink{struct_thread}{Thread} $\ast$thread)
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+Interface da Unidade de Memoria da J\+VM. 
+
+Interface responsavel por disponibilizar os servicos relacionados a unidade de memoria da J\+VM. 
+
+\subsection{Definições e macros}
+\index{memoryunit.\+h@{memoryunit.\+h}!E\+X\+TM@{E\+X\+TM}}
+\index{E\+X\+TM@{E\+X\+TM}!memoryunit.\+h@{memoryunit.\+h}}
+\subsubsection[{\texorpdfstring{E\+X\+TM}{EXTM}}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+X\+TM~extern}\hypertarget{memoryunit_8h_a3f4a72f4192118026f35e7787999667d}{}\label{memoryunit_8h_a3f4a72f4192118026f35e7787999667d}
+
+
+\subsection{Funções}
+\index{memoryunit.\+h@{memoryunit.\+h}!add\+Java\+Class\+To\+Method\+Area@{add\+Java\+Class\+To\+Method\+Area}}
+\index{add\+Java\+Class\+To\+Method\+Area@{add\+Java\+Class\+To\+Method\+Area}!memoryunit.\+h@{memoryunit.\+h}}
+\subsubsection[{\texorpdfstring{add\+Java\+Class\+To\+Method\+Area(\+Java\+Class $\ast$java\+Class, Method\+Area $\ast$method\+Area)}{addJavaClassToMethodArea(JavaClass *javaClass, MethodArea *methodArea)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+TM} void add\+Java\+Class\+To\+Method\+Area (
+\begin{DoxyParamCaption}
+\item[{{\bf Java\+Class} $\ast$}]{java\+Class, }
+\item[{{\bf Method\+Area} $\ast$}]{method\+Area}
+\end{DoxyParamCaption}
+)}\hypertarget{memoryunit_8h_a3c9bb41304aa98e56ba13d1bf45cda63}{}\label{memoryunit_8h_a3c9bb41304aa98e56ba13d1bf45cda63}
+Metodo que recebe uma referencia para uma classe e a adiciona na area de metodos recebida como parametro.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em java\+Class} & Estrutura a ser inserida na area de metodos \\
+\hline
+{\em method\+Area} & Area de metodos a receber a estrutura java\+Class \\
+\hline
+\end{DoxyParams}
+\index{memoryunit.\+h@{memoryunit.\+h}!find\+Java\+Class\+On\+Method\+Area@{find\+Java\+Class\+On\+Method\+Area}}
+\index{find\+Java\+Class\+On\+Method\+Area@{find\+Java\+Class\+On\+Method\+Area}!memoryunit.\+h@{memoryunit.\+h}}
+\subsubsection[{\texorpdfstring{find\+Java\+Class\+On\+Method\+Area(const char $\ast$qualified\+Name, Method\+Area $\ast$method\+Area)}{findJavaClassOnMethodArea(const char *qualifiedName, MethodArea *methodArea)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+TM} {\bf Java\+Class}$\ast$ find\+Java\+Class\+On\+Method\+Area (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{qualified\+Name, }
+\item[{{\bf Method\+Area} $\ast$}]{method\+Area}
+\end{DoxyParamCaption}
+)}\hypertarget{memoryunit_8h_a692ce92d51f280e1de6bc99f65a07b98}{}\label{memoryunit_8h_a692ce92d51f280e1de6bc99f65a07b98}
+Metodo que recebe o nome de uma classe como parametro e retorna uma referencia para esta estrutura na area de metodos. Caso a classe nao seja encontrada, retorna nulo.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em qualified\+Name} & Nome qualificado da classe a ser procurada \\
+\hline
+{\em method\+Area} & Area de metodos a ser utulizada na busca \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Endereco da estrutura \hyperlink{struct_java_class}{Java\+Class} (ou nulo se nao existe) 
+\end{DoxyReturn}
+\index{memoryunit.\+h@{memoryunit.\+h}!get\+Byte\+Code\+From\+Method@{get\+Byte\+Code\+From\+Method}}
+\index{get\+Byte\+Code\+From\+Method@{get\+Byte\+Code\+From\+Method}!memoryunit.\+h@{memoryunit.\+h}}
+\subsubsection[{\texorpdfstring{get\+Byte\+Code\+From\+Method(method\+\_\+info $\ast$method\+Info, cp\+\_\+info $\ast$constant\+\_\+pool, int pc)}{getByteCodeFromMethod(method_info *methodInfo, cp_info *constant_pool, int pc)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+TM} {\bf u1} get\+Byte\+Code\+From\+Method (
+\begin{DoxyParamCaption}
+\item[{{\bf method\+\_\+info} $\ast$}]{method\+Info, }
+\item[{{\bf cp\+\_\+info} $\ast$}]{constant\+\_\+pool, }
+\item[{int}]{pc}
+\end{DoxyParamCaption}
+)}\hypertarget{memoryunit_8h_a8e676ac498218295aa968518a401ccfd}{}\label{memoryunit_8h_a8e676ac498218295aa968518a401ccfd}
+Metodo que retorna o byte do atributo C\+O\+DE apontado por PC da estrutura Method\+Info passada como parametro.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em method\+Info} & Endereco da estrutura Method\+Info contendo o atributo C\+O\+DE a ser utilizado \\
+\hline
+{\em constant\+\_\+pool} & Referencia para o pool de constantes da classe do metodo \\
+\hline
+{\em pc} & Endereco da intrucao (indice do byte no vetor de bytes PC) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Opcode que esta na posicao apontada por PC 
+\end{DoxyReturn}
+\index{memoryunit.\+h@{memoryunit.\+h}!get\+Class@{get\+Class}}
+\index{get\+Class@{get\+Class}!memoryunit.\+h@{memoryunit.\+h}}
+\subsubsection[{\texorpdfstring{get\+Class(const char $\ast$qualified\+Name, Environment $\ast$environment)}{getClass(const char *qualifiedName, Environment *environment)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+TM} {\bf Java\+Class}$\ast$ get\+Class (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{qualified\+Name, }
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\hypertarget{memoryunit_8h_ae53a6de5808a743bf8cb12d2fc68fe6e}{}\label{memoryunit_8h_ae53a6de5808a743bf8cb12d2fc68fe6e}
+Metodo que recebe o nome de uma classe como parametro e retorna uma referencia para esta estrutura. Caso esta estrutura nao esteja na area de metodos, ela eh carregada.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em qualified\+Name} & Nome qualificado da classe a ser procurada \\
+\hline
+{\em environment} & \hyperlink{struct_thread}{Thread} e area de metodos do ambiente em execucao \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Endereco da estrutura \hyperlink{struct_java_class}{Java\+Class} (ou nulo se nao existe) 
+\end{DoxyReturn}
+\index{memoryunit.\+h@{memoryunit.\+h}!get\+Class\+Attribute\+Reference@{get\+Class\+Attribute\+Reference}}
+\index{get\+Class\+Attribute\+Reference@{get\+Class\+Attribute\+Reference}!memoryunit.\+h@{memoryunit.\+h}}
+\subsubsection[{\texorpdfstring{get\+Class\+Attribute\+Reference(const char $\ast$class\+Name, const char $\ast$attribute\+Namem, Environment $\ast$environment)}{getClassAttributeReference(const char *className, const char *attributeNamem, Environment *environment)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+TM} void$\ast$ get\+Class\+Attribute\+Reference (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{class\+Name, }
+\item[{const char $\ast$}]{attribute\+Namem, }
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\hypertarget{memoryunit_8h_ad036a41a92851097328405c2359893bc}{}\label{memoryunit_8h_ad036a41a92851097328405c2359893bc}
+Metodo que obtem o endereco de memoria do atributo de classe (static field) cujo nome eh passado por parametro.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em class\+Name} & Nome qualificado da classe que possui o atributo \\
+\hline
+{\em attribute\+Name} & Nome do atributo de classe \\
+\hline
+{\em environment} & \hyperlink{struct_thread}{Thread} e area de metodos do ambiente em execucao \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Endereco de memoria contendo o valor do atributo 
+\end{DoxyReturn}
+\index{memoryunit.\+h@{memoryunit.\+h}!get\+Code\+Attribute\+From\+Method@{get\+Code\+Attribute\+From\+Method}}
+\index{get\+Code\+Attribute\+From\+Method@{get\+Code\+Attribute\+From\+Method}!memoryunit.\+h@{memoryunit.\+h}}
+\subsubsection[{\texorpdfstring{get\+Code\+Attribute\+From\+Method(\+Java\+Class $\ast$java\+Class, const char $\ast$method\+Name, const char $\ast$method\+Descriptor)}{getCodeAttributeFromMethod(JavaClass *javaClass, const char *methodName, const char *methodDescriptor)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+TM} {\bf Code\+Attribute}$\ast$ get\+Code\+Attribute\+From\+Method (
+\begin{DoxyParamCaption}
+\item[{{\bf Java\+Class} $\ast$}]{java\+Class, }
+\item[{const char $\ast$}]{method\+Name, }
+\item[{const char $\ast$}]{method\+Descriptor}
+\end{DoxyParamCaption}
+)}\hypertarget{memoryunit_8h_a03d1978f5c9573da4e1b92490f988be7}{}\label{memoryunit_8h_a03d1978f5c9573da4e1b92490f988be7}
+Metodo que, dado um o nome e descritor de um metodo e a referencia para a sua classe, busca e retorna uma referencia para o atributo code, o qual estara preenchido.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em java\+Class} & Estrutura java\+Class da classe que contem o metodo \\
+\hline
+{\em method\+Name} & Nome do metodo a ser empilhado \\
+\hline
+{\em method\+Descriptor} & Descritor do metodo a ser executado (polimorfismo) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Referencia para uma estrutura \hyperlink{struct_code_attribute}{Code\+Attribute} referente ao metodo buscado 
+\end{DoxyReturn}
+\index{memoryunit.\+h@{memoryunit.\+h}!get\+Code\+From\+Method\+Info@{get\+Code\+From\+Method\+Info}}
+\index{get\+Code\+From\+Method\+Info@{get\+Code\+From\+Method\+Info}!memoryunit.\+h@{memoryunit.\+h}}
+\subsubsection[{\texorpdfstring{get\+Code\+From\+Method\+Info(method\+\_\+info $\ast$method, cp\+\_\+info $\ast$constant\+\_\+pool)}{getCodeFromMethodInfo(method_info *method, cp_info *constant_pool)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+TM} {\bf Code\+Attribute}$\ast$ get\+Code\+From\+Method\+Info (
+\begin{DoxyParamCaption}
+\item[{{\bf method\+\_\+info} $\ast$}]{method, }
+\item[{{\bf cp\+\_\+info} $\ast$}]{constant\+\_\+pool}
+\end{DoxyParamCaption}
+)}\hypertarget{memoryunit_8h_af8563e2811ed8ae28dc0219eca8cf8ab}{}\label{memoryunit_8h_af8563e2811ed8ae28dc0219eca8cf8ab}
+Metodo que, dado um ponteiro para uma estrutura method\+\_\+info e o pool de constantes contendo as constantes relativas ao metodo, busca e retorna uma referencia para o atributo code, o qual estara preenchido.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em method} & Referencia para o method\+\_\+info contendo o codigo \\
+\hline
+{\em constant\+\_\+pool} & Referencia para o pool de constantes da classe do metodo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Referencia para uma estrutura \hyperlink{struct_code_attribute}{Code\+Attribute} referente ao metodo buscado 
+\end{DoxyReturn}
+\index{memoryunit.\+h@{memoryunit.\+h}!get\+Current\+Frame@{get\+Current\+Frame}}
+\index{get\+Current\+Frame@{get\+Current\+Frame}!memoryunit.\+h@{memoryunit.\+h}}
+\subsubsection[{\texorpdfstring{get\+Current\+Frame(\+Thread $\ast$thread)}{getCurrentFrame(Thread *thread)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+TM} {\bf Frame}$\ast$ get\+Current\+Frame (
+\begin{DoxyParamCaption}
+\item[{{\bf Thread} $\ast$}]{thread}
+\end{DoxyParamCaption}
+)}\hypertarget{memoryunit_8h_a4159044cf4e7432efd5b797f4d0bcab0}{}\label{memoryunit_8h_a4159044cf4e7432efd5b797f4d0bcab0}
+Metodo responsavel por retornar uma referencia para o frame que está no topo da pilha da thread.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em thread} & \hyperlink{struct_thread}{Thread} contendo a pilha J\+VM com os frames \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Endereco do frame que esta no topo da pilha 
+\end{DoxyReturn}
+\index{memoryunit.\+h@{memoryunit.\+h}!get\+Method\+Info\+From\+Class@{get\+Method\+Info\+From\+Class}}
+\index{get\+Method\+Info\+From\+Class@{get\+Method\+Info\+From\+Class}!memoryunit.\+h@{memoryunit.\+h}}
+\subsubsection[{\texorpdfstring{get\+Method\+Info\+From\+Class(\+Java\+Class $\ast$java\+Class, const char $\ast$method\+Name, const char $\ast$method\+Descriptor)}{getMethodInfoFromClass(JavaClass *javaClass, const char *methodName, const char *methodDescriptor)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+TM} {\bf method\+\_\+info}$\ast$ get\+Method\+Info\+From\+Class (
+\begin{DoxyParamCaption}
+\item[{{\bf Java\+Class} $\ast$}]{java\+Class, }
+\item[{const char $\ast$}]{method\+Name, }
+\item[{const char $\ast$}]{method\+Descriptor}
+\end{DoxyParamCaption}
+)}\hypertarget{memoryunit_8h_af1fb76f3f2a68cb2a5ead2ea396fe178}{}\label{memoryunit_8h_af1fb76f3f2a68cb2a5ead2ea396fe178}
+Metodo que, dado um ponteiro para uma estrutura java\+Class, busca e retorna uma referencia para a estrutura method\+\_\+info referente ao metodo buscado
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em java\+Class} & Estrutura java\+Class da classe que contem o metodo \\
+\hline
+{\em method\+Name} & Nome do metodo a ser empilhado \\
+\hline
+{\em method\+Descriptor} & Descritor do metodo a ser executado (polimorfismo) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Referencia para uma estrutura method\+\_\+info referente ao metodo buscado 
+\end{DoxyReturn}
+\index{memoryunit.\+h@{memoryunit.\+h}!get\+Object\+Attribute\+Reference@{get\+Object\+Attribute\+Reference}}
+\index{get\+Object\+Attribute\+Reference@{get\+Object\+Attribute\+Reference}!memoryunit.\+h@{memoryunit.\+h}}
+\subsubsection[{\texorpdfstring{get\+Object\+Attribute\+Reference(\+Object $\ast$object, const char $\ast$attribute\+Name)}{getObjectAttributeReference(Object *object, const char *attributeName)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+TM} void$\ast$ get\+Object\+Attribute\+Reference (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{object, }
+\item[{const char $\ast$}]{attribute\+Name}
+\end{DoxyParamCaption}
+)}\hypertarget{memoryunit_8h_a63c8137e5f41466a5f64531c855325b3}{}\label{memoryunit_8h_a63c8137e5f41466a5f64531c855325b3}
+Metodo que obtem o endereco de memoria do atributo de objeto (instancia de classe) cujo nome eh passado por parametro.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em object} & Endereco do objeto que contem o atributo \\
+\hline
+{\em attribute\+Name} & Nome do atributo do bjeto \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Endereco contendo o valor do atributo 
+\end{DoxyReturn}
+\index{memoryunit.\+h@{memoryunit.\+h}!new\+Method\+Area@{new\+Method\+Area}}
+\index{new\+Method\+Area@{new\+Method\+Area}!memoryunit.\+h@{memoryunit.\+h}}
+\subsubsection[{\texorpdfstring{new\+Method\+Area()}{newMethodArea()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+TM} {\bf Method\+Area}$\ast$ new\+Method\+Area (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{memoryunit_8h_a13483ecdbbd264e5bd6927527223b1e3}{}\label{memoryunit_8h_a13483ecdbbd264e5bd6927527223b1e3}
+Metodo responsavel por criar, inicializar e retornar uma uma referencia para uma estrutura \hyperlink{struct_method_area}{Method\+Area}
+
+\begin{DoxyReturn}{Retorna}
+Referencia para uma estrutura \hyperlink{struct_method_area}{Method\+Area} inicializada 
+\end{DoxyReturn}
+\index{memoryunit.\+h@{memoryunit.\+h}!new\+Object\+From\+Class@{new\+Object\+From\+Class}}
+\index{new\+Object\+From\+Class@{new\+Object\+From\+Class}!memoryunit.\+h@{memoryunit.\+h}}
+\subsubsection[{\texorpdfstring{new\+Object\+From\+Class(const char $\ast$class\+Name, Environment $\ast$environment)}{newObjectFromClass(const char *className, Environment *environment)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+TM} {\bf Object}$\ast$ new\+Object\+From\+Class (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{class\+Name, }
+\item[{{\bf Environment} $\ast$}]{environment}
+\end{DoxyParamCaption}
+)}\hypertarget{memoryunit_8h_ab08b3f67f966670cf1687cb93ef13c40}{}\label{memoryunit_8h_ab08b3f67f966670cf1687cb93ef13c40}
+Método que cria e inicializa e retorna uma nova instancia da classe passada como parametro. A estrutura \hyperlink{struct_java_class}{Java\+Class} que define o objeto recebe um ponteiro para o mesmo na sua lista de objetos.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em class\+Name} & Nome qualificado da classe que possui o atributo \\
+\hline
+{\em environment} & \hyperlink{struct_thread}{Thread} e area de metodos do ambiente em execucao \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Endereco do objeto 
+\end{DoxyReturn}
+\index{memoryunit.\+h@{memoryunit.\+h}!new\+Thread@{new\+Thread}}
+\index{new\+Thread@{new\+Thread}!memoryunit.\+h@{memoryunit.\+h}}
+\subsubsection[{\texorpdfstring{new\+Thread()}{newThread()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+TM} {\bf Thread}$\ast$ new\+Thread (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{memoryunit_8h_aad0fadbd7a01142a4edd7dae8710866f}{}\label{memoryunit_8h_aad0fadbd7a01142a4edd7dae8710866f}
+Metodo responsavel por criar, inicializar e retornar uma uma referencia para uma estrutura \hyperlink{struct_thread}{Thread}
+
+\begin{DoxyReturn}{Retorna}
+Referencia para uma estrutura \hyperlink{struct_thread}{Thread} inicializada 
+\end{DoxyReturn}
+\index{memoryunit.\+h@{memoryunit.\+h}!pop\+Frame@{pop\+Frame}}
+\index{pop\+Frame@{pop\+Frame}!memoryunit.\+h@{memoryunit.\+h}}
+\subsubsection[{\texorpdfstring{pop\+Frame(\+Thread $\ast$thread)}{popFrame(Thread *thread)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+TM} void pop\+Frame (
+\begin{DoxyParamCaption}
+\item[{{\bf Thread} $\ast$}]{thread}
+\end{DoxyParamCaption}
+)}\hypertarget{memoryunit_8h_a28f3f006b82eb7eea1fe2b9bf1157f49}{}\label{memoryunit_8h_a28f3f006b82eb7eea1fe2b9bf1157f49}
+Metodo responsavel por desempilhar o frame que está no topo da pilha da thread.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em thread} & \hyperlink{struct_thread}{Thread} contendo a pilha J\+VM a ser utilizada no desempilhamento do frame \\
+\hline
+\end{DoxyParams}
+\index{memoryunit.\+h@{memoryunit.\+h}!pop\+From\+Operand\+Stack@{pop\+From\+Operand\+Stack}}
+\index{pop\+From\+Operand\+Stack@{pop\+From\+Operand\+Stack}!memoryunit.\+h@{memoryunit.\+h}}
+\subsubsection[{\texorpdfstring{pop\+From\+Operand\+Stack(\+Thread $\ast$thread)}{popFromOperandStack(Thread *thread)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+TM} {\bf u4} pop\+From\+Operand\+Stack (
+\begin{DoxyParamCaption}
+\item[{{\bf Thread} $\ast$}]{thread}
+\end{DoxyParamCaption}
+)}\hypertarget{memoryunit_8h_acb385de81972c4101cbe3cc48b0b236b}{}\label{memoryunit_8h_acb385de81972c4101cbe3cc48b0b236b}
+Metodo que desempilha e retorna um valor na pilha de operandos do frame atual da thread passada como parametro
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em thread} & \hyperlink{struct_thread}{Thread} que contem a pilha J\+VM com o frame atual \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor que foi desempilhado 
+\end{DoxyReturn}
+\index{memoryunit.\+h@{memoryunit.\+h}!push\+Frame@{push\+Frame}}
+\index{push\+Frame@{push\+Frame}!memoryunit.\+h@{memoryunit.\+h}}
+\subsubsection[{\texorpdfstring{push\+Frame(\+Environment $\ast$environment, const char $\ast$class\+Name, const char $\ast$method\+Name, const char $\ast$method\+Descriptor)}{pushFrame(Environment *environment, const char *className, const char *methodName, const char *methodDescriptor)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+TM} {\bf Frame}$\ast$ push\+Frame (
+\begin{DoxyParamCaption}
+\item[{{\bf Environment} $\ast$}]{environment, }
+\item[{const char $\ast$}]{class\+Name, }
+\item[{const char $\ast$}]{method\+Name, }
+\item[{const char $\ast$}]{method\+Descriptor}
+\end{DoxyParamCaption}
+)}\hypertarget{memoryunit_8h_a85585c5fd0eaac9f4fd90103c2b60543}{}\label{memoryunit_8h_a85585c5fd0eaac9f4fd90103c2b60543}
+Metodo responsavel por criar e inicializar um novo frame para um metodo e o empilhar na pilha da thread.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em environment} & \hyperlink{struct_thread}{Thread} e area de metodos do ambiente em execucao \\
+\hline
+{\em class\+Name} & Nome qualificado da classe que contem o metodo a ser empilhado \\
+\hline
+{\em method\+Name} & Nome do metodo a ser empilhado \\
+\hline
+{\em method\+Descriptor} & Descritor do metodo a ser executado (polimorfismo) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+referencia para o frame criado 
+\end{DoxyReturn}
+\index{memoryunit.\+h@{memoryunit.\+h}!push\+In\+Operand\+Stack@{push\+In\+Operand\+Stack}}
+\index{push\+In\+Operand\+Stack@{push\+In\+Operand\+Stack}!memoryunit.\+h@{memoryunit.\+h}}
+\subsubsection[{\texorpdfstring{push\+In\+Operand\+Stack(\+Thread $\ast$thread, u4 value)}{pushInOperandStack(Thread *thread, u4 value)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+TM} void push\+In\+Operand\+Stack (
+\begin{DoxyParamCaption}
+\item[{{\bf Thread} $\ast$}]{thread, }
+\item[{{\bf u4}}]{value}
+\end{DoxyParamCaption}
+)}\hypertarget{memoryunit_8h_adec55e54bb3757dc3e171ff4ff06e5a6}{}\label{memoryunit_8h_adec55e54bb3757dc3e171ff4ff06e5a6}
+Metodo que empilha um valor na pilha de operandos do frame atual da thread passada como parametro
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em thread} & \hyperlink{struct_thread}{Thread} que contem a pilha J\+VM com o frame atual \\
+\hline
+{\em value} & Valor a ser empilhado \\
+\hline
+\end{DoxyParams}
+\index{memoryunit.\+h@{memoryunit.\+h}!push\+In\+Operand\+Stack\+From\+Frame@{push\+In\+Operand\+Stack\+From\+Frame}}
+\index{push\+In\+Operand\+Stack\+From\+Frame@{push\+In\+Operand\+Stack\+From\+Frame}!memoryunit.\+h@{memoryunit.\+h}}
+\subsubsection[{\texorpdfstring{push\+In\+Operand\+Stack\+From\+Frame(\+Frame $\ast$frame, u4 value)}{pushInOperandStackFromFrame(Frame *frame, u4 value)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+TM} void push\+In\+Operand\+Stack\+From\+Frame (
+\begin{DoxyParamCaption}
+\item[{{\bf Frame} $\ast$}]{frame, }
+\item[{{\bf u4}}]{value}
+\end{DoxyParamCaption}
+)}\hypertarget{memoryunit_8h_a7444f8f5212aeb7a6af81cff78f7e8f0}{}\label{memoryunit_8h_a7444f8f5212aeb7a6af81cff78f7e8f0}
+Metodo que empilha um valor na pilha de operandos do frame passado como parametro
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em frame} & \hyperlink{struct_frame}{Frame} em cuja pilha de operandos o valor sera empilhado \\
+\hline
+{\em value} & Valor a ser empilhado \\
+\hline
+\end{DoxyParams}

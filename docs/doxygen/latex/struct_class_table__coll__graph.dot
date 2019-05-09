@@ -1,0 +1,31 @@
+digraph "ClassTable"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="ClassTable",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" javaClass" ];
+  Node2 [label="JavaClass",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_java_class.html",tooltip="Estrutura da JavaClass. "];
+  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" staticFields" ];
+  Node3 [label="Fields",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_fields.html",tooltip="Estrutura da FieldsTable. "];
+  Node4 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" fieldsTable" ];
+  Node4 [label="FieldsTable",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_fields_table.html",tooltip="Estrutura da FieldsTable. "];
+  Node5 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" fieldInfo" ];
+  Node5 [label="fieldAndMethod",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structfield_and_method.html",tooltip="Estrutura de Campos e Metodos. "];
+  Node6 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" attributes" ];
+  Node6 [label="attribute",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structattribute.html",tooltip="Estrutura de Atributos. "];
+  Node7 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" arqClass" ];
+  Node7 [label="arqClass",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structarq_class.html",tooltip="um metodo. "];
+  Node5 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" fields\nmethods" ];
+  Node6 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" attributes" ];
+  Node8 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" constant_pool" ];
+  Node8 [label="constPool",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structconst_pool.html",tooltip="Estrutura do Pool de Constantes. "];
+  Node9 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" objectList" ];
+  Node9 [label="ObjectList",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_object_list.html",tooltip="Estrutura da ObjectList. "];
+  Node9 -> Node9 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" next" ];
+  Node10 -> Node9 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" object" ];
+  Node10 [label="Object",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_object.html",tooltip="Estrutura do Object. "];
+  Node11 -> Node10 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" handler" ];
+  Node11 [label="Handler",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_handler.html",tooltip="Estrutura da Handler. "];
+  Node2 -> Node11 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" javaClass" ];
+  Node3 -> Node11 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" fields" ];
+}

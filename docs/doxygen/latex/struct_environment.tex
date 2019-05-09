@@ -1,0 +1,58 @@
+\hypertarget{struct_environment}{}\section{Referência da Estrutura Environment}
+\label{struct_environment}\index{Environment@{Environment}}
+
+
+Estrutura do ambiente de execucao da J\+VM.  
+
+
+
+
+{\ttfamily \#include $<$estruturas.\+h$>$}
+
+
+
+Diagrama de colaboração para Environment\+:
+% FIG 0
+\subsection*{Campos de Dados}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_thread}{Thread} $\ast$ \hyperlink{struct_environment_a9521ae1091a45875768bdbbe0a339014}{thread}
+\begin{DoxyCompactList}\small\item\em Referencia para a thread em execucao. \end{DoxyCompactList}\item 
+\hyperlink{struct_method_area}{Method\+Area} $\ast$ \hyperlink{struct_environment_a1c73c41c6c38e7e67ea22f6d59044852}{method\+Area}
+\begin{DoxyCompactList}\small\item\em Referencia para a area de metodos. \end{DoxyCompactList}\item 
+\hyperlink{estruturas_8h_a216a9f8b04b4f0af84a4ca9d1d85a6ca}{u1} \hyperlink{struct_environment_a8c0e2258ed60e94b0c7a66eac8e27e64}{debug\+Flags}
+\begin{DoxyCompactList}\small\item\em Flags de debug. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+Estrutura do ambiente de execucao da J\+VM. 
+
+Estrura que apresenta um ambiente de execucao, a qual contem uma thread e uma area de metodos 
+
+\subsection{Campos}
+\index{Environment@{Environment}!debug\+Flags@{debug\+Flags}}
+\index{debug\+Flags@{debug\+Flags}!Environment@{Environment}}
+\subsubsection[{\texorpdfstring{debug\+Flags}{debugFlags}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u1} Environment\+::debug\+Flags}\hypertarget{struct_environment_a8c0e2258ed60e94b0c7a66eac8e27e64}{}\label{struct_environment_a8c0e2258ed60e94b0c7a66eac8e27e64}
+
+
+Flags de debug. 
+
+\index{Environment@{Environment}!method\+Area@{method\+Area}}
+\index{method\+Area@{method\+Area}!Environment@{Environment}}
+\subsubsection[{\texorpdfstring{method\+Area}{methodArea}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Method\+Area}$\ast$ Environment\+::method\+Area}\hypertarget{struct_environment_a1c73c41c6c38e7e67ea22f6d59044852}{}\label{struct_environment_a1c73c41c6c38e7e67ea22f6d59044852}
+
+
+Referencia para a area de metodos. 
+
+\index{Environment@{Environment}!thread@{thread}}
+\index{thread@{thread}!Environment@{Environment}}
+\subsubsection[{\texorpdfstring{thread}{thread}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Thread}$\ast$ Environment\+::thread}\hypertarget{struct_environment_a9521ae1091a45875768bdbbe0a339014}{}\label{struct_environment_a9521ae1091a45875768bdbbe0a339014}
+
+
+Referencia para a thread em execucao. 
+
+
+
+A documentação para esta estrutura foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{estruturas_8h}{estruturas.\+h}\end{DoxyCompactItemize}

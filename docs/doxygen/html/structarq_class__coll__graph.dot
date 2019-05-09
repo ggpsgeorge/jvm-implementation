@@ -1,0 +1,13 @@
+digraph "arqClass"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="arqClass",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" fields\nmethods" ,fontname="Helvetica"];
+  Node2 [label="fieldAndMethod",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structfield_and_method.html",tooltip="Estrutura de Campos e Metodos. "];
+  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" attributes" ,fontname="Helvetica"];
+  Node3 [label="attribute",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structattribute.html",tooltip="Estrutura de Atributos. "];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" attributes" ,fontname="Helvetica"];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" constant_pool" ,fontname="Helvetica"];
+  Node4 [label="constPool",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structconst_pool.html",tooltip="Estrutura do Pool de Constantes. "];
+}

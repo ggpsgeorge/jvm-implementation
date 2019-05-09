@@ -1,0 +1,20 @@
+var searchData=
+[
+  ['saload',['saload',['../executionengine_8h.html#a2ac68ac6fcce7152c63f23783cc075f5',1,'executionengine.h']]],
+  ['sastore',['sastore',['../executionengine_8h.html#a65b55d9c60166bebe22034aac822274e',1,'executionengine.h']]],
+  ['shift_5fmask_5f32',['SHIFT_MASK_32',['../executionengine_8h.html#a08bb381cf8fb012b2ff0eb2d1edbf461',1,'executionengine.h']]],
+  ['shift_5fmask_5f64',['SHIFT_MASK_64',['../executionengine_8h.html#aafb65079d515aa64406ebe64716d50be',1,'executionengine.h']]],
+  ['shift_5fmask_5funsi',['SHIFT_MASK_UNSI',['../executionengine_8h.html#a93039dc0e8a4938a785a76f63681dc7f',1,'executionengine.h']]],
+  ['sipush',['sipush',['../executionengine_8h.html#a4a50c00f3ac984f933a6dd9d57e98045',1,'executionengine.h']]],
+  ['size',['size',['../struct_string_ref.html#ac00b58f387df69e78c10e4152332261f',1,'StringRef']]],
+  ['stack',['Stack',['../struct_stack.html',1,'Stack'],['../estruturas_8h.html#acccdaeb94a63f3757825012007215c0d',1,'Stack():&#160;estruturas.h']]],
+  ['start_5fpc',['start_pc',['../struct_exception_table.html#af137b3a966825f91146039797d3b1ba5',1,'ExceptionTable']]],
+  ['staticfields',['staticFields',['../struct_java_class.html#a4ce091e3ddb1f607166c6e64c39cf53a',1,'JavaClass']]],
+  ['stk',['stk',['../struct_stack.html#af2d2e9e2e533f72d25eb18831324dc6b',1,'Stack']]],
+  ['string',['String',['../structconst_pool.html#ab014bc483e8b8803ecf0c288495b5a5e',1,'constPool::String()'],['../estruturas_8h.html#a9ffedfebd21a940154d9fb5f22968d68',1,'String():&#160;estruturas.h']]],
+  ['string_5findex',['string_index',['../structconst_pool.html#a1bb9e94f3cb54a3e19bde3d251379ac0',1,'constPool']]],
+  ['string_5flength',['STRING_LENGTH',['../estruturas_8h.html#ac829415013d8120cedee928452ae0f55',1,'estruturas.h']]],
+  ['stringaddress',['stringAddress',['../struct_string_ref.html#ae38ec52f1790f3c3cfb82c0ebcf72d2d',1,'StringRef']]],
+  ['stringref',['StringRef',['../struct_string_ref.html',1,'']]],
+  ['super_5fclass',['super_class',['../structarq_class.html#a7bd81d496166908031c40895ed667ada',1,'arqClass']]]
+];

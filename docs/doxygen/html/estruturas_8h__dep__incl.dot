@@ -1,0 +1,22 @@
+digraph "include/estruturas.h"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="include/estruturas.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="include/classloader.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classloader_8h.html",tooltip="Interface do Carregador de Classes da JVM. "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="include/executionengine.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$executionengine_8h.html",tooltip="Interface do Execution Engine da JVM. "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="include/memoryunit.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$memoryunit_8h.html",tooltip="Interface da Unidade de Memoria da JVM. "];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="include/util.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$util_8h.html",tooltip="Interface com funcoes de utilidade para a JVM operar. "];
+  Node5 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="include/javaarray.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$javaarray_8h.html",tooltip="Biblioteca de arrays Java. "];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="include/javastring.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$javastring_8h.html",tooltip="Biblioteca de strings Java. "];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="include/opcodes.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$opcodes_8h.html",tooltip="Biblioteca de servicos de Opcodes. "];
+}

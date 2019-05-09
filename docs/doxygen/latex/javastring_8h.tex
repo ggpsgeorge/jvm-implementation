@@ -1,0 +1,79 @@
+\hypertarget{javastring_8h}{}\section{Referência do Arquivo include/javastring.h}
+\label{javastring_8h}\index{include/javastring.\+h@{include/javastring.\+h}}
+
+
+Biblioteca de strings Java.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$wchar.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}estruturas.\+h\char`\"{}}\\*
+Gráfico de dependência de inclusões para javastring.\+h\+:
+% FIG 0
+\subsection*{Estruturas de Dados}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_string_ref}{String\+Ref}
+\begin{DoxyCompactList}\small\item\em Estrutura de Constante String Java. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Definições e Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{javastring_8h_a9d86a281b244c5ae2ea58eadfb587dd7}{E\+X\+T\+JS}~extern
+\item 
+\#define \hyperlink{javastring_8h_a719c5304af17276c9da3fbb5d5d03bb9}{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+String\+Java}~20
+\end{DoxyCompactItemize}
+\subsection*{Definições de Tipos}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{struct_string_ref}{String\+Ref} \hyperlink{javastring_8h_a2999dfbe09994142d62098b5e46aaf38}{Java\+String}
+\begin{DoxyCompactList}\small\item\em Estrutura de Constante String Java. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{javastring_8h_a9d86a281b244c5ae2ea58eadfb587dd7}{E\+X\+T\+JS} \hyperlink{javastring_8h_a2999dfbe09994142d62098b5e46aaf38}{Java\+String} $\ast$ \hyperlink{javastring_8h_a03d4e9b2e1ae2d8386b7221797d380b3}{new\+Java\+String} (const wchar\+\_\+t $\ast$string)
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+Biblioteca de strings Java. 
+
+Biblioteca responsavel por prover as definicoes e metodos relacionados as strings constantes da J\+VM 
+
+\subsection{Definições e macros}
+\index{javastring.\+h@{javastring.\+h}!C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+String\+Java@{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+String\+Java}}
+\index{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+String\+Java@{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+String\+Java}!javastring.\+h@{javastring.\+h}}
+\subsubsection[{\texorpdfstring{C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+String\+Java}{CONSTANT_StringJava}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+O\+N\+S\+T\+A\+N\+T\+\_\+\+String\+Java~20}\hypertarget{javastring_8h_a719c5304af17276c9da3fbb5d5d03bb9}{}\label{javastring_8h_a719c5304af17276c9da3fbb5d5d03bb9}
+\index{javastring.\+h@{javastring.\+h}!E\+X\+T\+JS@{E\+X\+T\+JS}}
+\index{E\+X\+T\+JS@{E\+X\+T\+JS}!javastring.\+h@{javastring.\+h}}
+\subsubsection[{\texorpdfstring{E\+X\+T\+JS}{EXTJS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+X\+T\+JS~extern}\hypertarget{javastring_8h_a9d86a281b244c5ae2ea58eadfb587dd7}{}\label{javastring_8h_a9d86a281b244c5ae2ea58eadfb587dd7}
+
+
+\subsection{Definições dos tipos}
+\index{javastring.\+h@{javastring.\+h}!Java\+String@{Java\+String}}
+\index{Java\+String@{Java\+String}!javastring.\+h@{javastring.\+h}}
+\subsubsection[{\texorpdfstring{Java\+String}{JavaString}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf String\+Ref}  {\bf Java\+String}}\hypertarget{javastring_8h_a2999dfbe09994142d62098b5e46aaf38}{}\label{javastring_8h_a2999dfbe09994142d62098b5e46aaf38}
+
+
+Estrutura de Constante String Java. 
+
+Estrutura utilizada para a representacao de uma String Java (constante) 
+
+\subsection{Funções}
+\index{javastring.\+h@{javastring.\+h}!new\+Java\+String@{new\+Java\+String}}
+\index{new\+Java\+String@{new\+Java\+String}!javastring.\+h@{javastring.\+h}}
+\subsubsection[{\texorpdfstring{new\+Java\+String(const wchar\+\_\+t $\ast$string)}{newJavaString(const wchar_t *string)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+X\+T\+JS} {\bf Java\+String}$\ast$ new\+Java\+String (
+\begin{DoxyParamCaption}
+\item[{const wchar\+\_\+t $\ast$}]{string}
+\end{DoxyParamCaption}
+)}\hypertarget{javastring_8h_a03d4e9b2e1ae2d8386b7221797d380b3}{}\label{javastring_8h_a03d4e9b2e1ae2d8386b7221797d380b3}
+Metodo responsavel por inicializar e retornar uma estrutura de string java preenchida a partir de um vetor de char
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em string} & String c a ser carregada na estrutura java string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+estrutura Java\+String preenchida 
+\end{DoxyReturn}

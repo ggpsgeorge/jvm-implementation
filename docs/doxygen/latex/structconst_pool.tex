@@ -1,0 +1,149 @@
+\hypertarget{structconst_pool}{}\section{Referência da Estrutura const\+Pool}
+\label{structconst_pool}\index{const\+Pool@{const\+Pool}}
+
+
+Estrutura do Pool de Constantes.  
+
+
+
+
+{\ttfamily \#include $<$estruturas.\+h$>$}
+
+\subsection*{Campos de Dados}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{estruturas_8h_a216a9f8b04b4f0af84a4ca9d1d85a6ca}{u1} \hyperlink{structconst_pool_a876197bb013e214c071ab56d1de8ed25}{tag}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>struct \{\\
+\>\>\hyperlink{estruturas_8h_a5f223212eef04d10a4550ded680cb1cf}{u2} \hyperlink{structconst_pool_af3f5f8cd6fcae23720d11786466944e1}{name\_index}\\
+\>\} \hyperlink{structconst_pool_a3735adf769a89a8579d9c729d9ea852b}{Class}\\
+\>struct \{\\
+\>\>\hyperlink{estruturas_8h_a5f223212eef04d10a4550ded680cb1cf}{u2} \hyperlink{structconst_pool_ac2f1017863a461470285ceffa2487892}{class\_index}\\
+\>\>\hyperlink{estruturas_8h_a5f223212eef04d10a4550ded680cb1cf}{u2} \hyperlink{structconst_pool_a3dde2ae699efaa1736b684038ea4f3de}{name\_and\_type\_index}\\
+\>\} \hyperlink{structconst_pool_a2d445b84752ddea1db4ef9f3ce2fee02}{Fieldref}\\
+\>struct \{\\
+\>\>\hyperlink{estruturas_8h_a5f223212eef04d10a4550ded680cb1cf}{u2} \hyperlink{structconst_pool_af3f5f8cd6fcae23720d11786466944e1}{name\_index}\\
+\>\>\hyperlink{estruturas_8h_a5f223212eef04d10a4550ded680cb1cf}{u2} \hyperlink{structconst_pool_a09a23db7ae9a3429931f2a5447f9f7fe}{descriptor\_index}\\
+\>\} \hyperlink{structconst_pool_a727268ed0e1405a5eaab1aa5ad3cba74}{NameAndType}\\
+\>struct \{\\
+\>\>\hyperlink{estruturas_8h_a5f223212eef04d10a4550ded680cb1cf}{u2} \hyperlink{structconst_pool_addff2c24e88a3e8686a219fe6a9bbcd3}{lenght}\\
+\>\>\hyperlink{estruturas_8h_a216a9f8b04b4f0af84a4ca9d1d85a6ca}{u1} $\ast$ \hyperlink{structconst_pool_ae5e4f8056a2790c12bc61d9ba0582050}{bytes}\\
+\>\>\>{\em bytes\mbox{[}length\mbox{]} }\\
+\>\} \hyperlink{structconst_pool_ab18ebde1a84b99d3dc0b70b1df46be82}{Utf8}\\
+\>struct \{\\
+\>\>\hyperlink{estruturas_8h_a5f223212eef04d10a4550ded680cb1cf}{u2} \hyperlink{structconst_pool_ac2f1017863a461470285ceffa2487892}{class\_index}\\
+\>\>\hyperlink{estruturas_8h_a5f223212eef04d10a4550ded680cb1cf}{u2} \hyperlink{structconst_pool_a3dde2ae699efaa1736b684038ea4f3de}{name\_and\_type\_index}\\
+\>\} \hyperlink{structconst_pool_aedc243e8e674b59f15d83255f4fff7f6}{Methodref}\\
+\>struct \{\\
+\>\>\hyperlink{estruturas_8h_a5f223212eef04d10a4550ded680cb1cf}{u2} \hyperlink{structconst_pool_ac2f1017863a461470285ceffa2487892}{class\_index}\\
+\>\>\hyperlink{estruturas_8h_a5f223212eef04d10a4550ded680cb1cf}{u2} \hyperlink{structconst_pool_a3dde2ae699efaa1736b684038ea4f3de}{name\_and\_type\_index}\\
+\>\} \hyperlink{structconst_pool_aba9741376f8030471992d6b68fb4142b}{InterfaceMethodref}\\
+\>struct \{\\
+\>\>\hyperlink{estruturas_8h_a5f223212eef04d10a4550ded680cb1cf}{u2} \hyperlink{structconst_pool_a1bb9e94f3cb54a3e19bde3d251379ac0}{string\_index}\\
+\>\} \hyperlink{structconst_pool_ab014bc483e8b8803ecf0c288495b5a5e}{String}\\
+\>struct \{\\
+\>\>\hyperlink{estruturas_8h_aedf6ddc03df8caaaccbb4c60b9a9b850}{u4} \hyperlink{structconst_pool_ab5efc0514165cbdfb4ba3521cd70821b}{bytes}\\
+\>\} \hyperlink{structconst_pool_ae32ce70f2995b3b811d6ae719d62c6ef}{Integer}\\
+\>struct \{\\
+\>\>\hyperlink{estruturas_8h_aedf6ddc03df8caaaccbb4c60b9a9b850}{u4} \hyperlink{structconst_pool_ab5efc0514165cbdfb4ba3521cd70821b}{bytes}\\
+\>\} \hyperlink{structconst_pool_aaba15c27d5b0f572a54d68643aa577fa}{Float}\\
+\>struct \{\\
+\>\>\hyperlink{estruturas_8h_aedf6ddc03df8caaaccbb4c60b9a9b850}{u4} \hyperlink{structconst_pool_a5c4154d878bdc78c47829c3003008bcd}{high\_bytes}\\
+\>\>\hyperlink{estruturas_8h_aedf6ddc03df8caaaccbb4c60b9a9b850}{u4} \hyperlink{structconst_pool_a55d572db573fd39218d7e3233a7590fa}{low\_bytes}\\
+\>\} \hyperlink{structconst_pool_a2ff4c34ed23a88cc0e355b0111ce8957}{Long}\\
+\>struct \{\\
+\>\>\hyperlink{estruturas_8h_aedf6ddc03df8caaaccbb4c60b9a9b850}{u4} \hyperlink{structconst_pool_a5c4154d878bdc78c47829c3003008bcd}{high\_bytes}\\
+\>\>\hyperlink{estruturas_8h_aedf6ddc03df8caaaccbb4c60b9a9b850}{u4} \hyperlink{structconst_pool_a55d572db573fd39218d7e3233a7590fa}{low\_bytes}\\
+\>\} \hyperlink{structconst_pool_a860c917cdbc43a11bbe5411a3329129a}{Double}\\
+\} \hyperlink{structconst_pool_ab327fbd2fec182d523b180c4d941d7f5}{u}\\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+Estrutura do Pool de Constantes. 
+
+Estrutura utilizada para a representacao de um pool de constantes. 
+
+\subsection{Campos}
+\index{const\+Pool@{const\+Pool}!bytes@{bytes}}
+\index{bytes@{bytes}!const\+Pool@{const\+Pool}}
+\subsubsection[{\texorpdfstring{bytes}{bytes}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u1}$\ast$ const\+Pool\+::bytes}\hypertarget{structconst_pool_ae5e4f8056a2790c12bc61d9ba0582050}{}\label{structconst_pool_ae5e4f8056a2790c12bc61d9ba0582050}
+
+
+bytes\mbox{[}length\mbox{]} 
+
+\index{const\+Pool@{const\+Pool}!bytes@{bytes}}
+\index{bytes@{bytes}!const\+Pool@{const\+Pool}}
+\subsubsection[{\texorpdfstring{bytes}{bytes}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u4} const\+Pool\+::bytes}\hypertarget{structconst_pool_ab5efc0514165cbdfb4ba3521cd70821b}{}\label{structconst_pool_ab5efc0514165cbdfb4ba3521cd70821b}
+\index{const\+Pool@{const\+Pool}!Class@{Class}}
+\index{Class@{Class}!const\+Pool@{const\+Pool}}
+\subsubsection[{\texorpdfstring{Class}{Class}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   const\+Pool\+::\+Class}\hypertarget{structconst_pool_a3735adf769a89a8579d9c729d9ea852b}{}\label{structconst_pool_a3735adf769a89a8579d9c729d9ea852b}
+\index{const\+Pool@{const\+Pool}!class\+\_\+index@{class\+\_\+index}}
+\index{class\+\_\+index@{class\+\_\+index}!const\+Pool@{const\+Pool}}
+\subsubsection[{\texorpdfstring{class\+\_\+index}{class_index}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u2} const\+Pool\+::class\+\_\+index}\hypertarget{structconst_pool_ac2f1017863a461470285ceffa2487892}{}\label{structconst_pool_ac2f1017863a461470285ceffa2487892}
+\index{const\+Pool@{const\+Pool}!descriptor\+\_\+index@{descriptor\+\_\+index}}
+\index{descriptor\+\_\+index@{descriptor\+\_\+index}!const\+Pool@{const\+Pool}}
+\subsubsection[{\texorpdfstring{descriptor\+\_\+index}{descriptor_index}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u2} const\+Pool\+::descriptor\+\_\+index}\hypertarget{structconst_pool_a09a23db7ae9a3429931f2a5447f9f7fe}{}\label{structconst_pool_a09a23db7ae9a3429931f2a5447f9f7fe}
+\index{const\+Pool@{const\+Pool}!Double@{Double}}
+\index{Double@{Double}!const\+Pool@{const\+Pool}}
+\subsubsection[{\texorpdfstring{Double}{Double}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   const\+Pool\+::\+Double}\hypertarget{structconst_pool_a860c917cdbc43a11bbe5411a3329129a}{}\label{structconst_pool_a860c917cdbc43a11bbe5411a3329129a}
+\index{const\+Pool@{const\+Pool}!Fieldref@{Fieldref}}
+\index{Fieldref@{Fieldref}!const\+Pool@{const\+Pool}}
+\subsubsection[{\texorpdfstring{Fieldref}{Fieldref}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   const\+Pool\+::\+Fieldref}\hypertarget{structconst_pool_a2d445b84752ddea1db4ef9f3ce2fee02}{}\label{structconst_pool_a2d445b84752ddea1db4ef9f3ce2fee02}
+\index{const\+Pool@{const\+Pool}!Float@{Float}}
+\index{Float@{Float}!const\+Pool@{const\+Pool}}
+\subsubsection[{\texorpdfstring{Float}{Float}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   const\+Pool\+::\+Float}\hypertarget{structconst_pool_aaba15c27d5b0f572a54d68643aa577fa}{}\label{structconst_pool_aaba15c27d5b0f572a54d68643aa577fa}
+\index{const\+Pool@{const\+Pool}!high\+\_\+bytes@{high\+\_\+bytes}}
+\index{high\+\_\+bytes@{high\+\_\+bytes}!const\+Pool@{const\+Pool}}
+\subsubsection[{\texorpdfstring{high\+\_\+bytes}{high_bytes}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u4} const\+Pool\+::high\+\_\+bytes}\hypertarget{structconst_pool_a5c4154d878bdc78c47829c3003008bcd}{}\label{structconst_pool_a5c4154d878bdc78c47829c3003008bcd}
+\index{const\+Pool@{const\+Pool}!Integer@{Integer}}
+\index{Integer@{Integer}!const\+Pool@{const\+Pool}}
+\subsubsection[{\texorpdfstring{Integer}{Integer}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   const\+Pool\+::\+Integer}\hypertarget{structconst_pool_ae32ce70f2995b3b811d6ae719d62c6ef}{}\label{structconst_pool_ae32ce70f2995b3b811d6ae719d62c6ef}
+\index{const\+Pool@{const\+Pool}!Interface\+Methodref@{Interface\+Methodref}}
+\index{Interface\+Methodref@{Interface\+Methodref}!const\+Pool@{const\+Pool}}
+\subsubsection[{\texorpdfstring{Interface\+Methodref}{InterfaceMethodref}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   const\+Pool\+::\+Interface\+Methodref}\hypertarget{structconst_pool_aba9741376f8030471992d6b68fb4142b}{}\label{structconst_pool_aba9741376f8030471992d6b68fb4142b}
+\index{const\+Pool@{const\+Pool}!lenght@{lenght}}
+\index{lenght@{lenght}!const\+Pool@{const\+Pool}}
+\subsubsection[{\texorpdfstring{lenght}{lenght}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u2} const\+Pool\+::lenght}\hypertarget{structconst_pool_addff2c24e88a3e8686a219fe6a9bbcd3}{}\label{structconst_pool_addff2c24e88a3e8686a219fe6a9bbcd3}
+\index{const\+Pool@{const\+Pool}!Long@{Long}}
+\index{Long@{Long}!const\+Pool@{const\+Pool}}
+\subsubsection[{\texorpdfstring{Long}{Long}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   const\+Pool\+::\+Long}\hypertarget{structconst_pool_a2ff4c34ed23a88cc0e355b0111ce8957}{}\label{structconst_pool_a2ff4c34ed23a88cc0e355b0111ce8957}
+\index{const\+Pool@{const\+Pool}!low\+\_\+bytes@{low\+\_\+bytes}}
+\index{low\+\_\+bytes@{low\+\_\+bytes}!const\+Pool@{const\+Pool}}
+\subsubsection[{\texorpdfstring{low\+\_\+bytes}{low_bytes}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u4} const\+Pool\+::low\+\_\+bytes}\hypertarget{structconst_pool_a55d572db573fd39218d7e3233a7590fa}{}\label{structconst_pool_a55d572db573fd39218d7e3233a7590fa}
+\index{const\+Pool@{const\+Pool}!Methodref@{Methodref}}
+\index{Methodref@{Methodref}!const\+Pool@{const\+Pool}}
+\subsubsection[{\texorpdfstring{Methodref}{Methodref}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   const\+Pool\+::\+Methodref}\hypertarget{structconst_pool_aedc243e8e674b59f15d83255f4fff7f6}{}\label{structconst_pool_aedc243e8e674b59f15d83255f4fff7f6}
+\index{const\+Pool@{const\+Pool}!name\+\_\+and\+\_\+type\+\_\+index@{name\+\_\+and\+\_\+type\+\_\+index}}
+\index{name\+\_\+and\+\_\+type\+\_\+index@{name\+\_\+and\+\_\+type\+\_\+index}!const\+Pool@{const\+Pool}}
+\subsubsection[{\texorpdfstring{name\+\_\+and\+\_\+type\+\_\+index}{name_and_type_index}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u2} const\+Pool\+::name\+\_\+and\+\_\+type\+\_\+index}\hypertarget{structconst_pool_a3dde2ae699efaa1736b684038ea4f3de}{}\label{structconst_pool_a3dde2ae699efaa1736b684038ea4f3de}
+\index{const\+Pool@{const\+Pool}!name\+\_\+index@{name\+\_\+index}}
+\index{name\+\_\+index@{name\+\_\+index}!const\+Pool@{const\+Pool}}
+\subsubsection[{\texorpdfstring{name\+\_\+index}{name_index}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u2} const\+Pool\+::name\+\_\+index}\hypertarget{structconst_pool_af3f5f8cd6fcae23720d11786466944e1}{}\label{structconst_pool_af3f5f8cd6fcae23720d11786466944e1}
+\index{const\+Pool@{const\+Pool}!Name\+And\+Type@{Name\+And\+Type}}
+\index{Name\+And\+Type@{Name\+And\+Type}!const\+Pool@{const\+Pool}}
+\subsubsection[{\texorpdfstring{Name\+And\+Type}{NameAndType}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   const\+Pool\+::\+Name\+And\+Type}\hypertarget{structconst_pool_a727268ed0e1405a5eaab1aa5ad3cba74}{}\label{structconst_pool_a727268ed0e1405a5eaab1aa5ad3cba74}
+\index{const\+Pool@{const\+Pool}!String@{String}}
+\index{String@{String}!const\+Pool@{const\+Pool}}
+\subsubsection[{\texorpdfstring{String}{String}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   const\+Pool\+::\+String}\hypertarget{structconst_pool_ab014bc483e8b8803ecf0c288495b5a5e}{}\label{structconst_pool_ab014bc483e8b8803ecf0c288495b5a5e}
+\index{const\+Pool@{const\+Pool}!string\+\_\+index@{string\+\_\+index}}
+\index{string\+\_\+index@{string\+\_\+index}!const\+Pool@{const\+Pool}}
+\subsubsection[{\texorpdfstring{string\+\_\+index}{string_index}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u2} const\+Pool\+::string\+\_\+index}\hypertarget{structconst_pool_a1bb9e94f3cb54a3e19bde3d251379ac0}{}\label{structconst_pool_a1bb9e94f3cb54a3e19bde3d251379ac0}
+\index{const\+Pool@{const\+Pool}!tag@{tag}}
+\index{tag@{tag}!const\+Pool@{const\+Pool}}
+\subsubsection[{\texorpdfstring{tag}{tag}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u1} const\+Pool\+::tag}\hypertarget{structconst_pool_a876197bb013e214c071ab56d1de8ed25}{}\label{structconst_pool_a876197bb013e214c071ab56d1de8ed25}
+\index{const\+Pool@{const\+Pool}!u@{u}}
+\index{u@{u}!const\+Pool@{const\+Pool}}
+\subsubsection[{\texorpdfstring{u}{u}}]{\setlength{\rightskip}{0pt plus 5cm}union \{ ... \}   const\+Pool\+::u}\hypertarget{structconst_pool_ab327fbd2fec182d523b180c4d941d7f5}{}\label{structconst_pool_ab327fbd2fec182d523b180c4d941d7f5}
+\index{const\+Pool@{const\+Pool}!Utf8@{Utf8}}
+\index{Utf8@{Utf8}!const\+Pool@{const\+Pool}}
+\subsubsection[{\texorpdfstring{Utf8}{Utf8}}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   const\+Pool\+::\+Utf8}\hypertarget{structconst_pool_ab18ebde1a84b99d3dc0b70b1df46be82}{}\label{structconst_pool_ab18ebde1a84b99d3dc0b70b1df46be82}
+
+
+A documentação para esta estrutura foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{estruturas_8h}{estruturas.\+h}\end{DoxyCompactItemize}
